@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap");
+@font-face {
+  font-family: "Roboto";
+  src: "components/data/fonts/Roboto-Regular.ttf";
+}
+@font-face {
+  font-family: "Courier Prime";
+  src: "components/data/fonts/CourierPrime-Regular.ttf";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --primaryColor: #70ff00;
+  --primaryColorOpacity: rgba(112, 255, 0, 0.19);
+  --secondaryColor: #4f4f4f;
+  --primaryBgColor: #333333;
+  --thirdColor: #828282;
+  --btnSendMailColor: rgba(234, 67, 53, 0.33);
+  --projectBgColor: rgba(76, 76, 76, 0.66);
+  --white: #fff;
+  --green: #70ff00;
+  --hireText: #161616;
+
+  --border-raduis: 13px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: var(--headingColor);
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+
+.num {
+  color: var(--thirdColor);
+  font-size: 27px;
+}
+.num-text {
+  color: var(--secondaryColor);
+  font-size: 86px;
+  font-weight: bold;
+}
+.hello {
+  color: var(--white);
+  font-size: 39px;
+  font-weight: bold;
+}
+.role {
+  color: var(--white);
+  font-size: 57px;
+  font-weight: bold;
+}
+.name {
+  color: var(--primaryColor);
+  font-size: 78px;
+  font-weight: bold;
+}
+.heading {
+  color: var(--primaryColor);
+  font-size: 49px;
+  font-weight: bold;
+}
+
+/* ================= about ================ */
+button,
+.btn {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 17px;
+  color: var(--white);
+  font-family: "Courier Prime", monospace !important;
+  padding: 15px 27px;
+  border-radius: var(--border-raduis);
+  cursor: pointer;
+  display: flex;
+  gap: 44px;
+}
+
+.btn.primaryBtn {
+  background-color: var(--primaryColorOpacity);
+}
+.btn.secondaryBtn {
+  background-color: var(--secondaryColor);
+}
+.btn.hireBtn {
+  background-color: var(--primaryColor);
+  color: var(--hireText);
+}
+
+.aboutBox {
+  background-color: var(--secondaryColor);
+  border-radius: var(--border-raduis);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 19px;
+  padding: 12px 49px;
+  color: var(--white);
+}
+.aboutBox .text {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 35px;
+  font-family: "Courier Prime", monospace !important;
+}
+/* ================= about ================ */
+
+/* ================= skills ================ */
+
+/* ================= skills ================ */
+
+/* ================= projects ================ */
+.categoryBtn {
+  border: 3px solid var(--primaryColor);
+  padding: 14px 61px;
+}
+.t-code {
+  font-family: "Courier Prime", monospace !important;
+}
+.t-gr {
+  color: var(--primaryColor) !important;
+  font-family: "Courier Prime", monospace !important;
+}
+
+a,
+a.t-gr:hover {
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover {
+  color: var(--primaryColor);
+}
+a.t-gr {
+  text-decoration: underline;
+}
+
+.projects,
+.grid3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.projectBox {
+  position: relative;
+  width: 486px;
+  height: 406px;
+  border-radius: var(--border-raduis);
+  border: 2px solid var(--white);
+  background-color: var(--projectBgColor);
+}
+.projectBox {
+  backdrop-filter: blur(17px);
+}
+.projectBox .img {
+  position: relative;
+  width: 100%;
+  height: 321px;
+}
+.projectBox:hover .img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 37, 37, 0.39);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.projectBox .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projectBox .body h3 {
+  font-size: 30px;
+  color: var(--white);
+  font-weight: bold;
+}
+.projectBox .body p {
+  font-size: 23px;
+  color: var(--white);
+}
+/* ================= projects ================ */
+
+/* ================= contact me ================ */
+.socials {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 34px;
+  width: 593px;
 }
 
-.App-link {
-  color: #61dafb;
+.socialBox {
+  background-color: var(--primaryBgColor);
+  border-radius: var(--border-raduis);
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-left: 90px;
+  width: 593px;
+  color: var(--white);
+}
+.socialBox .text {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form .contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  width: 679px;
 }
+
+input,
+textarea {
+  width: 100%;
+  padding: 22px 50px;
+  bottom: none;
+  outline: none;
+  margin: 10px 0;
+  border-radius: var(--border-raduis);
+  border: 2px solid var(--primaryColor);
+  font-size: 32px;
+  color: var(--primaryColor);
+}
+
+.btn.send {
+  gap: 24px;
+}
+.btn.send img {
+  width: 29px;
+  height: 30px;
+}
+/* ================= contact me ================ */
