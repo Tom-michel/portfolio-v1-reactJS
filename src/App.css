@@ -29,10 +29,45 @@
   --border-raduis: 13px;
 }
 
+a {
+  color: var(--white) !important;
+  transition: 0.5s;
+}
+
 body {
-  background-color: var(--headingColor);
-  color: var(--white);
+  color: var(--white) !important;
   font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    130.36deg,
+    #000000 0%,
+    #272727 44.03%,
+    #494949 99.99%,
+    #727272 100%
+  );
+  background-size: cover;
+  z-index: 1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      130.36deg,
+      #000000 0%,
+      #272727 44.03%,
+      #494949 99.99%,
+      #727272 100%
+    )
+    no-repeat;
+  z-index: -1;
+}
+
+.nav-logo img {
+  height: 59px;
 }
 
 .num {
@@ -129,8 +164,7 @@ button,
 
 a,
 a.t-gr:hover {
-  text-decoration: none;
-  transition: 0.5s;
+  text-decoration: none !important;
 }
 a:hover {
   color: var(--primaryColor);

@@ -1,7 +1,8 @@
 export const brandlink = [
   {
     url: "#home",
-    img: "../images/logo.png",
+    // img: "../../../public/logo192.png",
+    img: "./images/nav-logo.svg",
   },
 ];
 
@@ -24,23 +25,23 @@ export const contactlink = [
   {
     url: "...",
     text: "LinkedIn",
-    icon: "../images/tech/...",
+    icon: "../images/icons/linkedin.svg",
   },
   {
-    url: "...",
+    url: "https://github.com/Tom-michel",
     text: "GitHub",
-    icon: "../images/tech/...",
+    icon: "../images/icons/github.svg",
   },
   {
-    url: "...",
+    url: "https://gitlab.com/Tom-michel",
     text: "GitLab",
-    icon: "../images/tech/...",
+    icon: "../images/icons/gitlab.svg",
   },
 
   {
-    url: "...",
+    url: "#contact",
     text: "ContactMe",
-    icon: "../images/tech/...",
+    icon: "../images/icons/contact-mail.svg",
   },
 ];
 

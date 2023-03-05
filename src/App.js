@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import "./bootstrap.min.css";
 import "./App.css";
 import { Pages } from "./components/pages/Pages";
 import Aos from "aos";
