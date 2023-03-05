@@ -1,3 +1,5 @@
+import { DesignServices, Keyboard } from "@mui/icons-material";
+
 export const brandlink = [
   {
     url: "#home",
@@ -40,19 +42,28 @@ export const contactlink = [
 
   {
     url: "#contact",
-    text: "ContactMe",
+    text: "Contact me",
     icon: "../images/icons/contact-mail.svg",
   },
 ];
 
 export const banner = [
   {
-    text: "Hello, i am",
+    hello: "Hello, i am",
     name: "Michel Btompe",
-    role: ["Full Stack Developer", "UI/UX Designer"],
-    exper_num: "5",
-    project_num: "10+",
-    img: "../images/...",
+    role: [
+      { text: "Full Stack Developer", icon: <Keyboard /> },
+      { text: "UI/UX Designer", icon: <DesignServices /> },
+    ],
+    done: [
+      {
+        exper_num: "5",
+        exper_text: "years of \nexperience",
+        project_num: "10",
+        project_text: "Projects \nCompleted",
+      },
+    ],
+    avatar: "../images/avatar.png",
     img_tech1: "../images/...",
     img_tech2: "../images/...",
     img_tech3: "../images/...",

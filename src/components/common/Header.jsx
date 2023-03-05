@@ -13,16 +13,24 @@ export const Header = () => {
           </Typography>
         ))}
       </div>
-      <div className="nav-center d-none d-md-flex">
+      <div className="nav-center d-none d-md-flex gap-3">
         {navlink.map((links) => (
-          <Link to={links.url}>{links.text}</Link>
+          <Link className="fw-bold" to={links.url}>
+            {links.text}
+          </Link>
         ))}
       </div>
-      <div className="nav-right">
+      <div className="nav-right d-flex gap-3">
         {contactlink.map((item, i) => (
-          <Typography component="a" href={item.url} className="item">
+          <Typography
+            component="a"
+            href={item.url}
+            className="item d-flex align-items-center gap-1"
+          >
             <img src={item.icon} alt="" className="icon" />
-            <span className="d-none d-md-inline text">{item.text}</span>
+            <span className="d-none d-xl-inline pt-1 fw-semibold text">
+              {item.text}
+            </span>
           </Typography>
         ))}
       </div>
