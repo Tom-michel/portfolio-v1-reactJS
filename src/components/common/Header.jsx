@@ -13,7 +13,7 @@ export const Header = () => {
           </Typography>
         ))}
       </div>
-      <div className="nav-center d-none d-md-flex gap-3">
+      <div className="nav-center d-none d-md-flex gap-5">
         {navlink.map((links) => (
           <Link className="fw-bold" to={links.url}>
             {links.text}

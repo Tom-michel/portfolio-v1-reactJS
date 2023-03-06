@@ -59,7 +59,7 @@ export const banner = [
       {
         exper_num: "5",
         exper_text: "years of \nexperience",
-        project_num: "10",
+        project_num: "10+",
         project_text: "Projects \nCompleted",
       },
     ],
@@ -72,9 +72,9 @@ export const banner = [
 
 export const about = [
   {
-    text: "...",
+    text: "I am a full stack web and mobile developer. I like to build or improve innovative solutions to the daily problems of society.",
     user: "@Tom",
-    role: "...",
+    role: "Fullstack Developer & Freelancer",
   },
 ];
 

@@ -32,18 +32,20 @@
 body {
   color: var(--white) !important;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden !important;
   background: linear-gradient(
-    130.36deg,
-    #000000 0%,
-    #272727 44.03%,
-    #494949 99.99%,
-    #727272 100%
-  );
+      130.36deg,
+      #000000 0%,
+      #272727 44.03%,
+      #494949 99.99%,
+      #727272 100%
+    )
+    no-repeat;
   background-size: cover;
   z-index: 1;
 }
 
-body::after {
+/* body::after {
   content: "";
   position: absolute;
   top: 0;
@@ -59,15 +61,19 @@ body::after {
     )
     no-repeat;
   z-index: -1;
-}
+} */
 
 /* ================= navbar =============== */
 nav {
   /* height: 59px; */
   height: 10vh;
   overflow: hidden;
-  /* background-color: #000000; */
+  /* background-color: #0000000e; */
   transition: 0.5s;
+  z-index: 999;
+
+  /* position: fixed; */
+  backdrop-filter: blur(10px) !important;
 }
 .nav-logo img {
   height: 25px;
@@ -96,7 +102,7 @@ a:hover {
   color: var(--primaryColor) !important;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .nav-right .item:last-child {
     transition: 0.5s;
     padding: 1px 10px;
@@ -107,10 +113,12 @@ a:hover {
 /* ================= banner =============== */
 #home {
   position: relative;
-  height: 90vh;
+  height: auto;
+  /* height: 90vh; */
 }
+
 #home .row {
-  width: 100%;
+  width: 100vw;
 }
 
 .num {
@@ -138,8 +146,6 @@ a:hover {
 .avatar {
   position: relative;
   width: 100%;
-  /* height: 100%; */
-  /* background-color: #000000; */
 }
 .avatar img {
   width: 400px;
@@ -148,38 +154,135 @@ a:hover {
 .t-gr {
   color: var(--primaryColor) !important;
 }
+
+/* @media screen and (min-width: 992px) {
+  #home .row {
+    width: 100vw;
+  }
+} */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .avatar img {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #home {
+    position: relative;
+    height: auto;
+  }
+  .avatar img {
+    width: 300px;
+  }
+  .num {
+    color: var(--secondaryColor);
+    font-size: 40px;
+  }
+  .num-text {
+    color: var(--thirdColor);
+    font-size: 12px;
+  }
+  .hello {
+    color: var(--white);
+    font-size: 20px;
+  }
+  .role {
+    color: var(--white);
+    font-size: 20px;
+  }
+  .name {
+    color: var(--primaryColor);
+    font-size: 35px;
+    /* width: 285px; */
+  }
+}
 /* ================= banner =============== */
+
 .heading {
-  color: var(--primaryColor);
-  font-size: 49px;
+  font-size: 35px;
   font-weight: bold;
+}
+.heading span {
+  color: var(--primaryColor);
+}
+@media screen and (max-width: 767px) {
+  .heading {
+    font-size: 25px;
+  }
 }
 
 /* ================= about ================ */
+#about {
+  position: relative;
+  z-index: 1;
+}
+#about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../public/images/grid_bg.png");
+  background-size: cover;
+  /* background-attachment: fixed; */
+  opacity: 0.15;
+}
+
+.aboutDiv {
+  position: relative;
+}
+.aboutDiv .bubble {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 100%;
+}
+.bubble .MuiAvatar-circular {
+  background-color: var(--primaryBgColor);
+}
+
 button,
 .btn {
   border: none;
   outline: none;
   background: none;
   font-size: 17px;
-  color: var(--white);
+  color: var(--white) !important;
   font-family: "Courier Prime", monospace !important;
-  padding: 15px 27px;
+  text-transform: capitalize !important;
+  padding: 5px 20px !important;
   border-radius: var(--border-raduis);
   cursor: pointer;
   display: flex;
-  gap: 44px;
+  gap: 15px;
 }
 
 .btn.primaryBtn {
   background-color: var(--primaryColorOpacity);
 }
+.btn.primaryBtn span {
+  color: var(--primaryColor) !important;
+}
 .btn.secondaryBtn {
   background-color: var(--secondaryColor);
 }
+.btn.secondaryBtn span {
+  color: #1e1e1e !important;
+}
 .btn.hireBtn {
   background-color: var(--primaryColor);
-  color: var(--hireText);
+  color: var(--hireText) !important;
+  text-decoration: underline !important;
+}
+.btn.hireBtn span {
+  color: #161616 !important;
+}
+
+.description {
+  font-size: 20px !important;
+  text-align: justify !important;
 }
 
 .aboutBox {
@@ -188,15 +291,27 @@ button,
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 19px;
-  padding: 12px 49px;
+  gap: 1rem;
+  padding: 25px 49px;
   color: var(--white);
 }
 .aboutBox .text {
   color: var(--white);
   font-weight: bold;
-  font-size: 35px;
+  font-size: 25px;
   font-family: "Courier Prime", monospace !important;
+}
+
+@media screen and (max-width: 767px) {
+  #about button,
+  #about .btn {
+    padding: 5px 15px !important;
+  }
+  .aboutBox {
+    align-items: start;
+    gap: 1rem;
+    padding: 25px 49px;
+  }
 }
 /* ================= about ================ */
 
