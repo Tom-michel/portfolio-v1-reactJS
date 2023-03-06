@@ -15,15 +15,15 @@ export const Banner = () => {
               <>
                 <p className="hello fw-bold">{item.hello}</p>
                 <h1 className="name my-md-5 my-4 t-gr fw-bold">
-                  {/* <Typewriter
+                  <Typewriter
                     options={{
                       strings: [`${"< " + item.name + " />"}`],
                       autoStart: true,
                       loop: true,
                       // deleteSpeed: 20,
                     }}
-                  /> */}
-                  <span className="">{"< " + item.name + " />"}</span>
+                  />
+                  {/* <span className="">{"< " + item.name + " />"}</span> */}
                 </h1>
                 <div className="mb-4">
                   {item.role.map((role) => (

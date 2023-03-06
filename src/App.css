@@ -25,6 +25,7 @@
   --white: #fff;
   --green: #70ff00;
   --hireText: #161616;
+  --darkBgColor: #161616;
 
   --border-raduis: 13px;
 }
@@ -277,7 +278,7 @@ button,
   text-decoration: underline !important;
 }
 .btn.hireBtn span {
-  color: #161616 !important;
+  color: var(--darkBgColor) !important;
 }
 
 .description {
@@ -310,13 +311,23 @@ button,
   .aboutBox {
     align-items: start;
     gap: 1rem;
-    padding: 25px 49px;
+    padding: 25px 30px;
+  }
+  .aboutBox .text {
+    font-size: 20px;
   }
 }
 /* ================= about ================ */
 
 /* ================= skills ================ */
+#skills {
+  background-color: var(--darkBgColor) !important;
+}
 
+.technos {
+}
+.technos .tech {
+}
 /* ================= skills ================ */
 
 /* ================= projects ================ */

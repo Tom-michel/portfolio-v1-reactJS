@@ -11,7 +11,7 @@ import { about } from "../data/my-data";
 
 export const About = () => {
   return (
-    <section id="about" className="my-5 py-5">
+    <section id="about" className="mt-5 py-5">
       <div className="container py-5">
         <Heading title="aboutMe" />
         {about.map((about) => (

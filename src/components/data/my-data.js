@@ -80,82 +80,87 @@ export const about = [
 
 export const skills = [
   {
-    name: "JavaScript",
-    img: "../images/...",
-    dots: "...",
-    starred: false,
-  },
-  {
-    name: "TypeScript",
-    img: "../images/...",
-    dots: "...",
-    starred: false,
-  },
-  {
-    name: "HTML5",
-    img: "../images/...",
-    dots: "...",
-    starred: false,
-  },
-  {
-    name: "CSS3",
-    img: "../images/...",
-    dots: "...",
-    starred: false,
-  },
-  {
-    name: "ReactJS",
-    img: "../images/...",
-    dots: "...",
-    starred: false,
-  },
-  {
-    name: "Flutter",
-    img: "../images/...",
-    dots: "...",
-    starred: true,
-  },
-  {
-    name: "GitHub",
-    img: "../images/...",
-    dots: "...",
-    starred: false,
-  },
-  {
-    name: "GitLab",
-    img: "../images/...",
-    dots: "...",
-    starred: false,
-  },
-  {
-    name: "Django",
-    img: "../images/...",
-    dots: "...",
-    starred: true,
-  },
-  {
-    name: "Python",
-    img: "../images/...",
-    dots: "...",
-    starred: false,
-  },
-  {
-    name: "TensorFlow",
-    img: "../images/...",
-    dots: "...",
-    starred: false,
-  },
-  {
-    name: "MySQL",
-    img: "../images/...",
-    dots: "...",
-    starred: true,
-  },
-  {
-    name: "MongoDB",
-    img: "../images/...",
-    dots: "...",
-    starred: false,
+    text: "I’am specialized in web and mobile development. I do frontend and backend using many languages and technologies ",
+    technos: [
+      {
+        name: "JavaScript",
+        img: "../images/...",
+        dots: "...",
+        starred: false,
+      },
+      {
+        name: "TypeScript",
+        img: "../images/...",
+        dots: "...",
+        starred: false,
+      },
+      {
+        name: "HTML5",
+        img: "../images/...",
+        dots: "...",
+        starred: false,
+      },
+      {
+        name: "CSS3",
+        img: "../images/...",
+        dots: "...",
+        starred: false,
+      },
+      {
+        name: "ReactJS",
+        img: "../images/...",
+        dots: "...",
+        starred: false,
+      },
+      {
+        name: "Flutter",
+        img: "../images/...",
+        dots: "...",
+        starred: true,
+      },
+      {
+        name: "GitHub",
+        img: "../images/...",
+        dots: "...",
+        starred: false,
+      },
+      {
+        name: "GitLab",
+        img: "../images/...",
+        dots: "...",
+        starred: false,
+      },
+      {
+        name: "Django",
+        img: "../images/...",
+        dots: "...",
+        starred: true,
+      },
+      {
+        name: "Python",
+        img: "../images/...",
+        dots: "...",
+        starred: false,
+      },
+      {
+        name: "TensorFlow",
+        img: "../images/...",
+        dots: "...",
+        starred: false,
+      },
+      {
+        name: "MySQL",
+        img: "../images/...",
+        dots: "...",
+        starred: true,
+      },
+      {
+        name: "MongoDB",
+        img: "../images/...",
+        dots: "...",
+        starred: false,
+      },
+    ],
   },
 ];
 
