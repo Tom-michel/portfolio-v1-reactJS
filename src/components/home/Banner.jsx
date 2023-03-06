@@ -33,7 +33,7 @@ export const Banner = () => {
                     </p>
                   ))}
                 </div>
-                <div className="d-flex flex-wrap align-items-center justify-content-md-start justify-content-center gap-xl-5 gap-3">
+                <div className="d-flex align-items-center justify-content-md-start justify-content-center gap-md-5 gap-3">
                   {item.done.map((val) => (
                     <>
                       <div className="exper d-flex align-items-center gap-1">

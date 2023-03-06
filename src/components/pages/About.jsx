@@ -17,11 +17,11 @@ export const About = () => {
         {about.map((about) => (
           <div className="row gap-md-0 gap-5 align-items-center">
             <div className="col-md-6">
-              <p className="description">
+              <p className="description pb-3">
                 <span>{about.text}</span>
                 <span className="t-gr t-code fw-bold ms-2">{about.user}</span>
               </p>
-              <div className="d-flex gap-3">
+              <div className="d-flex my-3 gap-3">
                 <Button className="btn primaryBtn" endIcon={<FileDownload />}>
                   Download CV
                 </Button>

@@ -47,6 +47,24 @@ export const contactlink = [
   },
 ];
 
+export const floatinglink = [
+  {
+    icon: "../images/icons/user.svg",
+    color: "rgba(252, 163, 38, 0.19)",
+    url: "#about",
+  },
+  {
+    icon: "../images/icons/keyboard.svg",
+    color: "rgba(112, 255, 0, 0.19)",
+    url: "#skills",
+  },
+  {
+    icon: "../images/icons/folder.svg",
+    color: "rgba(0, 122, 204, 0.19)",
+    url: "#projects",
+  },
+];
+
 export const banner = [
   {
     hello: "Hello, i am",
