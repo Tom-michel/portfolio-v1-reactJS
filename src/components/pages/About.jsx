@@ -11,8 +11,8 @@ import { about } from "../data/my-data";
 
 export const About = () => {
   return (
-    <section id="about" className="mt-5 py-5">
-      <div className="container py-5">
+    <section id="about" className="bg-grid mt-5 py-5">
+      <div className="container">
         <Heading title="aboutMe" />
         {about.map((about) => (
           <div className="row gap-md-0 gap-5 align-items-center">

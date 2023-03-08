@@ -2,7 +2,7 @@ import React from "react";
 import { About } from "../pages/About";
 import { Skills } from "../pages/Skills";
 import { Banner } from "./Banner";
-import { ScrollTopBtn } from "../common/ScrollTopBtn";
+import { Projects } from "../pages/Projects";
 
 export const Home = () => {
   return (
@@ -10,7 +10,7 @@ export const Home = () => {
       <Banner />
       <About />
       <Skills />
-      <ScrollTopBtn />
+      <Projects />
     </>
   );
 };

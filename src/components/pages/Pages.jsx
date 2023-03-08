@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { FloatingMenu } from "../common/FloatingMenu";
 import { Header } from "../common/Header";
 import { Home } from "../home/Home";
+import { ScrollTopBtn } from "../common/ScrollTopBtn";
 
 export const Pages = () => {
   return (
@@ -14,6 +15,7 @@ export const Pages = () => {
           <Route exact path="/" component={Home} />
         </Switch>
       </Router>
+      <ScrollTopBtn />
     </>
   );
 };

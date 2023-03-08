@@ -15,9 +15,12 @@ export const Header = () => {
       </div>
       <div className="nav-center d-none d-md-flex gap-5">
         {navlink.map((links) => (
-          <Link className="fw-bold" to={links.url}>
+          // <Link className="fw-bold" to={links.url}>
+          //   {links.text}
+          // </Link>
+          <Typography className="fw-bold" component="a" href={links.url}>
             {links.text}
-          </Link>
+          </Typography>
         ))}
       </div>
       <div className="nav-right d-flex gap-3">

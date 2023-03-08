@@ -127,6 +127,10 @@ a.t-gr:hover {
 a:hover {
   color: var(--primaryColor) !important;
 }
+a:hover img.icon {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(74%) saturate(1816%)
+    hue-rotate(45deg) brightness(109%) contrast(112%);
+}
 
 @media screen and (max-width: 767px) {
   .nav-right .item:last-child {
@@ -147,33 +151,33 @@ a:hover {
   width: 100vw;
 }
 
-.num {
+#home .num {
   color: var(--secondaryColor);
   font-size: 50px;
 }
-.num-text {
+#home .num-text {
   color: var(--thirdColor);
   font-size: 15px;
 }
-.hello {
+#home .hello {
   color: var(--white);
   font-size: 35px;
 }
-.role {
+#home .role {
   color: var(--white);
   font-size: 20px;
 }
-.name {
+#home .name {
   color: var(--primaryColor);
   font-size: 45px;
   /* width: 285px; */
 }
 
-.avatar {
+#home .avatar {
   position: relative;
   width: 100%;
 }
-.avatar img {
+#home .avatar img {
   width: 400px;
 }
 
@@ -197,26 +201,26 @@ a:hover {
     position: relative;
     height: auto;
   }
-  .avatar img {
+  #home .avatar img {
     width: 300px;
   }
-  .num {
+  #home .num {
     color: var(--secondaryColor);
     font-size: 40px;
   }
-  .num-text {
+  #home .num-text {
     color: var(--thirdColor);
     font-size: 12px;
   }
-  .hello {
+  #home .hello {
     color: var(--white);
     font-size: 20px;
   }
-  .role {
+  #home .role {
     color: var(--white);
     font-size: 20px;
   }
-  .name {
+  #home .name {
     color: var(--primaryColor);
     font-size: 35px;
     /* width: 285px; */
@@ -237,12 +241,11 @@ a:hover {
   }
 }
 
-/* ================= about ================ */
-#about {
+.bg-grid {
   position: relative;
   z-index: 1;
 }
-#about::after {
+.bg-grid::after {
   content: "";
   position: absolute;
   top: 0;
@@ -253,9 +256,10 @@ a:hover {
   background-image: url("../public/images/grid_bg.png");
   background-size: cover;
   /* background-attachment: fixed; */
-  opacity: 0.15;
+  opacity: 0.09;
 }
 
+/* ================= about ================ */
 .aboutDiv {
   position: relative;
 }
@@ -307,7 +311,7 @@ button,
 }
 
 .description {
-  font-size: 20px !important;
+  font-size: 17px !important;
   text-align: justify !important;
 }
 
@@ -355,10 +359,57 @@ button,
 .technos {
 }
 .technos .tech {
+  width: 85px;
+  transition: 0.5s;
+}
+.techImg {
+  width: 85px;
+  transition: 0.5s;
+}
+.techNameDot .name {
+  font-size: 12px;
+  transition: 0.5s;
+}
+.techNameDot .dot {
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 991px) {
+  .technos {
+    justify-content: center;
+  }
+  .technos .tech {
+    width: 75px;
+  }
+  .techImg {
+    width: 75px;
+  }
+  .techNameDot .name {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .technos {
+    justify-content: center;
+  }
+  .technos .tech {
+    width: 65px;
+  }
+  .techImg {
+    width: 65px;
+  }
+  .techNameDot .name {
+    font-size: 10px;
+  }
 }
 /* ================= skills ================ */
 
 /* ================= projects ================ */
+#projects {
+  position: relative;
+  z-index: 1;
+}
 .categoryBtn {
   border: 3px solid var(--primaryColor);
   padding: 14px 61px;
