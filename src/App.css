@@ -336,6 +336,10 @@ button,
   .description {
     font-size: 15px !important;
   }
+  .t-gr.t-code {
+    font-size: 13px !important;
+  }
+
   /* #about button,
   #about .btn {
     padding: 5px 15px !important;
