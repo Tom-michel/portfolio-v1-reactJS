@@ -16,7 +16,7 @@ import { Avatar, AvatarGroup } from "@mui/material";
 
 export const Projects = () => {
   return (
-    <section id="projects" className="bg-grid py-5">
+    <section id="projects" className="bg-gri py-5">
       <div className="container pt-3">
         <Heading title="projects" />
         {project.map((pro) => (
@@ -43,7 +43,7 @@ export const Projects = () => {
                 (some of professional projects are in private mode)
               </span>
             </p>
-            <div className="projects d-flex flex-wrap gap-4 align-items-center justify-content-center">
+            <div className="projects d-flex flex-wrap gap-4 align-items-center justify-content-md-start justify-content-center">
               {pro.item.map((p) => (
                 <>
                   <Card variant="solid" sx={{ width: 320, bgcolor: "#09090D" }}>
@@ -74,14 +74,21 @@ export const Projects = () => {
                       </IconButton>
                     </CardOverflow>
                     <Typography
-                      className="d-flex align-items-center gap-3"
+                      className="d-flex align-items-center"
                       level="h2"
                       sx={{ fontSize: "md", mt: 2 }}
                     >
-                      <Link href="#multiple-actions" overlay underline="none">
+                      <Link
+                        className="me-3"
+                        href="#multiple-actions"
+                        overlay
+                        underline="none"
+                      >
                         <Typography fontSize="md">{p.name}</Typography>
                       </Link>
-                      <span className="category mb-1">{p.category}</span>
+                      {p.category.map((cat) => (
+                        <span className="category me-1 mb-1">{cat}</span>
+                      ))}
                     </Typography>
                     <Typography
                       component="p"
@@ -110,8 +117,8 @@ export const Projects = () => {
                             alt={val.name}
                             src={val.img}
                             sx={{
-                              width: 15,
-                              height: 15,
+                              width: 20,
+                              height: 20,
                               bgcolor: "#161616",
                               padding: 0.9,
                             }}

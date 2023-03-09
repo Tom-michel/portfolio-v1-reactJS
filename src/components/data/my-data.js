@@ -329,7 +329,7 @@ export const project = [
         date: "...",
         tech: [flutter, react, nest, mongodb],
         tags: ["...", "...", "..."],
-        category: "mobile",
+        category: ["mobile"],
       },
       {
         name: "Wassup",
@@ -347,7 +347,7 @@ export const project = [
         date: "...",
         tech: [flutter, sqlite],
         tags: ["...", "...", "..."],
-        category: "mobile",
+        category: ["mobile"],
       },
       {
         name: "Food Recognition",
@@ -356,7 +356,7 @@ export const project = [
         date: "...",
         tech: [flutter, tensorflow],
         tags: ["...", "...", "..."],
-        category: "mobile",
+        category: ["mobile"],
       },
       {
         name: "Food Annotation",
@@ -374,7 +374,7 @@ export const project = [
         date: "...",
         tech: [django, python, bootstrap, mysql],
         tags: ["...", "...", "..."],
-        category: "web",
+        category: ["web"],
       },
       {
         name: "KennerBrige",
@@ -383,7 +383,7 @@ export const project = [
         date: "...",
         tech: [django, python, bootstrap, mysql],
         tags: ["...", "...", "..."],
-        category: "web",
+        category: ["web"],
       },
       {
         name: "Jerry",
@@ -392,7 +392,7 @@ export const project = [
         date: "...",
         tech: [django, python, bootstrap, mysql],
         tags: ["...", "...", "..."],
-        category: "web",
+        category: ["web"],
       },
       {
         name: "FindInvest",
@@ -401,7 +401,7 @@ export const project = [
         date: "...",
         tech: [django, python, bootstrap, sqlite],
         tags: ["...", "...", "..."],
-        category: "web",
+        category: ["web"],
       },
       {
         name: "FindRepater",
@@ -410,7 +410,7 @@ export const project = [
         date: "...",
         tech: [django, python, bootstrap, sqlite],
         tags: ["...", "...", "..."],
-        category: "web",
+        category: ["web"],
       },
       {
         name: "Plannig",
@@ -419,7 +419,7 @@ export const project = [
         date: "...",
         tech: [django, python, bootstrap, sqlite],
         tags: ["...", "...", "..."],
-        category: "web",
+        category: ["web"],
       },
       {
         name: "Umonety",
