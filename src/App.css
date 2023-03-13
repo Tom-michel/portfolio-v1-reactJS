@@ -28,7 +28,7 @@
   --hireText: #161616;
   --darkBgColor: #161616;
 
-  --border-raduis: 13px;
+  --borderRadius: 8px;
 }
 
 body {
@@ -68,12 +68,15 @@ body {
 .to-top {
   z-index: 2 !important;
 }
+/* .to-top button {
+  border-radius: 50% !important;
+} */
 
 /* ================= floating menu ========= */
 .floatingMenu {
   position: fixed;
   top: 0;
-  right: -23px;
+  right: -35px;
   z-index: 999;
   height: 100%;
   transition: 0.5s;
@@ -84,22 +87,31 @@ body {
 .floatingMenu .floatingItem {
   position: relative;
   border-radius: 8px !important;
-  padding-left: 10px;
+  padding-left: 5px;
   backdrop-filter: blur(10px) !important;
+}
+.floatingMenu .floatingItem img {
+  width: 20px;
 }
 /* ================= floating menu ========= */
 
 /* ================= navbar =============== */
+
+.nav-section {
+	 /* background-color: #333; */
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+     backdrop-filter: blur(20px) !important;
+     z-index: 999;
+}
+
 nav {
   /* height: 59px; */
   height: 10vh;
   overflow: hidden;
-  /* background-color: #0000000e; */
   transition: 0.5s;
-  z-index: 999;
-
-  /* position: fixed; */
-  backdrop-filter: blur(10px) !important;
 }
 .nav-logo img {
   height: 25px;
@@ -112,7 +124,7 @@ nav {
   border: 2px solid rgba(112, 255, 0, 0.55);
   border-bottom: 2px solid var(--white);
   padding: 2px 10px;
-  border-radius: var(--border-raduis);
+  border-radius: var(--borderRadius);
   transition: 0.5s;
 }
 
@@ -137,6 +149,10 @@ a:hover img.icon {
     transition: 0.5s;
     padding: 1px 10px;
   }
+  nav {
+
+  height: 8vh;
+}
 }
 /* ================= navbar =============== */
 
@@ -232,8 +248,12 @@ a:hover img.icon {
   font-size: 35px;
   font-weight: bold;
 }
-.heading span {
+.heading .title {
   color: var(--primaryColor);
+}
+.heading .param {
+  font-size: 23px;
+  font-weight: 500;
 }
 @media screen and (max-width: 767px) {
   .heading {
@@ -283,7 +303,9 @@ button,
   font-family: "Courier Prime", monospace !important;
   text-transform: capitalize !important;
   /* padding: 5px 20px !important; */
-  border-radius: var(--border-raduis);
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  border-radius: var(--borderRadius) !important;
   cursor: pointer;
   display: flex;
   gap: 15px;
@@ -310,6 +332,11 @@ button,
   color: var(--darkBgColor) !important;
 }
 
+.btn.catBtn {
+  color: var(--primaryColor) !important;
+  border: 1px solid var(--primaryColor);
+}
+
 .description {
   font-size: 17px !important;
   text-align: justify !important;
@@ -317,7 +344,7 @@ button,
 
 .aboutBox {
   background-color: var(--secondaryColor);
-  border-radius: var(--border-raduis);
+  border-radius: var(--borderRadius);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -414,6 +441,41 @@ button,
   position: relative;
   z-index: 1;
 }
+
+.projects .card-project {
+  transition: 0.5s;
+  background-color: var(--projectBgColor) !important;
+  backdrop-filter: blur(34px) !important;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+.projects .card-project:hover {
+  transition: 0.5s;
+  background-color: var(--projectBgColor) !important;
+  backdrop-filter: blur(34px) !important;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.8);
+  /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); */
+  transform: scale(1.05) !important;
+}
+.projects .project-footer {
+  background-color: var(--projectBgColor) !important;
+  backdrop-filter: blur(34px) !important;
+}
+.projects .project-tech {
+  background-color: #6A6969 !important;
+  border: 1px solid #C6C6C6 !important;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+
+/* .projects .MuiCard-root {
+  box-shadow: 0 0 0.5rem #000000f5;
+}
+
+.projects .MuiAvatar-root {
+  border: none !important;
+  box-shadow: 0 0.05rem 0.18rem #ffffff73;
+} */
+
 .categoryBtn {
   border: 3px solid var(--primaryColor);
   padding: 14px 61px;
@@ -442,14 +504,6 @@ a.t-gr {
   color: var(--white);
 }
 
-.projects .MuiCard-root {
-  box-shadow: 0 0 0.5rem #000000f5;
-}
-
-.projects .MuiAvatar-root {
-  border: none !important;
-  box-shadow: 0 0.05rem 0.18rem #ffffff73;
-}
 
 /* ================= projects ================ */
 
@@ -464,7 +518,7 @@ a.t-gr {
 
 .socialBox {
   background-color: var(--primaryBgColor);
-  border-radius: var(--border-raduis);
+  border-radius: var(--borderRadius);
   display: flex;
   align-items: center;
   gap: 25px;
@@ -492,7 +546,7 @@ textarea {
   bottom: none;
   outline: none;
   margin: 10px 0;
-  border-radius: var(--border-raduis);
+  border-radius: var(--borderRadius);
   border: 2px solid var(--primaryColor);
   font-size: 32px;
   color: var(--primaryColor);

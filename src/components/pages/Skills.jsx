@@ -10,7 +10,7 @@ export const Skills = () => {
     <section id="skills" className="py-5">
       <div className="container py-3">
         <div className="row">
-          <Heading title="skills" />
+          <Heading title="skills" param=" " />
           {skills.map((skill) => (
             <>
               <p className="description">{skill.text}</p>

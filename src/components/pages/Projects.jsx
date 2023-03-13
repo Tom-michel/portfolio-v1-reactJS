@@ -1,7 +1,7 @@
 // import { Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { Heading } from "../common/Heading";
-import { project } from "../data/my-data";
+import { project, portfolio } from "../data/my-data";
 import {
   Typography,
   Card,
@@ -12,13 +12,29 @@ import {
   Link,
 } from "@mui/joy";
 import { Favorite, RemoveRedEye } from "@mui/icons-material";
-import { Avatar, AvatarGroup } from "@mui/material";
+import { Avatar, AvatarGroup, Button } from "@mui/material";
+
+const allCategory = ["all", ...new Set(portfolio.map((item) => item.category))];
 
 export const Projects = () => {
+
+  const [list, setList] = useState(portfolio);
+  const [category, setCategory] = useState(allCategory);
+  console.log(setCategory);
+
+  const filterItems = (category) => {
+    const newItems = portfolio.filter((item) => item.category === category);
+    setList(newItems);
+
+    if (category === "all") {
+      setList(portfolio);
+    }
+  };
+  
   return (
-    <section id="projects" className="bg-gri py-5">
+    <section id="projects" className="bg-grid py-5">
       <div className="container pt-3">
-        <Heading title="projects" />
+        <Heading title="projects" param={list.length} />
         {project.map((pro) => (
           <>
             <p className="description pb-3">
@@ -26,27 +42,37 @@ export const Projects = () => {
               personal, professional and academic projetcs. Some of them are
               listed below and others can be found on my{" "}
               <a
-                className="t-gr t-code fw-bold text-decoration-underline"
+                className="t-gr t-code fw-bold text-decoration-underline" target="blank"
                 href={pro.github}
               >
                 github
               </a>{" "}
               and{" "}
               <a
-                className="t-gr t-code fw-bold text-decoration-underline"
+                className="t-gr t-code fw-bold text-decoration-underline" target="blank"
                 href={pro.gitlab}
               >
                 gitlab
               </a>{" "}
               accounts.{" "}
               <span className="fst-italic">
-                (some of professional projects are in private mode)
+                (some of professional projects are in private mode !)
               </span>
             </p>
-            <div className="projects d-flex flex-wrap gap-4 align-items-center justify-content-md-start justify-content-center">
-              {pro.item.map((p) => (
+            <div className="d-flex flex-wrap my-3 gap-3">
+              {category.map((cat) => (
+		          <Button
+		            className="btn catBtn"
+		            onClick={() => filterItems(cat)}
+		          >
+		            {cat}
+		          </Button>
+		      ))}
+            </div>
+            <div className="projects pt-3 d-flex flex-wrap gap-4 align-items-center justify-content-md-start justify-content-center">
+              {list.map((p) => (
                 <>
-                  <Card variant="solid" sx={{ width: 320, bgcolor: "#09090D" }}>
+                  <Card className="card-project" variant="solid" sx={{ width: 320, bgcolor: "#09090D" }}>
                     <CardOverflow>
                       <AspectRatio ratio="2">
                         <img
@@ -86,32 +112,32 @@ export const Projects = () => {
                       >
                         <Typography fontSize="md">{p.name}</Typography>
                       </Link>
-                      {p.category.map((cat) => (
-                        <span className="category me-1 mb-1">{cat}</span>
-                      ))}
+
+                        <span className="category me-1 mb-1 pt-1">{p.category}</span>
+
                     </Typography>
                     <Typography
                       component="p"
                       level="body2"
-                      sx={{ mt: 0.5, mb: 2 }}
+                      sx={{ mt: 0.5, mb: 2, color: "#fff", }}
                     >
                       <span>{p.desc}description</span>
                     </Typography>
                     <Divider inset="context" />
                     <CardOverflow
-                      className="d-flex justify-content-between align-items-center"
+                      className="project-footer d-flex justify-content-between align-items-center"
                       variant="soft"
                       sx={{
                         display: "flex",
                         gap: 1.5,
                         py: 1.5,
                         px: "var(--Card-padding)",
-                        bgcolor: "#25252D",
+                        // bgcolor: "#25252D",
                       }}
                     >
                       <AvatarGroup className="gap-1" max={10}>
                         {p.tech.map((val) => (
-                          <Avatar
+                          <Avatar className="project-tech"
                             data-toggle="tooltip"
                             title={val.name}
                             alt={val.name}
@@ -119,7 +145,7 @@ export const Projects = () => {
                             sx={{
                               width: 20,
                               height: 20,
-                              bgcolor: "#161616",
+                              // bgcolor: "#161616",
                               padding: 0.9,
                             }}
                           />

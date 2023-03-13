@@ -208,6 +208,18 @@ export const nest = {
   dots: "#E10058",
   starred: false,
 };
+export const codeigniter = {
+  name: "CodeIgniter",
+  img: "../images/tech/codeigniter.png",
+  dots: "#F34423",
+  starred: false,
+};
+export const php = {
+  name: "PHP",
+  img: "../images/tech/php.png",
+  dots: "#4F5B93",
+  starred: false,
+};
 
 export const skills = [
   {
@@ -229,99 +241,13 @@ export const skills = [
       sqlite,
       mysql,
       mongodb,
-      // {
-      //   name: "JavaScript",
-      //   img: "../images/javascript.svg",
-      //   dots: "#F0DB4F",
-      //   starred: false,
-      // },
-      // {
-      //   name: "TypeScript",
-      //   img: "../images/typescript.svg",
-      //   dots: "#007ACC",
-      //   starred: false,
-      // },
-      // {
-      //   name: "HTML5",
-      //   img: "../images/html5.svg",
-      //   dots: "#E44D26",
-      //   starred: false,
-      // },
-      // {
-      //   name: "CSS3",
-      //   img: "../images/css3.svg",
-      //   dots: "#1572B6",
-      //   starred: false,
-      // },
-      // {
-      //   name: "Bootstrap",
-      //   img: "../images/bootstrap.png",
-      //   dots: "#694FB8",
-      //   starred: false,
-      // },
-      // {
-      //   name: "ReactJS",
-      //   img: "../images/react.svg",
-      //   dots: "#61DAFB",
-      //   starred: false,
-      // },
-      // {
-      //   name: "Flutter",
-      //   img: "../images/flutter.svg",
-      //   dots: "#1572B6",
-      //   starred: true,
-      // },
-      // {
-      //   name: "GitHub",
-      //   img: "../images/github.png",
-      //   dots: "#FFFFFF",
-      //   starred: false,
-      // },
-      // {
-      //   name: "GitLab",
-      //   img: "../images/gitlab.png",
-      //   dots: "#FCA326",
-      //   starred: false,
-      // },
-      // {
-      //   name: "Django",
-      //   img: "../images/django.png",
-      //   dots: "#147155",
-      //   starred: true,
-      // },
-      // {
-      //   name: "Python",
-      //   img: "../images/python.png",
-      //   dots: "#F0DB4F",
-      //   starred: false,
-      // },
-      // {
-      //   name: "TensorFlow",
-      //   img: "../images/Tensorflow_logo.svg.png",
-      //   dots: "#FCA326",
-      //   starred: false,
-      // },
-      // {
-      //   name: "MySQL",
-      //   img: "../images/mysql-logo.jpg",
-      //   dots: "#FFFFFF",
-      //   starred: true,
-      // },
-      // {
-      //   name: "MongoDB",
-      //   img: "../images/bootstrap.png",
-      //   dots: "#0B7A30",
-      //   starred: false,
-      // },
     ],
   },
 ];
 
-export const project = [
-  {
-    github: "https://github.com/Tom-michel",
-    gitlab: "https://gitlab.com/Tom-michel",
-    item: [
+// projects
+
+export const portfolio = [
       {
         name: "CNIC",
         img: "../images/...",
@@ -329,7 +255,7 @@ export const project = [
         date: "...",
         tech: [flutter, react, nest, mongodb],
         tags: ["...", "...", "..."],
-        category: ["mobile"],
+        category: "mobile",
       },
       {
         name: "Wassup",
@@ -338,7 +264,7 @@ export const project = [
         date: "...",
         tech: [flutter, django, node, sqlite, figma],
         tags: ["...", "...", "..."],
-        category: ["mobile", "design"],
+        category: "mobile-design",
       },
       {
         name: "Food Agenda",
@@ -347,7 +273,7 @@ export const project = [
         date: "...",
         tech: [flutter, sqlite],
         tags: ["...", "...", "..."],
-        category: ["mobile"],
+        category: "mobile",
       },
       {
         name: "Food Recognition",
@@ -356,7 +282,7 @@ export const project = [
         date: "...",
         tech: [flutter, tensorflow],
         tags: ["...", "...", "..."],
-        category: ["mobile"],
+        category: "mobile",
       },
       {
         name: "Food Annotation",
@@ -365,7 +291,7 @@ export const project = [
         date: "...",
         tech: [flutter, figma],
         tags: ["...", "...", "..."],
-        category: ["mobile", "design"],
+        category: "mobile-design",
       },
       {
         name: "DolphPretty",
@@ -374,7 +300,7 @@ export const project = [
         date: "...",
         tech: [django, python, bootstrap, mysql],
         tags: ["...", "...", "..."],
-        category: ["web"],
+        category: "web",
       },
       {
         name: "KennerBrige",
@@ -383,7 +309,7 @@ export const project = [
         date: "...",
         tech: [django, python, bootstrap, mysql],
         tags: ["...", "...", "..."],
-        category: ["web"],
+        category: "web",
       },
       {
         name: "Jerry",
@@ -392,7 +318,7 @@ export const project = [
         date: "...",
         tech: [django, python, bootstrap, mysql],
         tags: ["...", "...", "..."],
-        category: ["web"],
+        category: "web",
       },
       {
         name: "FindInvest",
@@ -401,7 +327,7 @@ export const project = [
         date: "...",
         tech: [django, python, bootstrap, sqlite],
         tags: ["...", "...", "..."],
-        category: ["web"],
+        category: "web",
       },
       {
         name: "FindRepater",
@@ -410,16 +336,16 @@ export const project = [
         date: "...",
         tech: [django, python, bootstrap, sqlite],
         tags: ["...", "...", "..."],
-        category: ["web"],
+        category: "web",
       },
       {
-        name: "Plannig",
+        name: "Simen Academy",
         img: "../images/...",
         desc: "...",
         date: "...",
-        tech: [django, python, bootstrap, sqlite],
+        tech: [codeigniter, php, bootstrap, mysql],
         tags: ["...", "...", "..."],
-        category: ["web"],
+        category: "mobile-design",
       },
       {
         name: "Umonety",
@@ -428,11 +354,28 @@ export const project = [
         date: "...",
         tech: [bootstrap, html, css, figma],
         tags: ["...", "...", "..."],
-        category: ["mobile", "design"],
+        category: "mobile-design",
       },
-    ],
+      {
+        name: "Plannig",
+        img: "../images/...",
+        desc: "...",
+        date: "...",
+        tech: [django, python, bootstrap, sqlite],
+        tags: ["...", "...", "..."],
+        category: "web",
+      },
+    ];
+
+export const project = [
+  {
+    github: "https://github.com/Tom-michel",
+    gitlab: "https://gitlab.com/Tom-michel",
+    portfolio,
   },
 ];
+
+
 
 export const contacts = [
   {

@@ -4,6 +4,7 @@ import React from "react";
 
 export const Header = () => {
   return (
+  <div className="nav-section">
     <nav className="container d-flex align-items-center justify-content-between">
       <div className="nav-logo">
         {brandlink.map((brand) => (
@@ -37,5 +38,6 @@ export const Header = () => {
         ))}
       </div>
     </nav>
+    </div>
   );
 };

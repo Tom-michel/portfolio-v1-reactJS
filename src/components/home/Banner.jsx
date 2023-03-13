@@ -9,7 +9,7 @@ export const Banner = () => {
         id="home"
         className="container pt-5 mt-md-5 mt-0 d-flex align-items-center"
       >
-        <div className="row">
+        <div className="row mt-5 pt-4">
           <div className="col-md-6 text-md-start text-center">
             {banner.map((item) => (
               <>

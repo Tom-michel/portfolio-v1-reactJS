@@ -13,7 +13,7 @@ export const About = () => {
   return (
     <section id="about" className="bg-grid mt-5 py-5">
       <div className="container">
-        <Heading title="aboutMe" />
+        <Heading title="aboutMe" param=" " />
         {about.map((about) => (
           <div className="row gap-md-0 gap-5 align-items-center">
             <div className="col-md-6">
