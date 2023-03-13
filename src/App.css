@@ -98,12 +98,12 @@ body {
 /* ================= navbar =============== */
 
 .nav-section {
-	 /* background-color: #333; */
+	 /* background-color: var(--projectBgColor); */
 	 position: fixed;
 	 top: 0;
 	 left: 0;
 	 width: 100%;
-     backdrop-filter: blur(20px) !important;
+     backdrop-filter: blur(40px) !important;
      z-index: 999;
 }
 

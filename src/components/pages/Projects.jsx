@@ -21,6 +21,11 @@ export const Projects = () => {
   const [list, setList] = useState(portfolio);
   const [category, setCategory] = useState(allCategory);
   console.log(setCategory);
+  
+  const [showAll, setShowAll] = useState(false);
+  const projectsToShow = showAll ? list : list.slice(0, 4);
+  
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const filterItems = (category) => {
     const newItems = portfolio.filter((item) => item.category === category);
@@ -70,7 +75,7 @@ export const Projects = () => {
 		      ))}
             </div>
             <div className="projects pt-3 d-flex flex-wrap gap-4 align-items-center justify-content-md-start justify-content-center">
-              {list.map((p) => (
+              {projectsToShow.map((p) => (
                 <>
                   <Card className="card-project" variant="solid" sx={{ width: 320, bgcolor: "#09090D" }}>
                     <CardOverflow>
@@ -105,8 +110,9 @@ export const Projects = () => {
                       sx={{ fontSize: "md", mt: 2 }}
                     >
                       <Link
+                        onClick={() => setSelectedProject(p)}
                         className="me-3"
-                        href="#multiple-actions"
+                        href="#display-modal"
                         overlay
                         underline="none"
                       >
@@ -153,6 +159,7 @@ export const Projects = () => {
                       </AvatarGroup>
                       <Divider orientation="vertical" />
                       <Typography
+                      	onClick={() => setSelectedProject(p)}
                         component="a"
                         className="t-gr t-code d-flex align-items-center gap-2"
                         href=""
@@ -169,6 +176,15 @@ export const Projects = () => {
                 </>
               ))}
             </div>
+            { !showAll && projectsToShow.length < list.length ?
+		        <Button onClick={() => setShowAll(true)} className="btn primaryBtn my-5" endIcon={<RemoveRedEye />}>
+		          Show All {list.length}
+		        </Button>
+		      : (list.length > 4 ?
+		        <Button onClick={() => setShowAll(false)} className="btn primaryBtn my-5" endIcon={<RemoveRedEye />}>
+		          Show Less 
+		        </Button> : "")
+            }
           </>
         ))}
       </div>
