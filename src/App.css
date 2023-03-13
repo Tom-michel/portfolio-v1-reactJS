@@ -449,12 +449,12 @@ button,
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 .projects .card-project:hover {
-  transition: 0.5s;
+  transition: 0.2s;
   background-color: var(--projectBgColor) !important;
   backdrop-filter: blur(34px) !important;
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.8);
   /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); */
-  transform: scale(1.05) !important;
+  transform: scale(1.01) !important;
 }
 .projects .project-footer {
   background-color: var(--projectBgColor) !important;

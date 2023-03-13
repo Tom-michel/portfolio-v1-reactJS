@@ -1,6 +1,7 @@
 // import { Typography } from "@mui/material";
 import React, { useState } from "react";
 import { Heading } from "../common/Heading";
+import { ProjectModal } from "../common/ProjectModal";
 import { project, portfolio } from "../data/my-data";
 import {
   Typography,
@@ -26,6 +27,9 @@ export const Projects = () => {
   const projectsToShow = showAll ? list : list.slice(0, 4);
   
   const [selectedProject, setSelectedProject] = useState(null);
+  
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
 
   const filterItems = (category) => {
     const newItems = portfolio.filter((item) => item.category === category);
@@ -35,6 +39,7 @@ export const Projects = () => {
       setList(portfolio);
     }
   };
+  
   
   return (
     <section id="projects" className="bg-grid py-5">
@@ -110,9 +115,12 @@ export const Projects = () => {
                       sx={{ fontSize: "md", mt: 2 }}
                     >
                       <Link
-                        onClick={() => setSelectedProject(p)}
+                        onClick={() => {
+						  setSelectedProject(p);
+						  handleOpen();
+						}}
                         className="me-3"
-                        href="#display-modal"
+                        href={"#"+p.name.replace(/\s+/g, "-")}
                         overlay
                         underline="none"
                       >
@@ -159,10 +167,13 @@ export const Projects = () => {
                       </AvatarGroup>
                       <Divider orientation="vertical" />
                       <Typography
-                      	onClick={() => setSelectedProject(p)}
+                      	onClick={() => {
+						  setSelectedProject(p);
+						  handleOpen();
+						}}
                         component="a"
                         className="t-gr t-code d-flex align-items-center gap-2"
-                        href=""
+                        href={"#"+p.name.replace(/\s+/g, "-")}
                         level="body3"
                         sx={{ fontWeight: "md", color: "text.secondary" }}
                       >
@@ -185,6 +196,7 @@ export const Projects = () => {
 		          Show Less 
 		        </Button> : "")
             }
+            { selectedProject && <ProjectModal my_project={selectedProject} open={open} setOpen={setOpen} />}
           </>
         ))}
       </div>
