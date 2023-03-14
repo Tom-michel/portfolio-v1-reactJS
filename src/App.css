@@ -383,7 +383,7 @@ button,
 /* ================= about ================ */
 
 /* ================= skills ================ */
-#skills {
+.bg_dark {
   background-color: var(--darkBgColor) !important;
 }
 
@@ -517,22 +517,23 @@ a.t-gr {
 }
 
 .socialBox {
-  background-color: var(--primaryBgColor);
-  border-radius: var(--borderRadius);
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  padding-left: 90px;
-  width: 593px;
+  background-color: var(--primaryBgColor) !important;
+  border-radius: var(--borderRadius) !important;
   color: var(--white);
 }
-.socialBox .text {
+.socialBox .content {
+	width: 220px;
+}
+.socialBox .content img {
+	width: 30px;
+}
+.socialBox .content .text {
+	text-transform: none !important;
   color: var(--white);
-  font-weight: bold;
-  font-size: 40px;
+  font-size: 18px;
 }
 
-form .contactForm {
+/*form .contactForm {
   display: flex;
   flex-direction: column;
   gap: 23px;
@@ -558,5 +559,5 @@ textarea {
 .btn.send img {
   width: 29px;
   height: 30px;
-}
+}*/
 /* ================= contact me ================ */

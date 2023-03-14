@@ -7,7 +7,7 @@ import { StarBorderSharp } from "@mui/icons-material";
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-5">
+    <section id="skills" className="bg_dark py-5">
       <div className="container py-3">
         <div className="row">
           <Heading title="skills" param=" " />

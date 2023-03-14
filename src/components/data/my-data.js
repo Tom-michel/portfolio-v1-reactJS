@@ -384,17 +384,17 @@ export const contacts = [
 	  {
 		url: "...",
 		text: "WhatsApp",
-		icon: "../images/social/...",
+		icon: "../images/social/whatsapp.png",
 	  },
 	  {
 		url: "...",
 		text: "@Michel BTOMPE",
-		icon: "../images/social/...",
+		icon: "../images/social/linkedin.svg",
 	  },
 	  {
 		url: "...",
 		text: "@MichelBTOMPE",
-		icon: "../images/social/...",
+		icon: "../images/social/twitter.png",
 	  },
   ],
   }

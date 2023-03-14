@@ -42,7 +42,7 @@ export const Projects = () => {
   
   
   return (
-    <section id="projects" className="bg-grid py-5">
+    <section id="projects" className="bg-grid pt-y pb-3">
       <div className="container pt-3">
         <Heading title="projects" param={list.length} />
         {project.map((pro) => (
