@@ -379,18 +379,23 @@ export const project = [
 
 export const contacts = [
   {
-    url: "...",
-    text: "WhatsApp",
-    icon: "../images/social/...",
-  },
-  {
-    url: "...",
-    text: "@Michel BTOMPE",
-    icon: "../images/social/...",
-  },
-  {
-    url: "...",
-    text: "@MichelBTOMPE",
-    icon: "../images/social/...",
-  },
+  text: "You can contact me WhatsApp, LinkedIn an twitter or directly write your message with the form below and choose a way to send.",
+  urls: [
+	  {
+		url: "...",
+		text: "WhatsApp",
+		icon: "../images/social/...",
+	  },
+	  {
+		url: "...",
+		text: "@Michel BTOMPE",
+		icon: "../images/social/...",
+	  },
+	  {
+		url: "...",
+		text: "@MichelBTOMPE",
+		icon: "../images/social/...",
+	  },
+  ],
+  }
 ];
