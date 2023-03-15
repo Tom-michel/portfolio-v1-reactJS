@@ -560,4 +560,8 @@ textarea {
   width: 29px;
   height: 30px;
 }*/
+
+.formContactDiv input {
+	color: var(--primaryColor) !important;
+}
 /* ================= contact me ================ */

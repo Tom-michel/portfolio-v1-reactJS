@@ -380,6 +380,8 @@ export const project = [
 export const contacts = [
   {
   text: "You can contact me WhatsApp, LinkedIn an twitter or directly write your message with the form below and choose a way to send.",
+  zap: "../images/social/whatsapp.png",
+  mail: "../images/social/gmail.png",
   urls: [
 	  {
 		url: "...",

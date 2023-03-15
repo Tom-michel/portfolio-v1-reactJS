@@ -1,33 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import { Heading } from "../common/Heading";
 import { contacts } from "../data/my-data";
-import { Button } from "@mui/material";
-import TextField from '@mui/material/TextField';
-import { styled } from '@mui/material/styles';
+import { Button, TextField } from "@mui/material";
+//import { styled } from '@mui/material/styles';
 
-const ValidationTextField = styled(TextField)({
-  '& input:valid + fieldset': {
-    borderColor: 'green',
-    borderWidth: 2,
-  },
-  '& input:invalid + fieldset': {
-    borderColor: 'red',
-    borderWidth: 2,
-  },
-  '& input:valid:focus + fieldset': {
-    borderLeftWidth: 6,
-    padding: '4px !important', // override inline-style
-  },
-});
-
-const CssTextField = styled(TextField)({
+/*const CssTextField = styled(TextField)({
   '& label.Mui-focused': {
     color: 'var(--primaryColor)',
   },
   '& label': {
-    color: 'var(--primaryColor)',
-  },
-  '& defaultValue': {
     color: 'var(--primaryColor)',
   },
   '& .MuiInput-underline:after': {
@@ -44,13 +25,37 @@ const CssTextField = styled(TextField)({
       borderColor: 'var(--primaryColor)',
     },
   },
-});
+}); */
+
 
 export const Contacts = () => {
-	const [name, setName] = React.useState('Cat in the Hat');
-	const [email, setEmail] = React.useState('Cat in the Hat');
-	const [subject, setSubject] = React.useState('Cat in the Hat');
-	const [message, setMessage] = React.useState('Cat in the Hat');
+	
+	const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let errors = {};
+    if (!name) {
+      errors.name = "Name is required";
+    }
+    if (!email) {
+      errors.email = "Email is required";
+    }
+    if (!subject) {
+      errors.subject = "Subject is required";
+    }
+    if (!message) {
+      errors.message = "Message is required";
+    }
+    setErrors(errors);
+
+    // Submit logic
+    // ...
+  };
 
   return (
     <section id="conatcts" className="bg_dark py-5">
@@ -76,40 +81,63 @@ export const Contacts = () => {
 								  </Button>
 		            ))}
 		          </div>
-		          <div className="col-md-6 formContactDi">
-		          	<form
-									onSubmit={(event) => {
-										event.preventDefault();
-									}}
-								>
+		          <div className="col-md-6 formContactDiv">
+		          	<form onSubmit={handleSubmit}>
 									<div className="row">
 										<div className="col-md-6">
 											<TextField
-												id="outlined-controlled"
 												label="Name"
-												helperText="Please enter your name"
-												//value={name}
-												size="small"
-												onChange={(event) => {
-													setName(event.target.value);
-												}}
+												size='small'
+												fullWidth
+												sx={{ m: 1 }}
+												value={name}
+												onChange={(e) => setName(e.target.value)}
+												error={!!errors.name}
+												helperText={errors.name}
 											/>
-											<p>{name}</p>
 										</div>
 										<div className="col-md-6">
-											<CssTextField defaultValue="TOM" label="Custom CSS" id="custom-css-outlined-input" />
+											<TextField
+												label="Email"
+												size='small'
+												fullWidth
+												sx={{ m: 1 }}
+												value={email}
+												onChange={(e) => setEmail(e.target.value)}
+												error={!!errors.email}
+												helperText={errors.email}
+											/>
 										</div>
 										<div className="col-md-12">
-											
+											<TextField
+												label="Subject"
+												size='small'
+												fullWidth
+												sx={{ m: 1 }}
+												value={subject}
+												onChange={(e) => setSubject(e.target.value)}
+												error={!!errors.subject}
+												helperText={errors.subject}
+											/>
 										</div>
 										<div className="col-md-12">
-											
+											<TextField
+												label="Message"
+												multiline
+												rows={4}
+												size='small'
+												fullWidth
+												sx={{ m: 1 }}
+												value={message}
+												onChange={(e) => setMessage(e.target.value)}
+												error={!!errors.message}
+												helperText={errors.message}
+											/>
 										</div>
-										<div className="col-md-12">
-											<Button type="submit">Submit</Button>
-											<Button type="submit">Submit</Button>
+										<div className="col-md-12 text-end">
+											<Button sx={{ m: 1 }} type="submit" endIcon={<img src={cont.zap}/>}>Submit</Button>
+											<Button sx={{ m: 1 }} type="submit" endIcon={<img src={cont.mail}/>}>Submit</Button>
 										</div>
-										
 									</div>
 								</form>
 		          </div>
