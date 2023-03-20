@@ -29,6 +29,8 @@
   --darkBgColor: #161616;
 
   --borderRadius: 8px;
+  
+  --joy-palette-background-backdrop: rgba(var(--joy-palette-neutral-darkChannel, 37 37 45) / 0.5) !important;
 }
 
 body {
@@ -293,7 +295,6 @@ a:hover img.icon {
   background-color: var(--primaryBgColor);
 }
 
-button,
 .btn {
   border: none;
   outline: none;
@@ -454,7 +455,7 @@ button,
   backdrop-filter: blur(34px) !important;
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.8);
   /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); */
-  transform: scale(1.01) !important;
+  /* transform: scale(1.01) !important; */
 }
 .projects .project-footer {
   background-color: var(--projectBgColor) !important;
@@ -502,6 +503,19 @@ a.t-gr {
   font-size: 12px;
   font-weight: normal;
   color: var(--white);
+}
+
+/* modal */
+.MuiModal-backdrop.css-114iouz-JoyModal-backdrop{
+	background-color: var(--joy-palette-background-backdrop) !important;
+	backdrop-filter: blur(8px) !important;
+}
+
+.MuiSheet-root.css-rj8n7p-JoySheet-root, 
+.MuiModalClose-root.css-ickcxg-JoyModalClose-root {
+	background-color: var(--joy-palette-common-black, #09090D);
+	color: var(--joy-palette-text-secondary);
+	box-shadow: none !important;
 }
 
 
