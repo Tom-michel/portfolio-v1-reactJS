@@ -1,28 +1,11 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-
-import Button from '@mui/joy/Button';
-import Modal from '@mui/joy/Modal';
-import ModalClose from '@mui/joy/ModalClose';
-import Typography from '@mui/joy/Typography';
-import Sheet from '@mui/joy/Sheet';
-
-
+import {Modal, ModalClose, ModalDialog, Typography} from '@mui/joy';
 import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
 import { styled } from '@mui/material/styles';
+import List from '@mui/joy/List';
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: '#000',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
 
 const Label = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -48,20 +31,12 @@ export const ProjectModal = ({my_project, open, setOpen}) => {
         aria-describedby="modal-modal-description"
         sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       >
-        <Sheet
-          variant="plain"
-          sx={{
-            maxWidth: 500,
-            borderRadius: 'md',
-            p: 3,
-            boxShadow: 'lg',
-          }}
-        >
+        <ModalDialog layout="fullscreen">
           <ModalClose
             variant="plain"
             sx={{
-              top: 'calc(-1/4 * var(--IconButton-size))',
-              right: 'calc(-1/4 * var(--IconButton-size))',
+              /*top: 'calc(-1/4 * var(--IconButton-size))',
+              right: 'calc(-1/4 * var(--IconButton-size))',*/
               boxShadow: '0 2px 12px 0 rgba(0 0 0 / 0.2)',
               borderRadius: '50%',
               bgcolor: 'background.body',
@@ -81,28 +56,37 @@ export const ProjectModal = ({my_project, open, setOpen}) => {
             Description
           </Typography>
           
-					<Box sx={{ width: 500, minHeight: 829 }}>
-						<Masonry columns={3} spacing={2}>
-						  {itemData.map((item, index) => (
-						    <div key={index}>
-						      <Label>{index + 1}</Label>
-						      <img
-						        src={`${item.img}?w=162&auto=format`}
-						        srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
-						        alt={item.title}
-						        loading="lazy"
-						        style={{
-						          borderBottomLeftRadius: 4,
-						          borderBottomRightRadius: 4,
-						          display: 'block',
-						          width: '100%',
-						        }}
-						      />
-						    </div>
-						  ))}
-						</Masonry>
-					</Box>
-        </Sheet>
+          <List
+            sx={{
+              overflowY:'scroll',
+              mx: 'calc(-1 * var(--ModalDialog-padding))',
+              px: 'var(--ModalDialog-padding)',
+            }}
+          >
+
+						<Box>
+							<Masonry columns={{xs:2, sm:3, lg:4}} spacing={{xs:2, sm:3, lg:4}}>
+								{itemData.map((item, index) => (
+								  <div key={index}>
+								    <Label>{index + 1}</Label>
+								    <img
+								      src={`${item.img}?w=162&auto=format`}
+								      srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+								      alt={item.title}
+								      loading="lazy"
+								      style={{
+								        borderBottomLeftRadius: 4,
+								        borderBottomRightRadius: 4,
+								        display: 'block',
+								        width: '100%',
+								      }}
+								    />
+								  </div>
+								))}
+							</Masonry>
+						</Box>
+				</List>
+        </ModalDialog>
       </Modal>
     </div>
   );

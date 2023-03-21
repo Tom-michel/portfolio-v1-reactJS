@@ -506,17 +506,25 @@ a.t-gr {
 }
 
 /* modal */
-.MuiModal-backdrop.css-114iouz-JoyModal-backdrop{
-	background-color: var(--joy-palette-background-backdrop) !important;
-	backdrop-filter: blur(8px) !important;
+
+.MuiModalDialog-root.MuiModalDialog-layoutFullscreen {
+	background-color: transparent !important;
+	backdrop-filter: blur(10px) !important;
+	/* background-color: var(--joy-palette-background-backdrop) !important;
+	backdrop-filter: blur(8px) !important; */
 }
 
-.MuiSheet-root.css-rj8n7p-JoySheet-root, 
-.MuiModalClose-root.css-ickcxg-JoyModalClose-root {
-	background-color: var(--joy-palette-common-black, #09090D);
-	color: var(--joy-palette-text-secondary);
-	box-shadow: none !important;
+.MuiModalDialog-root .MuiModalClose-root {
+	border-color: #73738C;
 }
+
+.MuiModalDialog-root p {
+	color: var(--);
+}
+.MuiModalDialog-root h2  {
+	color: var(--white) !important;
+}
+
 
 
 /* ================= projects ================ */
