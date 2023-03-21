@@ -33,8 +33,8 @@ export const About = () => {
             <div className="col-md-6 aboutDiv">
               <div className="aboutBox">
                 <p className="text">{about.role}</p>
-                <Button className="btn hireBtn" endIcon={<Handshake />}>
-                  Hire me
+                <Button href="#services" className="btn hireBtn" endIcon={<Handshake />}>
+                  Service
                 </Button>
               </div>
               <div className="bubble d-flex gap-2 justify-content-center">

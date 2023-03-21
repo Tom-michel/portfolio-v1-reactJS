@@ -110,8 +110,8 @@ body {
 }
 
 nav {
-  /* height: 59px; */
-  height: 10vh;
+  height: 59px;
+  /* height: 10vh; */
   overflow: hidden;
   transition: 0.5s;
 }
@@ -152,8 +152,7 @@ a:hover img.icon {
     padding: 1px 10px;
   }
   nav {
-
-  height: 8vh;
+  height: 59px;
 }
 }
 /* ================= navbar =============== */
@@ -314,12 +313,14 @@ a:hover img.icon {
 
 .btn.primaryBtn {
   background-color: var(--primaryColorOpacity);
+  border: 1px solid var(--primaryColorOpacity) !important;
 }
 .btn.primaryBtn .MuiButton-endIcon {
   color: var(--primaryColor) !important;
 }
 .btn.secondaryBtn {
   background-color: var(--secondaryColor);
+  border: 1px solid var(--secondaryColor) !important;
 }
 .btn.secondaryBtn .MuiButton-endIcon {
   color: #1e1e1e !important;
@@ -328,6 +329,7 @@ a:hover img.icon {
   background-color: var(--primaryColor);
   color: var(--hireText) !important;
   text-decoration: underline !important;
+  border: 1px solid var(--primaryColor) !important;
 }
 .btn.hireBtn .MuiButton-endIcon {
   color: var(--darkBgColor) !important;
@@ -336,6 +338,14 @@ a:hover img.icon {
 .btn.catBtn {
   color: var(--primaryColor) !important;
   border: 1px solid var(--primaryColor);
+}
+
+.btn.sendMail {
+	background-color: var(--btnSendMailColor) !important;
+  border: 1px solid var(--btnSendMailColor) !important;
+}
+.btn.sendMail .MuiButton-endIcon {
+  color: var(--primaryColor) !important;
 }
 
 .description {
@@ -555,35 +565,53 @@ a.t-gr {
   font-size: 18px;
 }
 
-/*form .contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 23px;
-  width: 679px;
+.formContactDiv .btn span img {
+	width: 22px;
 }
 
-input,
-textarea {
-  width: 100%;
-  padding: 22px 50px;
-  bottom: none;
-  outline: none;
-  margin: 10px 0;
-  border-radius: var(--borderRadius);
-  border: 2px solid var(--primaryColor);
-  font-size: 32px;
-  color: var(--primaryColor);
+form {
+	position: relative;
 }
 
-.btn.send {
-  gap: 24px;
+fieldset {
+	border-color: var(--primaryColor) !important;
 }
-.btn.send img {
-  width: 29px;
-  height: 30px;
-}*/
+.Mui-error fieldset {
+	border-color: #d32f2f !important;
+}
 
-.formContactDiv input {
+label{
+  color: var(--primaryColor) !important;
+}
+label.Mui-error{
+  color: #d32f2f !important;
+}
+
+input, textarea {
+	width: 100% !important;
 	color: var(--primaryColor) !important;
 }
+
+/*input, textarea {
+	width: 100% !important;
+	color: var(--primaryColor) !important;
+}
+
+label, label.Mui-focused {
+  color: var(--primaryColor) !important;
+}
+
+MuiInput-underline:after {
+  borderBottomColor: var(--primaryColor);
+}
+.MuiOutlinedInput-root, fieldset {
+	border-color: var(--primaryColor) !important;
+}
+fieldset:hover {
+	border-color: var(--white) !important;
+}
+.Mui-focused fieldset {
+	border-color: var(--primaryColor) !important;
+}*/
+
 /* ================= contact me ================ */

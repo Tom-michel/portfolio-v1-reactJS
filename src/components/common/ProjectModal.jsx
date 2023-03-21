@@ -68,7 +68,7 @@ export const ProjectModal = ({my_project, open, setOpen}) => {
 							<Masonry columns={{xs:2, sm:3, lg:4}} spacing={{xs:2, sm:3, lg:4}}>
 								{itemData.map((item, index) => (
 								  <div key={index}>
-								    <Label>{index + 1}</Label>
+								    <Label>{"image " + index + 1}</Label>
 								    <img
 								      src={`${item.img}?w=162&auto=format`}
 								      srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
