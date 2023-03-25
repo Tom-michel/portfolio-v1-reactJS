@@ -2,30 +2,8 @@ import React, { useState } from "react";
 import { Heading } from "../common/Heading";
 import { contacts } from "../data/my-data";
 import { Button, TextField } from "@mui/material";
+import { SendMailBtn, SendZapBtn } from "../common/Buttons";
 // import { styled } from '@mui/material/styles';
-
-/*const CssTextField = styled(TextField)({
-  '& label.Mui-focused': {
-    color: 'var(--primaryColor)',
-  },
-  '& label': {
-    color: 'var(--primaryColor)',
-  },
-  '& .MuiInput-underline:after': {
-    borderBottomColor: 'var(--primaryColor)',
-  },
-  '& .MuiOutlinedInput-root': {
-    '& fieldset': {
-      borderColor: 'var(--primaryColor)',
-    },
-    '&:hover fieldset': {
-      borderColor: 'var(--white)',
-    },
-    '&.Mui-focused fieldset': {
-      borderColor: 'var(--primaryColor)',
-    },
-  },
-});*/
 
 export const Contacts = () => {
   const [name, setName] = useState("");
@@ -131,20 +109,8 @@ export const Contacts = () => {
                       />
                     </div>
                     <div className="col-md-12 d-flex justify-content-end gap-3">
-                      <Button
-                        className="btn sendMail"
-                        /*sx={{ m: 1 }}*/ type="submit"
-                        endIcon={<img src={cont.mail} alt="" />}
-                      >
-                        Send
-                      </Button>
-                      <Button
-                        className="btn primaryBtn"
-                        /*sx={{ m: 1 }}*/ type="submit"
-                        endIcon={<img src={cont.zap} alt="" />}
-                      >
-                        Send
-                      </Button>
+                      <SendMailBtn icon={cont.mail} text="Send" />
+                      <SendZapBtn icon={cont.zap} text="Send" />
                     </div>
                   </div>
                 </form>

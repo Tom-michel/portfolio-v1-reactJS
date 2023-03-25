@@ -29,8 +29,10 @@
   --darkBgColor: #161616;
 
   --borderRadius: 8px;
-  
-  --joy-palette-background-backdrop: rgba(var(--joy-palette-neutral-darkChannel, 37 37 45) / 0.5) !important;
+
+  --joy-palette-background-backdrop: rgba(
+    var(--joy-palette-neutral-darkChannel, 37 37 45) / 0.5
+  ) !important;
 }
 
 body {
@@ -100,13 +102,13 @@ body {
 /* ================= navbar =============== */
 
 .nav-section {
-	 /* background-color: var(--projectBgColor); */
-	 position: fixed;
-	 top: 0;
-	 left: 0;
-	 width: 100%;
-     backdrop-filter: blur(40px) !important;
-     z-index: 999;
+  /* background-color: var(--projectBgColor); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(40px) !important;
+  z-index: 999;
 }
 
 nav {
@@ -125,6 +127,7 @@ nav {
 .nav-right .item:last-child {
   border: 2px solid rgba(112, 255, 0, 0.55);
   border-bottom: 2px solid var(--white);
+  border-right: 2px solid var(--white);
   padding: 2px 10px;
   border-radius: var(--borderRadius);
   transition: 0.5s;
@@ -152,8 +155,8 @@ a:hover img.icon {
     padding: 1px 10px;
   }
   nav {
-  height: 59px;
-}
+    height: 59px;
+  }
 }
 /* ================= navbar =============== */
 
@@ -325,13 +328,13 @@ a:hover img.icon {
 .btn.secondaryBtn .MuiButton-endIcon {
   color: #1e1e1e !important;
 }
-.btn.hireBtn {
+.btn.serviceBtn {
   background-color: var(--primaryColor);
   color: var(--hireText) !important;
   text-decoration: underline !important;
   border: 1px solid var(--primaryColor) !important;
 }
-.btn.hireBtn .MuiButton-endIcon {
+.btn.serviceBtn .MuiButton-endIcon {
   color: var(--darkBgColor) !important;
 }
 
@@ -341,7 +344,7 @@ a:hover img.icon {
 }
 
 .btn.sendMail {
-	background-color: var(--btnSendMailColor) !important;
+  background-color: var(--btnSendMailColor) !important;
   border: 1px solid var(--btnSendMailColor) !important;
 }
 .btn.sendMail .MuiButton-endIcon {
@@ -472,11 +475,10 @@ a:hover img.icon {
   backdrop-filter: blur(34px) !important;
 }
 .projects .project-tech {
-  background-color: #6A6969 !important;
-  border: 1px solid #C6C6C6 !important;
+  background-color: #6a6969 !important;
+  border: 1px solid #c6c6c6 !important;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
-
 
 /* .projects .MuiCard-root {
   box-shadow: 0 0 0.5rem #000000f5;
@@ -518,24 +520,22 @@ a.t-gr {
 /* modal */
 
 .MuiModalDialog-root.MuiModalDialog-layoutFullscreen {
-	background-color: transparent !important;
-	backdrop-filter: blur(10px) !important;
-	/* background-color: var(--joy-palette-background-backdrop) !important;
+  background-color: transparent !important;
+  backdrop-filter: blur(10px) !important;
+  /* background-color: var(--joy-palette-background-backdrop) !important;
 	backdrop-filter: blur(8px) !important; */
 }
 
 .MuiModalDialog-root .MuiModalClose-root {
-	border-color: #73738C;
+  border-color: #73738c;
 }
 
 .MuiModalDialog-root p {
-	color: var(--);
+  color: var(--);
 }
-.MuiModalDialog-root h2  {
-	color: var(--white) !important;
+.MuiModalDialog-root h2 {
+  color: var(--white) !important;
 }
-
-
 
 /* ================= projects ================ */
 
@@ -554,42 +554,43 @@ a.t-gr {
   color: var(--white);
 }
 .socialBox .content {
-	width: 220px;
+  width: 220px;
 }
 .socialBox .content img {
-	width: 30px;
+  width: 30px;
 }
 .socialBox .content .text {
-	text-transform: none !important;
+  text-transform: none !important;
   color: var(--white);
   font-size: 18px;
 }
 
 .formContactDiv .btn span img {
-	width: 22px;
+  width: 22px;
 }
 
 form {
-	position: relative;
+  position: relative;
 }
 
 fieldset {
-	border-color: var(--primaryColor) !important;
+  border-color: var(--primaryColor) !important;
 }
 .Mui-error fieldset {
-	border-color: #d32f2f !important;
+  border-color: #d32f2f !important;
 }
 
-label{
+label {
   color: var(--primaryColor) !important;
 }
-label.Mui-error{
+label.Mui-error {
   color: #d32f2f !important;
 }
 
-input, textarea {
-	width: 100% !important;
-	color: var(--primaryColor) !important;
+input,
+textarea {
+  width: 100% !important;
+  color: var(--primaryColor) !important;
 }
 
 /*input, textarea {

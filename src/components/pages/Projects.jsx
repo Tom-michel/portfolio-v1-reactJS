@@ -3,31 +3,23 @@ import React, { useState } from "react";
 import { Heading } from "../common/Heading";
 import { ProjectModal } from "../common/ProjectModal";
 import { project, portfolio } from "../data/my-data";
-import {
-  Typography,
-  Card,
-  AspectRatio,
-  IconButton,
-  CardOverflow,
-  Divider,
-  Link,
-} from "@mui/joy";
-import { Favorite, RemoveRedEye } from "@mui/icons-material";
-import { Avatar, AvatarGroup, Button } from "@mui/material";
+import { RemoveRedEye } from "@mui/icons-material";
+import { Button } from "@mui/material";
+import { CategoryBtn } from "../common/Buttons";
+import { ProjectCard } from "./ProjectCard";
 
 const allCategory = ["all", ...new Set(portfolio.map((item) => item.category))];
 
 export const Projects = () => {
-
   const [list, setList] = useState(portfolio);
   const [category, setCategory] = useState(allCategory);
   console.log(setCategory);
-  
+
   const [showAll, setShowAll] = useState(false);
   const projectsToShow = showAll ? list : list.slice(0, 4);
-  
+
   const [selectedProject, setSelectedProject] = useState(null);
-  
+
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
 
@@ -39,8 +31,7 @@ export const Projects = () => {
       setList(portfolio);
     }
   };
-  
-  
+
   return (
     <section id="projects" className="bg-grid pt-5 pb-3">
       <div className="container pt-3">
@@ -52,14 +43,16 @@ export const Projects = () => {
               personal, professional and academic projetcs. Some of them are
               listed below and others can be found on my{" "}
               <a
-                className="t-gr t-code fw-bold text-decoration-underline" target="blank"
+                className="t-gr t-code fw-bold text-decoration-underline"
+                target="blank"
                 href={pro.github}
               >
                 github
               </a>{" "}
               and{" "}
               <a
-                className="t-gr t-code fw-bold text-decoration-underline" target="blank"
+                className="t-gr t-code fw-bold text-decoration-underline"
+                target="blank"
                 href={pro.gitlab}
               >
                 gitlab
@@ -71,18 +64,20 @@ export const Projects = () => {
             </p>
             <div className="d-flex flex-wrap my-3 gap-3">
               {category.map((cat) => (
-		          <Button
-		            className="btn catBtn"
-		            onClick={() => filterItems(cat)}
-		          >
-		            {cat}
-		          </Button>
-		      ))}
+                <CategoryBtn
+                  text={cat}
+                  oncliClickAction={() => filterItems(cat)}
+                />
+              ))}
             </div>
             <div className="projects pt-3 d-flex flex-wrap gap-4 align-items-center justify-content-md-start justify-content-center">
               {projectsToShow.map((p) => (
                 <>
-                  <Card className="card-project" variant="solid" sx={{ width: 320, bgcolor: "#09090D" }}>
+                  {/* <Card
+                    className="card-project"
+                    variant="solid"
+                    sx={{ width: 320, bgcolor: "#09090D" }}
+                  >
                     <CardOverflow>
                       <AspectRatio ratio="2">
                         <img
@@ -116,24 +111,25 @@ export const Projects = () => {
                     >
                       <Link
                         onClick={() => {
-						  setSelectedProject(p);
-						  handleOpen();
-						}}
+                          setSelectedProject(p);
+                          handleOpen();
+                        }}
                         className="me-3"
-                        href={"#"+p.name.replace(/\s+/g, "-")}
+                        href={"#" + p.name.replace(/\s+/g, "-")}
                         overlay
                         underline="none"
                       >
                         <Typography fontSize="md">{p.name}</Typography>
                       </Link>
 
-                        <span className="category me-1 mb-1 pt-1">{p.category}</span>
-
+                      <span className="category me-1 mb-1 pt-1">
+                        {p.category}
+                      </span>
                     </Typography>
                     <Typography
                       component="p"
                       level="body2"
-                      sx={{ mt: 0.5, mb: 2, color: "#fff", }}
+                      sx={{ mt: 0.5, mb: 2, color: "#fff" }}
                     >
                       <span>{p.desc}description</span>
                     </Typography>
@@ -151,11 +147,12 @@ export const Projects = () => {
                     >
                       <AvatarGroup className="gap-1" max={10}>
                         {p.tech.map((val) => (
-                          <Avatar className="project-tech"
-                            data-toggle="tooltip"
-                            title={val.name}
+                          <Avatar
+                            className="proame}
                             alt={val.name}
-                            src={val.img}
+                            src={val.img}ject-tech"
+                            data-toggle="tooltip"
+                            title={val.n
                             sx={{
                               width: 20,
                               height: 20,
@@ -167,13 +164,13 @@ export const Projects = () => {
                       </AvatarGroup>
                       <Divider orientation="vertical" />
                       <Typography
-                      	onClick={() => {
-						  setSelectedProject(p);
-						  handleOpen();
-						}}
+                        onClick={() => {
+                          setSelectedProject(p);
+                          handleOpen();
+                        }}
                         component="a"
                         className="t-gr t-code d-flex align-items-center gap-2"
-                        href={"#"+p.name.replace(/\s+/g, "-")}
+                        href={"#" + p.name.replace(/\s+/g, "-")}
                         level="body3"
                         sx={{ fontWeight: "md", color: "text.secondary" }}
                       >
@@ -183,20 +180,47 @@ export const Projects = () => {
                         <RemoveRedEye fontSize="small" />
                       </Typography>
                     </CardOverflow>
-                  </Card>
+                  </Card> */}
+                  <ProjectCard
+                    tech={p.tech}
+                    img=""
+                    name={p.name}
+                    category={p.category}
+                    desc={p.desc}
+                    onClickAction={() => {
+                      setSelectedProject(p);
+                      handleOpen();
+                    }}
+                  />
                 </>
               ))}
             </div>
-            { !showAll && projectsToShow.length < list.length ?
-		        <Button onClick={() => setShowAll(true)} className="btn primaryBtn my-5" endIcon={<RemoveRedEye />}>
-		          Show All {list.length}
-		        </Button>
-		      : (list.length > 4 ?
-		        <Button onClick={() => setShowAll(false)} className="btn primaryBtn my-5" endIcon={<RemoveRedEye />}>
-		          Show Less 
-		        </Button> : "")
-            }
-            { selectedProject && <ProjectModal my_project={selectedProject} open={open} setOpen={setOpen} />}
+            {!showAll && projectsToShow.length < list.length ? (
+              <Button
+                onClick={() => setShowAll(true)}
+                className="btn primaryBtn my-5"
+                endIcon={<RemoveRedEye />}
+              >
+                Show All {list.length}
+              </Button>
+            ) : list.length > 4 ? (
+              <Button
+                onClick={() => setShowAll(false)}
+                className="btn primaryBtn my-5"
+                endIcon={<RemoveRedEye />}
+              >
+                Show Less
+              </Button>
+            ) : (
+              ""
+            )}
+            {selectedProject && (
+              <ProjectModal
+                my_project={selectedProject}
+                open={open}
+                setOpen={setOpen}
+              />
+            )}
           </>
         ))}
       </div>
