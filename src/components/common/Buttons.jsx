@@ -68,3 +68,15 @@ export const CategoryBtn = ({ text, oncliClickAction }) => {
     </>
   );
 };
+
+
+export const HireBtn = ({ icon, text, color }) => {
+  return (
+    <>
+      <Button className="btn primaryBtn hireBtn" endIcon={icon}>
+        {text}
+      </Button>
+    </>
+  );
+};
+

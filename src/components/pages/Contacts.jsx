@@ -34,7 +34,7 @@ export const Contacts = () => {
   };
 
   return (
-    <section id="conatacts" className="bg_dark py-5">
+    <section id="contact" className="bg_dark py-5">
       <div className="container">
         <Heading title="contactMe" param=" " />
         {contacts.map((cont) => (

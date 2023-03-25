@@ -1,4 +1,9 @@
-import { DesignServices, Keyboard } from "@mui/icons-material";
+import {
+  DesignServices,
+  DevicesOutlined,
+  Keyboard,
+  PhoneIphoneOutlined,
+} from "@mui/icons-material";
 
 export const brandlink = [
   {
@@ -71,7 +76,7 @@ export const banner = [
     name: "Michel Btompe",
     role: [
       { text: "Full Stack Developer", icon: <Keyboard /> },
-      { text: "UI/UX Designer", icon: <DesignServices /> },
+      { text: "UI Designer", icon: <DesignServices /> },
     ],
     done: [
       {
@@ -126,7 +131,7 @@ export const bootstrap = {
   name: "Bootstrap",
   img: "../images/tech/bootstrap.png",
   dots: "#694FB8",
-  starred: false,
+  starred: true,
 };
 export const react = {
   name: "ReactJS",
@@ -144,18 +149,24 @@ export const github = {
   name: "GitHub",
   img: "../images/tech/github.png",
   dots: "#FFFFFF",
-  starred: false,
+  starred: true,
 };
 export const gitlab = {
   name: "GitLab",
   img: "../images/tech/gitlab.svg",
   dots: "#FCA326",
-  starred: false,
+  starred: true,
 };
 export const django = {
   name: "Django",
   img: "../images/tech/django.png",
   dots: "#147155",
+  starred: true,
+};
+export const djangorest = {
+  name: "DRF",
+  img: "../images/tech/drf.png",
+  dots: "#FFFFFF",
   starred: true,
 };
 export const python = {
@@ -168,7 +179,7 @@ export const figma = {
   name: "Figma",
   img: "../images/tech/figma.png",
   dots: "#BB00FF",
-  starred: false,
+  starred: true,
 };
 export const tensorflow = {
   name: "TensorFlow",
@@ -235,6 +246,7 @@ export const skills = [
       github,
       gitlab,
       django,
+      djangorest,
       python,
       figma,
       tensorflow,
@@ -248,124 +260,124 @@ export const skills = [
 // projects
 
 export const portfolio = [
-      {
-        name: "CNIC",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [flutter, react, nest, mongodb],
-        tags: ["...", "...", "..."],
-        category: "mobile",
-      },
-      {
-        name: "Wassup",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [flutter, django, node, sqlite, figma],
-        tags: ["...", "...", "..."],
-        category: "mobile-design",
-      },
-      {
-        name: "Food Agenda",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [flutter, sqlite],
-        tags: ["...", "...", "..."],
-        category: "mobile",
-      },
-      {
-        name: "Food Recognition",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [flutter, tensorflow],
-        tags: ["...", "...", "..."],
-        category: "mobile",
-      },
-      {
-        name: "Food Annotation",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [flutter, figma],
-        tags: ["...", "...", "..."],
-        category: "mobile-design",
-      },
-      {
-        name: "DolphPretty",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [django, python, bootstrap, mysql],
-        tags: ["...", "...", "..."],
-        category: "web",
-      },
-      {
-        name: "KennerBrige",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [django, python, bootstrap, mysql],
-        tags: ["...", "...", "..."],
-        category: "web",
-      },
-      {
-        name: "Jerry",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [django, python, bootstrap, mysql],
-        tags: ["...", "...", "..."],
-        category: "web",
-      },
-      {
-        name: "FindInvest",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [django, python, bootstrap, sqlite],
-        tags: ["...", "...", "..."],
-        category: "web",
-      },
-      {
-        name: "FindRepater",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [django, python, bootstrap, sqlite],
-        tags: ["...", "...", "..."],
-        category: "web",
-      },
-      {
-        name: "Simen Academy",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [codeigniter, php, bootstrap, mysql],
-        tags: ["...", "...", "..."],
-        category: "mobile-design",
-      },
-      {
-        name: "Umonety",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [bootstrap, html, css, figma],
-        tags: ["...", "...", "..."],
-        category: "mobile-design",
-      },
-      {
-        name: "Plannig",
-        img: "../images/...",
-        desc: "...",
-        date: "...",
-        tech: [django, python, bootstrap, sqlite],
-        tags: ["...", "...", "..."],
-        category: "web",
-      },
-    ];
+  {
+    name: "CNIC",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [flutter, react, nest, mongodb],
+    tags: ["...", "...", "..."],
+    category: "mobile",
+  },
+  {
+    name: "Wassup",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [flutter, django, node, sqlite, figma],
+    tags: ["...", "...", "..."],
+    category: "mobile-design",
+  },
+  {
+    name: "Food Agenda",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [flutter, sqlite],
+    tags: ["...", "...", "..."],
+    category: "mobile",
+  },
+  {
+    name: "Food Recognition",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [flutter, tensorflow],
+    tags: ["...", "...", "..."],
+    category: "mobile",
+  },
+  {
+    name: "Food Annotation",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [flutter, figma],
+    tags: ["...", "...", "..."],
+    category: "mobile-design",
+  },
+  {
+    name: "DolphPretty",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [django, python, bootstrap, mysql],
+    tags: ["...", "...", "..."],
+    category: "web",
+  },
+  {
+    name: "KennerBrige",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [django, python, bootstrap, mysql],
+    tags: ["...", "...", "..."],
+    category: "web",
+  },
+  {
+    name: "Jerry",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [django, python, bootstrap, mysql],
+    tags: ["...", "...", "..."],
+    category: "web",
+  },
+  {
+    name: "FindInvest",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [django, python, bootstrap, sqlite],
+    tags: ["...", "...", "..."],
+    category: "web",
+  },
+  {
+    name: "FindRepater",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [django, python, bootstrap, sqlite],
+    tags: ["...", "...", "..."],
+    category: "web",
+  },
+  {
+    name: "Simen Academy",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [codeigniter, php, bootstrap, mysql],
+    tags: ["...", "...", "..."],
+    category: "mobile-design",
+  },
+  {
+    name: "Umonety",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [bootstrap, html, css, figma],
+    tags: ["...", "...", "..."],
+    category: "mobile-design",
+  },
+  {
+    name: "Plannig",
+    img: "../images/...",
+    desc: "...",
+    date: "...",
+    tech: [django, python, bootstrap, sqlite],
+    tags: ["...", "...", "..."],
+    category: "web",
+  },
+];
 
 export const project = [
   {
@@ -375,29 +387,54 @@ export const project = [
   },
 ];
 
-
+export const services = [
+  {
+    icon: <DevicesOutlined sx={{ color: "#FCA326", fontSize: 40+"px" }} />,
+    title: "Web Development",
+    desc: "I design and build professional and responsives web sites and web applications by using some of the technologies listed above.",
+    colorTitle: "#FCA326",
+    colorBg: "rgba(252, 163, 38, 0.05)", 
+    colorBtn: "rgba(252, 163, 38, 0.19)",
+  },
+  {
+    icon: <PhoneIphoneOutlined sx={{ color: "#70FF00", fontSize: 40+"px" }} />,
+    title: "Mobile Development",
+    desc: "I design and build professional and responsives mobile applications by using some of the technologies listed above.",
+    colorTitle: "#70FF00",
+    colorBg: "rgba(112, 255, 0, 0.05)",
+    colorBtn: "rgba(112, 255, 0, 0.19)",
+  },
+  {
+    icon: <img width="30px" src="../images/icons/figma.svg" alt="" />,
+    title: "UI Design",
+    desc: "I design web and mobile appalications mock-ups, typographies and graphic charters",
+    colorTitle: "#F7C30A",
+    colorBg: "rgba(246, 195, 10, 0.05)",
+    colorBtn: "rgba(246, 195, 10, 0.19)", 
+  },
+];
 
 export const contacts = [
   {
-  text: "You can contact me WhatsApp, LinkedIn an twitter or directly write your message with the form below and choose a way to send.",
-  zap: "../images/social/whatsapp.png",
-  mail: "../images/social/gmail.png",
-  urls: [
-	  {
-		url: "...",
-		text: "WhatsApp",
-		icon: "../images/social/whatsapp.png",
-	  },
-	  {
-		url: "...",
-		text: "@Michel BTOMPE",
-		icon: "../images/social/linkedin.svg",
-	  },
-	  {
-		url: "...",
-		text: "@MichelBTOMPE",
-		icon: "../images/social/twitter.png",
-	  },
-  ],
-  }
+    text: "You can contact me WhatsApp, LinkedIn an twitter or directly write your message with the form below and choose a way to send.",
+    zap: "../images/social/whatsapp.png",
+    mail: "../images/social/gmail.png",
+    urls: [
+      {
+        url: "...",
+        text: "WhatsApp",
+        icon: "../images/social/whatsapp.png",
+      },
+      {
+        url: "...",
+        text: "@Michel BTOMPE",
+        icon: "../images/social/linkedin.svg",
+      },
+      {
+        url: "...",
+        text: "@MichelBTOMPE",
+        icon: "../images/social/twitter.png",
+      },
+    ],
+  },
 ];

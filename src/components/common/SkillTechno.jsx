@@ -18,7 +18,7 @@ export const SkillTechno = ({ img, color, name, starred }) => {
             <TimelineDot
               className="t-gr"
               sx={{
-                backgroundColor: { color },
+                backgroundColor: color,
                 padding: {
                   xs: 2 + "px",
                   md: 3 + "px",

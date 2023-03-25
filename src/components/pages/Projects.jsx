@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { Heading } from "../common/Heading";
 import { ProjectModal } from "../common/ProjectModal";
 import { project, portfolio } from "../data/my-data";
-import { RemoveRedEye } from "@mui/icons-material";
+import { ExpandLessOutlined, ExpandMoreOutlined } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { CategoryBtn } from "../common/Buttons";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "../common/ProjectCard";
 
 const allCategory = ["all", ...new Set(portfolio.map((item) => item.category))];
 
@@ -33,7 +33,7 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="bg-grid pt-5 pb-3">
+    <section id="projects" className="pt-5 pb-3">
       <div className="container pt-3">
         <Heading title="projects" param={list.length} />
         {project.map((pro) => (
@@ -73,114 +73,6 @@ export const Projects = () => {
             <div className="projects pt-3 d-flex flex-wrap gap-4 align-items-center justify-content-md-start justify-content-center">
               {projectsToShow.map((p) => (
                 <>
-                  {/* <Card
-                    className="card-project"
-                    variant="solid"
-                    sx={{ width: 320, bgcolor: "#09090D" }}
-                  >
-                    <CardOverflow>
-                      <AspectRatio ratio="2">
-                        <img
-                          src="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318"
-                          srcSet="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318&dpr=2 2x"
-                          loading="lazy"
-                          alt=""
-                        />
-                      </AspectRatio>
-                      <IconButton
-                        aria-label="Like minimal photography"
-                        size="sm"
-                        variant="solid"
-                        color="danger"
-                        sx={{
-                          position: "absolute",
-                          zIndex: 2,
-                          borderRadius: "50%",
-                          right: "1rem",
-                          bottom: 0,
-                          transform: "translateY(50%)",
-                        }}
-                      >
-                        <Favorite fontSize="small" />
-                      </IconButton>
-                    </CardOverflow>
-                    <Typography
-                      className="d-flex align-items-center"
-                      level="h2"
-                      sx={{ fontSize: "md", mt: 2 }}
-                    >
-                      <Link
-                        onClick={() => {
-                          setSelectedProject(p);
-                          handleOpen();
-                        }}
-                        className="me-3"
-                        href={"#" + p.name.replace(/\s+/g, "-")}
-                        overlay
-                        underline="none"
-                      >
-                        <Typography fontSize="md">{p.name}</Typography>
-                      </Link>
-
-                      <span className="category me-1 mb-1 pt-1">
-                        {p.category}
-                      </span>
-                    </Typography>
-                    <Typography
-                      component="p"
-                      level="body2"
-                      sx={{ mt: 0.5, mb: 2, color: "#fff" }}
-                    >
-                      <span>{p.desc}description</span>
-                    </Typography>
-                    <Divider inset="context" />
-                    <CardOverflow
-                      className="project-footer d-flex justify-content-between align-items-center"
-                      variant="soft"
-                      sx={{
-                        display: "flex",
-                        gap: 1.5,
-                        py: 1.5,
-                        px: "var(--Card-padding)",
-                        // bgcolor: "#25252D",
-                      }}
-                    >
-                      <AvatarGroup className="gap-1" max={10}>
-                        {p.tech.map((val) => (
-                          <Avatar
-                            className="proame}
-                            alt={val.name}
-                            src={val.img}ject-tech"
-                            data-toggle="tooltip"
-                            title={val.n
-                            sx={{
-                              width: 20,
-                              height: 20,
-                              // bgcolor: "#161616",
-                              padding: 0.9,
-                            }}
-                          />
-                        ))}
-                      </AvatarGroup>
-                      <Divider orientation="vertical" />
-                      <Typography
-                        onClick={() => {
-                          setSelectedProject(p);
-                          handleOpen();
-                        }}
-                        component="a"
-                        className="t-gr t-code d-flex align-items-center gap-2"
-                        href={"#" + p.name.replace(/\s+/g, "-")}
-                        level="body3"
-                        sx={{ fontWeight: "md", color: "text.secondary" }}
-                      >
-                        <span className="text-decoration-underline">
-                          Explore
-                        </span>
-                        <RemoveRedEye fontSize="small" />
-                      </Typography>
-                    </CardOverflow>
-                  </Card> */}
                   <ProjectCard
                     tech={p.tech}
                     img=""
@@ -199,7 +91,7 @@ export const Projects = () => {
               <Button
                 onClick={() => setShowAll(true)}
                 className="btn primaryBtn my-5"
-                endIcon={<RemoveRedEye />}
+                endIcon={<ExpandMoreOutlined />}
               >
                 Show All {list.length}
               </Button>
@@ -207,7 +99,7 @@ export const Projects = () => {
               <Button
                 onClick={() => setShowAll(false)}
                 className="btn primaryBtn my-5"
-                endIcon={<RemoveRedEye />}
+                endIcon={<ExpandLessOutlined />}
               >
                 Show Less
               </Button>

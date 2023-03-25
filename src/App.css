@@ -401,8 +401,6 @@ a:hover img.icon {
   background-color: var(--darkBgColor) !important;
 }
 
-.technos {
-}
 .technos .tech {
   width: 85px;
   transition: 0.5s;
@@ -538,6 +536,19 @@ a.t-gr {
 }
 
 /* ================= projects ================ */
+
+/* ================= services ================ */
+.boxes {
+}
+
+.boxes .box {
+	
+}
+.boxes .box .box-card:northchild(2) {
+	/*background-color: var(--primaryColorOpacity) !important;
+	border: 2px solid var(--secondaryColor) !important;*/
+}
+/* ================= services ================ */
 
 /* ================= contact me ================ */
 .socials {

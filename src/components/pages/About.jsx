@@ -1,9 +1,9 @@
 import {
-  Code,
-  DataObject,
-  FileDownload,
-  Handshake,
-  RemoveRedEye,
+  BusinessCenterOutlined,
+  CodeOutlined,
+  DataObjectOutlined,
+  FileDownloadOutlined,
+  RemoveRedEyeOutlined,
 } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
 import React from "react";
@@ -24,21 +24,27 @@ export const About = () => {
                 <span className="t-gr t-code fw-bold ms-2">{about.user}</span>
               </p>
               <div className="d-flex my-3 gap-3">
-                <PrimaryBtn icon={<FileDownload />} text="Download CV" />
-                <SecondaryBtn icon={<RemoveRedEye />} text="View The CV" />
+                <PrimaryBtn
+                  icon={<FileDownloadOutlined />}
+                  text="Download CV"
+                />
+                <SecondaryBtn
+                  icon={<RemoveRedEyeOutlined />}
+                  text="View The CV"
+                />
               </div>
             </div>
             <div className="col-md-6 aboutDiv">
               <div className="aboutBox">
                 <p className="text">{about.role}</p>
-                <ServiceBtn icon={<Handshake />} text="Services" />
+                <ServiceBtn icon={<BusinessCenterOutlined />} text="Services" />
               </div>
               <div className="bubble d-flex gap-2 justify-content-center">
                 <Avatar>
-                  <Code className="t-gr" />
+                  <CodeOutlined className="t-gr" />
                 </Avatar>
                 <Avatar>
-                  <DataObject className="t-gr" />
+                  <DataObjectOutlined className="t-gr" />
                 </Avatar>
               </div>
             </div>

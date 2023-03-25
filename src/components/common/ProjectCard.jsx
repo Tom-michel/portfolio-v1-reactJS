@@ -22,7 +22,7 @@ export const ProjectCard = ({
   return (
     <>
       <Card
-        className="card-project"
+        className="card-project h-100"
         variant="solid"
         sx={{ width: 320, bgcolor: "#09090D" }}
       >

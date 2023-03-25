@@ -27,7 +27,6 @@ export const Header = () => {
         {contactlink.map((item, i) => (
           <Typography
             component="a"
-            target="blank"
             href={item.url}
             className="item d-flex align-items-center gap-1"
           >
