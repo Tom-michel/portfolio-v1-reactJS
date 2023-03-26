@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import {Modal, ModalClose, ModalDialog, Typography} from '@mui/joy';
-import Paper from '@mui/material/Paper';
+//import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
-import { styled } from '@mui/material/styles';
+//import { styled } from '@mui/material/styles';
 import List from '@mui/joy/List';
 
 
-const Label = styled(Paper)(({ theme }) => ({
+/*const Label = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   padding: theme.spacing(0.5),
@@ -15,7 +15,7 @@ const Label = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
   borderBottomLeftRadius: 0,
   borderBottomRightRadius: 0,
-}));
+}));*/
 
 export const ProjectModal = ({my_project, open, setOpen}) => {
 
@@ -53,10 +53,10 @@ export const ProjectModal = ({my_project, open, setOpen}) => {
             {my_project.name}
           </Typography>
           <Typography id="modal-desc" textColor="text.tertiary">
-            Description
+            {my_project.desc}
           </Typography>
           
-          <List
+          <List className="desc-imgList"
             sx={{
               overflowY:'scroll',
               mx: 'calc(-1 * var(--ModalDialog-padding))',
@@ -65,14 +65,17 @@ export const ProjectModal = ({my_project, open, setOpen}) => {
           >
 
 						<Box>
-							<Masonry columns={{xs:2, sm:3, lg:4}} spacing={{xs:2, sm:3, lg:4}}>
-								{itemData.map((item, index) => (
-								  <div key={index}>
-								    <Label>{"image " + index + 1}</Label>
+							<Masonry className="mx-auto" columns={{xs:2, sm:3, lg:4}} spacing={{xs:2, sm:3, lg:4}}>
+								{my_project.images.map((img, index) => (
+								  <div className="desc-img" key={index}>
+								  	<div className="desc-text">
+								  		<span>{img.text}</span>
+								  	</div>
+								    {/*<Label>{"image " + index + 1}</Label>*/}
 								    <img
-								      src={`${item.img}?w=162&auto=format`}
-								      srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
-								      alt={item.title}
+								      src={`${img.img}?w=162&auto=format`}
+								      srcSet={`${img.img}?w=162&auto=format&dpr=2 2x`}
+								      alt=""
 								      loading="lazy"
 								      style={{
 								        borderBottomLeftRadius: 4,
@@ -92,7 +95,7 @@ export const ProjectModal = ({my_project, open, setOpen}) => {
   );
 }
 
-const itemData = [
+/*const itemData = [
   {
     img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
     title: 'Fern',
@@ -161,4 +164,4 @@ const itemData = [
     img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
     title: 'Bike',
   },
-];
+];*/

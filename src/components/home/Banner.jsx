@@ -74,7 +74,7 @@ export const Banner = () => {
 		              ))}
 		            </div>
 				      </div>
-				      <div className="col-md-6 mt-sm-0 mt-5 text-center">
+				      <div className="col-md-6 mt-md-0 mt-5 text-center">
 			          {item.avatar.map((av) => (
 			            <Tilt options={options} className="circularAvatar mx-auto d-flex align-items-start 
 			            	justify-content-center position-relative">

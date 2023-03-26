@@ -3,12 +3,12 @@ import {
   Typography,
   Card,
   AspectRatio,
-  IconButton,
+  //IconButton,
   CardOverflow,
   Divider,
   Link,
 } from "@mui/joy";
-import { Favorite, RemoveRedEye } from "@mui/icons-material";
+import { /*Favorite,*/ RemoveRedEye } from "@mui/icons-material";
 import { Avatar, AvatarGroup } from "@mui/material";
 
 export const ProjectCard = ({
@@ -35,7 +35,7 @@ export const ProjectCard = ({
               alt=""
             />
           </AspectRatio>
-          <IconButton
+          {/* <IconButton
             aria-label="Like minimal photography"
             size="sm"
             variant="solid"
@@ -50,7 +50,7 @@ export const ProjectCard = ({
             }}
           >
             <Favorite fontSize="small" />
-          </IconButton>
+          </IconButton> */}
         </CardOverflow>
         <Typography
           className="d-flex align-items-center"
@@ -74,7 +74,7 @@ export const ProjectCard = ({
           level="body2"
           sx={{ mt: 0.5, mb: 2, color: "#fff" }}
         >
-          <span>{desc}description</span>
+          <span>{desc}</span>
         </Typography>
         <Divider inset="context" />
         <CardOverflow

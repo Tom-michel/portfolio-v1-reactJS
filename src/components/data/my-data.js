@@ -267,6 +267,16 @@ export const portfolio = [
   {
     name: "CNIC",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "..",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "..",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [flutter, react, nest, mongodb],
@@ -276,15 +286,35 @@ export const portfolio = [
   {
     name: "Wassup",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [flutter, django, node, sqlite, figma],
     tags: ["...", "...", "..."],
-    category: "mobile-design",
+    category: "mobile | design",
   },
   {
     name: "Food Agenda",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [flutter, sqlite],
@@ -294,6 +324,16 @@ export const portfolio = [
   {
     name: "Food Recognition",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [flutter, tensorflow],
@@ -303,15 +343,35 @@ export const portfolio = [
   {
     name: "Food Annotation",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [flutter, figma],
     tags: ["...", "...", "..."],
-    category: "mobile-design",
+    category: "mobile | design",
   },
   {
     name: "DolphPretty",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [django, python, bootstrap, mysql],
@@ -321,6 +381,16 @@ export const portfolio = [
   {
     name: "KennerBrige",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [django, python, bootstrap, mysql],
@@ -330,6 +400,16 @@ export const portfolio = [
   {
     name: "Jerry",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [django, python, bootstrap, mysql],
@@ -339,6 +419,16 @@ export const portfolio = [
   {
     name: "FindInvest",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [django, python, bootstrap, sqlite],
@@ -348,6 +438,16 @@ export const portfolio = [
   {
     name: "FindRepater",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [django, python, bootstrap, sqlite],
@@ -357,24 +457,54 @@ export const portfolio = [
   {
     name: "Simen Academy",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [codeigniter, php, bootstrap, mysql],
     tags: ["...", "...", "..."],
-    category: "mobile-design",
+    category: "mobile | design",
   },
   {
     name: "Umonety",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [bootstrap, html, css, figma],
     tags: ["...", "...", "..."],
-    category: "mobile-design",
+    category: "mobile | design",
   },
   {
     name: "Plannig",
     img: "../images/...",
+    images: [
+    	{
+    		img: "../images/...",
+    		text: "..",
+    	},
+    	{
+    		img: "../images/...",
+    		text: "",
+    	},
+    ],
     desc: "...",
     date: "...",
     tech: [django, python, bootstrap, sqlite],
