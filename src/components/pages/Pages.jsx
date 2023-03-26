@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { FloatingMenu } from "../common/FloatingMenu";
 import { Header } from "../common/Header";
+import { Footer } from "../common/Footer";
 import { Home } from "../home/Home";
 import { ScrollTopBtn } from "../common/ScrollTopBtn";
 
@@ -16,6 +17,7 @@ export const Pages = () => {
         </Switch>
       </Router>
       <ScrollTopBtn />
+      <Footer />
     </>
   );
 };
