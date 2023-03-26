@@ -193,13 +193,6 @@ a:hover img.icon {
   /* width: 285px; */
 }
 
-#home .avatar {
-  position: relative;
-  width: 100%;
-}
-#home .avatar img {
-  width: 400px;
-}
 
 .t-gr {
   color: var(--primaryColor) !important;
@@ -210,19 +203,11 @@ a:hover img.icon {
     width: 100vw;
   }
 } */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .avatar img {
-    width: 350px;
-  }
-}
 
 @media screen and (max-width: 767px) {
   #home {
     position: relative;
     height: auto;
-  }
-  #home .avatar img {
-    width: 300px;
   }
   #home .num {
     color: var(--secondaryColor);
@@ -252,6 +237,186 @@ a:hover img.icon {
     font-size: 30px;
   }
 }*/
+
+/*------ avatar --------*/
+
+#home .circularAvatar {
+  width: 100%;
+  background-color: #2D2D2D;
+  box-shadow: 0px 5px 34px 2px rgba(0, 0, 0, 0.25);
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+#home .circularAvatar .img {
+  width: 85%;
+  height: 85%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#home .circularAvatar .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#home .circularAvatar .tech {
+  background-color: #363636;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.circularAvatar .tech img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  background-color: var(--primaryBgColor);
+  box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.06);
+}
+
+.circularAvatar .tech.t1 {
+  width: 90px;
+  height: 90px;
+  bottom: 10%;
+  left: 3%;
+}
+.circularAvatar .tech.t2 {
+  width: 70px;
+  height: 70px;
+  bottom: 4%;
+  right: 6%;
+}
+.circularAvatar .tech.t3 {
+  width: 60px;
+  height: 60px;
+  top: 13%;
+  right: 5%;
+}
+
+.circularAvatar .dot {
+  border-radius: 50%;
+  position: absolute;
+  transition: 0.5s;
+}
+.circularAvatar .dot.d1 {
+  background-color: var(--secondaryColor);
+  width: 20px;
+  height: 20px;
+  top: 15%;
+  left: 0;
+}
+.circularAvatar .dot.d2 {
+  background-color: #BDBDBD;
+  width: 10px;
+  height: 10px;
+  bottom: 35%;
+  right: -5%;
+}
+.circularAvatar .dot.d3 {
+  background-color: #222222;
+  width: 30px;
+  height: 30px;
+  top: -5%;
+  right: 0;
+}
+
+
+@media screen and (max-width: 991px) {
+  #home .circularAvatar {
+		width: 300px;
+		height: 300px;
+	}
+	.tech.t1 {
+		width: 70px;
+		height: 70px;
+	}
+	.tech.t2 {
+		width: 55px;
+		height: 55px;
+	}
+	.tech.t3 {
+		width: 45px;
+		height: 45px;
+	}
+	
+	.dot.d1 {
+		width: 15px;
+		height: 15px;
+	}
+	.dot.d2 {
+		width: 7px;
+		height: 7px;
+	}
+	.dot.d3 {
+		width: 25px;
+		height: 25px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+  #home .circularAvatar {
+		width: 250px;
+		height: 250px;
+	}
+	.tech.t1 {
+		width: 60px;
+		height: 60px;
+	}
+	.tech.t2 {
+		width: 50px;
+		height: 50px;
+	}
+	.tech.t3 {
+		width: 45px;
+		height: 45px;
+	}
+	
+	.dot.d1 {
+		width: 15px;
+		height: 15px;
+	}
+	.dot.d2 {
+		width: 7px;
+		height: 7px;
+	}
+	.dot.d3 {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+
+.tech.t1, .tech.t2 {
+  animation: icon-beat infinite 1s linear !important;
+}
+.tech.t3 {
+  transform: none;
+  animation: icon-spin infinite 10s linear;
+}
+
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes icon-beat {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+
 /* ================= banner =============== */
 
 .heading {
@@ -410,6 +575,14 @@ a:hover img.icon {
 .technos .tech {
   width: 85px;
   transition: 0.5s;
+  padding-top: 0.5rem;
+  border: solid 1px transparent;
+	border-radius: var(--borderRadius);
+}
+.technos .tech:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
 }
 .techImg {
   width: 85px;
@@ -429,6 +602,7 @@ a:hover img.icon {
   }
   .technos .tech {
     width: 75px;
+		border-color: transparent;
   }
   .techImg {
     width: 75px;
@@ -437,7 +611,6 @@ a:hover img.icon {
     font-size: 11px;
   }
 }
-
 @media screen and (max-width: 767px) {
   .technos {
     justify-content: center;

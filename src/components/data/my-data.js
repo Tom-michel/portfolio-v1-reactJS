@@ -86,10 +86,14 @@ export const banner = [
         project_text: "Projects \nCompleted",
       },
     ],
-    avatar: "../images/avatar.png",
-    img_tech1: "../images/...",
-    img_tech2: "../images/...",
-    img_tech3: "../images/...",
+    avatar: [
+		  {
+		  	img: "../images/avatar-img.png",
+				tech1: "../images/tech/django.png",
+				tech2: "../images/tech/flutter.png",
+				tech3: "../images/tech/react.svg",
+			}
+		],
   },
 ];
 

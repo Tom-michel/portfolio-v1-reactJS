@@ -12,7 +12,7 @@ export const Skills = () => {
           {skills.map((skill) => (
             <>
               <p className="description">{skill.text}</p>
-              <div className="technos mt-3 d-flex flex-wrap align-items-end gap-sm-4 gap-3">
+              <div className="technos mt-3 d-flex flex-wrap align-items-end gap-sm-2 gap-3">
                 {skill.technos.map((tech) => (
                   <SkillTechno
                     img={tech.img}

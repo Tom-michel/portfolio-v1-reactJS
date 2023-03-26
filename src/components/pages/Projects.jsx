@@ -8,7 +8,7 @@ import { Button } from "@mui/material";
 import { CategoryBtn } from "../common/Buttons";
 import { ProjectCard } from "../common/ProjectCard";
 
-const allCategory = ["all", ...new Set(portfolio.map((item) => item.category))];
+const allCategory = [/*"all", */...new Set(portfolio.map((item) => item.category))];
 
 export const Projects = () => {
   const [list, setList] = useState(portfolio);
@@ -27,9 +27,9 @@ export const Projects = () => {
     const newItems = portfolio.filter((item) => item.category === category);
     setList(newItems);
 
-    if (category === "all") {
+    /*if (category === "all") {
       setList(portfolio);
-    }
+    }*/
   };
 
   return (
@@ -63,6 +63,26 @@ export const Projects = () => {
               </span>
             </p>
             <div className="d-flex flex-wrap my-3 gap-3">
+            	
+            	{!showAll && projectsToShow.length < list.length ? (
+		            <Button
+		              onClick={() => setShowAll(true)}
+		              className="btn primaryBtn"
+		              endIcon={<ExpandMoreOutlined />}
+		            >
+		              Show All {list.length}
+		            </Button>
+		          ) : list.length > 4 ? (
+		            <Button
+		              onClick={() => setShowAll(false)}
+		              className="btn primaryBtn"
+		              endIcon={<ExpandLessOutlined />}
+		            >
+		              Show Less
+		            </Button>
+		          ) : (
+		            ""
+		          )}
               {category.map((cat) => (
                 <CategoryBtn
                   text={cat}
@@ -87,7 +107,7 @@ export const Projects = () => {
                 </>
               ))}
             </div>
-            {!showAll && projectsToShow.length < list.length ? (
+            {/*{!showAll && projectsToShow.length < list.length ? (
               <Button
                 onClick={() => setShowAll(true)}
                 className="btn primaryBtn my-5"
@@ -105,7 +125,7 @@ export const Projects = () => {
               </Button>
             ) : (
               ""
-            )}
+            )}*/}
             {selectedProject && (
               <ProjectModal
                 my_project={selectedProject}
