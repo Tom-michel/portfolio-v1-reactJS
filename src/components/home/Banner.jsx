@@ -31,7 +31,7 @@ export const Banner = () => {
 		    <>
 		      <div className="row mt-5 pt-4 align-items-center">
 				      <div className="col-md-6 text-md-start text-center">
-		            <p className="hello fw-bold">{item.hello}</p>
+		            <p className="hello fw-bold" data-aos="fade-right">{item.hello}</p>
 		            <h1 className="name my-md-5 my-4 t-gr fw-bold">
 		              <Typewriter
 		                options={{
@@ -45,7 +45,8 @@ export const Banner = () => {
 		            </h1>
 		            <div className="mb-4">
 		              {item.role.map((role) => (
-		                <p className="role text-capitalize d-flex align-items-center justify-content-md-start justify-content-center gap-2 mb-1">
+		                <p className="role text-capitalize d-flex align-items-center justify-content-md-start 
+		                	justify-content-center gap-2 mb-1" data-aos="fade-left">
 		                  <span className="role-icon t-gr">{role.icon}</span>
 		                  <span className="role-text fw-bold">{role.text}</span>
 		                </p>
@@ -54,7 +55,7 @@ export const Banner = () => {
 		            <div className="d-flex align-items-center justify-content-md-start justify-content-center gap-md-5 gap-3">
 		              {item.done.map((val) => (
 		                <>
-		                  <div className="exper d-flex align-items-center gap-1">
+		                  <div className="exper d-flex align-items-center gap-1" data-aos="fade-up-right">
 		                    <p className="num fw-bold">{val.exper_num}</p>
 		                    <p className="num-text text-uppercase text-start">
 		                      <span>{val.exper_text.split("\n")[0]}</span>
@@ -62,7 +63,7 @@ export const Banner = () => {
 		                      <span>{val.exper_text.split("\n")[1]}</span>
 		                    </p>
 		                  </div>
-		                  <div className="project d-flex align-items-center gap-1">
+		                  <div className="project d-flex align-items-center gap-1" data-aos="fade-up-right">
 		                    <p className="num fw-bold">{val.project_num}</p>
 		                    <p className="num-text text-uppercase text-start">
 		                      <span>{val.project_text.split("\n")[0]}</span>
@@ -77,7 +78,7 @@ export const Banner = () => {
 				      <div className="col-md-6 mt-md-0 mt-5 text-center">
 			          {item.avatar.map((av) => (
 			            <Tilt options={options} className="circularAvatar mx-auto d-flex align-items-start 
-			            	justify-content-center position-relative">
+			            	justify-content-center position-relative" data-aos="zoom-in-left">
 										<div className="img position-relative">
 											<img src={av.img} alt="" />
 										</div>

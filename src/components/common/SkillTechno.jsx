@@ -25,7 +25,8 @@ export const SkillTechno = ({ img, color, name, starred }) => {
 	
   return (
     <Tilt options={options}>
-      <div className="tech d-flex flex-column align-items-center justify-content-cente px-sm-5 px-0 h-100">
+      <div className="tech d-flex flex-column align-items-center 
+      	justify-content-cente px-sm-5 px-0 h-100" data-aos="zoom-out-down">
         <img className="techImg" src={img} alt="techImg" />
         <div className="techNameDot d-flex align-items-center justify-content-center gap-1">
           {starred ? (

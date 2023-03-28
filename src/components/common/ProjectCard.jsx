@@ -26,13 +26,18 @@ export const ProjectCard = ({
         variant="solid"
         sx={{ width: 320, bgcolor: "#09090D" }}
       >
-        <CardOverflow>
-          <AspectRatio ratio="2">
+        <CardOverflow 
+        	//data-aos="flip-left"
+        >
+          <AspectRatio ratio="2" 
+          	//data-aos="flip-down"
+          >
             <img
               src="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318"
               srcSet="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318&dpr=2 2x"
               loading="lazy"
               alt=""
+              //data-aos="flip-up"
             />
           </AspectRatio>
           {/* <IconButton
@@ -63,16 +68,18 @@ export const ProjectCard = ({
             href={"#" + name.replace(/\s+/g, "-")}
             overlay
             underline="none"
+            data-aos="flip-right"
           >
             <Typography fontSize="md">{name}</Typography>
           </Link>
 
-          <span className="category me-1 mb-1 pt-1">{category}</span>
+          <span className="category me-1 mb-1 pt-1" data-aos="fade-left">{category}</span>
         </Typography>
         <Typography
           component="p"
           level="body2"
           sx={{ mt: 0.5, mb: 2, color: "#fff" }}
+          data-aos="fade-up-right"
         >
           <span>{desc}</span>
         </Typography>
@@ -102,6 +109,7 @@ export const ProjectCard = ({
                   // bgcolor: "#161616",
                   padding: 0.9,
                 }}
+                data-aos="fade-up-right"
               />
             ))}
           </AvatarGroup>

@@ -17,7 +17,8 @@ export const Footer = () => {
 	return (
 		<>
 			<section id="footer">
-				<div className="container py-3 d-flex flex-wrap gap-3 align-items-center justify-content-sm-between justify-content-center">
+				<div className="container py-3 d-flex flex-wrap gap-3 
+					align-items-center justify-content-sm-between justify-content-center">
 					<div className="nav-logo">
 				    {brandlink.map((brand) => (
 				      <Typography component="a" href={brand.url}>

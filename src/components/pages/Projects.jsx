@@ -33,12 +33,12 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="pt-5 pb-3">
+    <section id="projects" className="py-5 mb-3">
       <div className="container pt-3">
         <Heading title="projects" param={list.length} />
         {project.map((pro) => (
           <>
-            <p className="description pb-3">
+            <p className="description pb-3" data-aos="fade-in-zoom">
               Since i started codeing, I have worked and participated on many
               personal, professional and academic projetcs. Some of them are
               listed below and others can be found on my{" "}
@@ -69,6 +69,7 @@ export const Projects = () => {
 		              onClick={() => setShowAll(true)}
 		              className="btn primaryBtn"
 		              endIcon={<ExpandMoreOutlined />}
+		              data-aos="fade-up"
 		            >
 		              Show All {list.length}
 		            </Button>
@@ -77,6 +78,7 @@ export const Projects = () => {
 		              onClick={() => setShowAll(false)}
 		              className="btn primaryBtn"
 		              endIcon={<ExpandLessOutlined />}
+		              data-aos="fade-up"
 		            >
 		              Show Less
 		            </Button>

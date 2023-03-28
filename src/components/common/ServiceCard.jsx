@@ -29,8 +29,10 @@ export const ServiceCard = ({icon, title, desc, colorTitle, colorBg, colorBtn}) 
   
   return (
     <Tilt options={options} className="h-100">
-    	<Card className="box-card d-flex flex-column align-items-center justify-content-between h-100" variant="outlined" 
-    		sx={{ backgroundColor: colorBg, borderColor: colorTitle }}>
+    	<Card className="box-card d-flex flex-column align-items-center 
+    		justify-content-between h-100" variant="outlined" 
+    		sx={{ backgroundColor: colorBg, borderColor: colorTitle }}
+    		data-aos="zoom-out-down">
 		    <CardContent>
 		      <Typography className="d-flex flex-column align-items-center gap-3">
 		        {icon}
@@ -43,7 +45,10 @@ export const ServiceCard = ({icon, title, desc, colorTitle, colorBg, colorBtn}) 
 		      </Typography>
 		    </CardContent>
 		    <CardActions>
-		      <Button sx={{ color: colorTitle }} size="small" endIcon={<HandshakeOutlined />}>Hire Me</Button>
+		      <Button sx={{ color: colorTitle }} size="small" endIcon={<HandshakeOutlined />}
+		      	data-aos="fade-up-right">
+		      	Hire Me
+		      </Button>
 		    </CardActions>
 		  </Card>
     </Tilt>

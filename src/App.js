@@ -2,7 +2,8 @@ import "./bootstrap.min.css";
 import "./App.css";
 import { Pages } from "./components/pages/Pages";
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import LoadingPage from './LoadingPage';
 
 import "aos/dist/aos.css";
 
@@ -11,10 +12,15 @@ function App() {
     Aos.init();
     Aos.refresh();
   }, []);
+  
+  const [loading, setLoading] = useState(true);
+	useEffect(() => {
+    setLoading(false);
+  }, []);
 
   return (
     <>
-      <Pages />
+      {loading ? <LoadingPage /> : <Pages />}
     </>
   );
 }

@@ -11,7 +11,7 @@ export const Skills = () => {
           <Heading title="skills" param=" " />
           {skills.map((skill) => (
             <>
-              <p className="description">{skill.text}</p>
+              <p className="description" data-aos="fade-in-zoom">{skill.text}</p>
               <div className="technos mt-3 d-flex flex-wrap align-items-end gap-sm-2 gap-3">
                 {skill.technos.map((tech) => (
                   <SkillTechno

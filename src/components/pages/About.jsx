@@ -19,11 +19,11 @@ export const About = () => {
         {about.map((about) => (
           <div className="row gap-md-0 gap-5 align-items-center">
             <div className="col-md-6">
-              <p className="description pb-3">
+              <p className="description pb-3" data-aos="fade-in-zoom">
                 <span>{about.text}</span>
                 <span className="t-gr t-code fw-bold ms-2">{about.user}</span>
               </p>
-              <div className="d-flex my-3 gap-3">
+              <div className="d-flex my-3 gap-3" data-aos="fade-down-right">
                 <PrimaryBtn
                   icon={<FileDownloadOutlined />}
                   text="Download CV"
@@ -34,7 +34,7 @@ export const About = () => {
                 />
               </div>
             </div>
-            <div className="col-md-6 aboutDiv">
+            <div className="col-md-6 aboutDiv" data-aos="fade-down-left">
               <div className="aboutBox">
                 <p className="text">{about.role}</p>
                 <ServiceBtn icon={<BusinessCenterOutlined />} text="Services" />

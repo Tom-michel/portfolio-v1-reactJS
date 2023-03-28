@@ -4,7 +4,8 @@ import React from "react";
 export const PrimaryBtn = ({ icon, text }) => {
   return (
     <>
-      <Button className="btn primaryBtn" type="submit" endIcon={icon}>
+      <Button className="btn primaryBtn" type="submit" endIcon={icon}
+      	data-aos="fade-down-right">
         {text}
       </Button>
     </>
@@ -14,7 +15,8 @@ export const PrimaryBtn = ({ icon, text }) => {
 export const SecondaryBtn = ({ icon, text }) => {
   return (
     <>
-      <Button className="btn secondaryBtn" endIcon={icon}>
+      <Button className="btn secondaryBtn" endIcon={icon}
+      	data-aos="fade-down-right">
         {text}
       </Button>
     </>
@@ -24,20 +26,23 @@ export const SecondaryBtn = ({ icon, text }) => {
 export const ServiceBtn = ({ icon, text }) => {
   return (
     <>
-      <Button href="#services" className="btn serviceBtn" endIcon={icon}>
+      <Button href="#services" className="btn serviceBtn" endIcon={icon}
+      	data-aos="fade-down-right">
         {text}
       </Button>
     </>
   );
 };
 
-export const SendMailBtn = ({ icon, text }) => {
+export const SendMailBtn = ({ icon, text, clickAction }) => {
   return (
     <>
       <Button
         className="btn sendMail"
         type="submit"
         endIcon={<img src={icon} alt="" />}
+        onClick={clickAction}
+        //data-aos="fade-down-right"
       >
         {text}
       </Button>
@@ -45,13 +50,15 @@ export const SendMailBtn = ({ icon, text }) => {
   );
 };
 
-export const SendZapBtn = ({ icon, text }) => {
+export const SendZapBtn = ({ icon, text, clickAction }) => {
   return (
     <>
       <Button
         className="btn primaryBtn"
         type="submit"
         endIcon={<img src={icon} alt="" />}
+        onClick={clickAction}
+        //data-aos="fade-down-right"
       >
         {text}
       </Button>
@@ -62,7 +69,8 @@ export const SendZapBtn = ({ icon, text }) => {
 export const CategoryBtn = ({ text, oncliClickAction }) => {
   return (
     <>
-      <Button className="btn catBtn" onClick={oncliClickAction}>
+      <Button className="btn catBtn" onClick={oncliClickAction}
+      	data-aos="fade-down-right">
         {text}
       </Button>
     </>
@@ -73,7 +81,8 @@ export const CategoryBtn = ({ text, oncliClickAction }) => {
 export const HireBtn = ({ icon, text, color }) => {
   return (
     <>
-      <Button className="btn primaryBtn hireBtn" endIcon={icon}>
+      <Button className="btn primaryBtn hireBtn" endIcon={icon}
+      	data-aos="fade-down-right">
         {text}
       </Button>
     </>

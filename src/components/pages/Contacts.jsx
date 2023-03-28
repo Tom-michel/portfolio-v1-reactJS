@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Heading } from "../common/Heading";
 import { contacts } from "../data/my-data";
 import { Button, TextField } from "@mui/material";
-import { SendMailBtn, SendZapBtn } from "../common/Buttons";
+import { /*SendMailBtn,*/ SendZapBtn } from "../common/Buttons";
 // import { styled } from '@mui/material/styles';
 
 export const Contacts = () => {
+	//const [sendMethod, setSendMethod] = useState("zap");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -18,19 +19,24 @@ export const Contacts = () => {
     if (!name) {
       errors.name = "Name is required";
     }
-    if (!email) {
+    else if (!email) {
       errors.email = "Email is required";
     }
-    if (!subject) {
+    else if (!subject) {
       errors.subject = "Subject is required";
     }
-    if (!message) {
+    else if (!message) {
       errors.message = "Message is required";
     }
-    setErrors(errors);
+    else {
 
-    // Submit logic
-    // ...
+		  // Submit logic
+		  const phoneNumber = "+237656789174";
+		  const messageBody = `*Name:* ${name}%0D%0A*Email:* ${email}%0D%0A*Subject:* ${subject}%0D%0A*Message:* ${message}`;
+		  const url = `https://wa.me/${phoneNumber}/?text=${messageBody}`;
+		  window.open(url, "_blank");
+		}
+  	setErrors(errors);
   };
 
   return (
@@ -39,7 +45,7 @@ export const Contacts = () => {
         <Heading title="contactMe" param=" " />
         {contacts.map((cont) => (
           <>
-            <p className="description pb-0 pb-md-5">
+            <p className="description pb-0 pb-md-5" data-aos="fade-in-zoom">
               <span>{cont.text}</span>
             </p>
             <div className="row gap-md-0 gap-5 align-items-start">
@@ -49,6 +55,7 @@ export const Contacts = () => {
                     target="blank"
                     href={url.url}
                     className="socialBox d-flex justify-content-center py-4 w-100"
+                    data-aos="fade-left"
                   >
                     <div className="content d-flex align-items-center justify-content-start gap-4">
                       <img src={url.icon} alt="icon" />
@@ -58,7 +65,7 @@ export const Contacts = () => {
                 ))}
               </div>
               <div className="col-md-6 formContactDiv">
-                <form onSubmit={handleSubmit}>
+                <form id="contact-form" onSubmit={handleSubmit}>
                   <div className="row gap-3">
                     <div className="col-md-12">
                       <TextField
@@ -109,7 +116,7 @@ export const Contacts = () => {
                       />
                     </div>
                     <div className="col-md-12 d-flex justify-content-end gap-3">
-                      <SendMailBtn icon={cont.mail} text="Send" />
+                      {/*<SendMailBtn icon={cont.mail} text="Send" />*/}
                       <SendZapBtn icon={cont.zap} text="Send" />
                     </div>
                   </div>
