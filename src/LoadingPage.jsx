@@ -1,5 +1,5 @@
-import React from 'react';
-import './LoadingPage.css';
+import React from "react";
+import "./LoadingPage.css";
 import Loader from "react-js-loader";
 
 const LoadingPage = () => {
@@ -10,7 +10,12 @@ const LoadingPage = () => {
       <span className="spinner"></span>
       <span className="loading_name">M</span>*/}
       <div className={"item"}>
-        <Loader type="bubble-spin" bgColor={"var(--primaryColor)"} /*title={"Loading..."}*/ color={"var(--primaryColor)"} size={100} />
+        <Loader
+          type="bubble-spin"
+          bgColor={"var(--primaryColor)"}
+          /*title={"Loading..."}*/ color={"var(--primaryColor)"}
+          size={100}
+        />
       </div>
     </div>
   );

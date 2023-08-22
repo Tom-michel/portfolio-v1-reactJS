@@ -13,7 +13,7 @@ import { about } from "../data/my-data";
 
 export const About = () => {
   return (
-    <section id="about" className="bg-grid mt-5 py-5">
+    <section id="about" className="bg-grid mt-5 py-5 w-100">
       <div className="container">
         <Heading title="aboutMe" param=" " />
         {about.map((about) => (

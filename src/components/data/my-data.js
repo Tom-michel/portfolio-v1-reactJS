@@ -73,7 +73,8 @@ export const floatinglink = [
 export const banner = [
   {
     hello: "Hello, i am",
-    name: "Michel Btompe",
+    name: ["< Michel Btompe />", "Developer", "App Designer"],
+    // name: "Michel Btompe",
     role: [
       { text: "Full Stack Developer", icon: <Keyboard /> },
       { text: "UI Designer", icon: <DesignServices /> },
@@ -87,19 +88,20 @@ export const banner = [
       },
     ],
     avatar: [
-		  {
-		  	img: "../images/avatar-img.png",
-				tech1: "../images/tech/django.png",
-				tech2: "../images/tech/flutter.png",
-				tech3: "../images/tech/react.svg",
-			}
-		],
+      {
+        // img: "../images/avatar-img.png",
+        img: "../images/tm-pro.jpg",
+        tech1: "../images/tech/django.png",
+        tech2: "../images/tech/flutter.png",
+        tech3: "../images/tech/react.svg",
+      },
+    ],
   },
 ];
 
 export const about = [
   {
-    text: "I am a full stack web and mobile developer. I like to build or improve innovative solutions to the daily problems of society.",
+    text: "I am a user interface designer and a fullstack web/mobile developer. I like to build or improve innovative solutions to everyday problems in society. I have already participated in several professional and academic projects as a backend or frontend developer, freelancer, project manager.",
     user: "@Tom",
     role: "Fullstack Developer & Freelancer",
   },
@@ -238,7 +240,7 @@ export const php = {
 
 export const skills = [
   {
-    text: "I’am specialized in web and mobile development. I do frontend and backend using many languages and technologies ",
+    text: "I’am specialized in UI Design and web/mobile development. I do frontend and backend using many languages and technologies ",
     technos: [
       javascript,
       typescript,
@@ -268,14 +270,14 @@ export const portfolio = [
     name: "CNIC",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "..",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "..",
-    	},
+      {
+        img: "../images/...",
+        text: "..",
+      },
+      {
+        img: "../images/...",
+        text: "..",
+      },
     ],
     desc: "...",
     date: "...",
@@ -287,14 +289,14 @@ export const portfolio = [
     name: "Wassup",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -306,14 +308,14 @@ export const portfolio = [
     name: "Food Agenda",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -325,14 +327,14 @@ export const portfolio = [
     name: "Food Recognition",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -344,14 +346,14 @@ export const portfolio = [
     name: "Food Annotation",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -363,14 +365,14 @@ export const portfolio = [
     name: "DolphPretty",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -382,14 +384,14 @@ export const portfolio = [
     name: "KennerBrige",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -401,14 +403,14 @@ export const portfolio = [
     name: "Jerry",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -420,14 +422,14 @@ export const portfolio = [
     name: "FindInvest",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -439,14 +441,14 @@ export const portfolio = [
     name: "FindRepater",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -458,14 +460,14 @@ export const portfolio = [
     name: "Simen Academy",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -477,14 +479,14 @@ export const portfolio = [
     name: "Umonety",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -496,14 +498,14 @@ export const portfolio = [
     name: "Plannig",
     img: "../images/...",
     images: [
-    	{
-    		img: "../images/...",
-    		text: "..",
-    	},
-    	{
-    		img: "../images/...",
-    		text: "",
-    	},
+      {
+        img: "../images/...",
+        text: "..",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
     ],
     desc: "...",
     date: "...",
@@ -523,15 +525,17 @@ export const project = [
 
 export const services = [
   {
-    icon: <DevicesOutlined sx={{ color: "#FCA326", fontSize: 40+"px" }} />,
+    icon: <DevicesOutlined sx={{ color: "#FCA326", fontSize: 40 + "px" }} />,
     title: "Web Development",
     desc: "I design and build professional and responsives web sites and web applications by using some of the technologies listed above.",
     colorTitle: "#FCA326",
-    colorBg: "rgba(252, 163, 38, 0.05)", 
+    colorBg: "rgba(252, 163, 38, 0.05)",
     colorBtn: "rgba(252, 163, 38, 0.19)",
   },
   {
-    icon: <PhoneIphoneOutlined sx={{ color: "#70FF00", fontSize: 40+"px" }} />,
+    icon: (
+      <PhoneIphoneOutlined sx={{ color: "#70FF00", fontSize: 40 + "px" }} />
+    ),
     title: "Mobile Development",
     desc: "I design and build professional and responsives mobile applications by using some of the technologies listed above.",
     colorTitle: "#70FF00",
@@ -544,7 +548,7 @@ export const services = [
     desc: "I design web and mobile appalications mock-ups, typographies and graphic charters",
     colorTitle: "#F7C30A",
     colorBg: "rgba(246, 195, 10, 0.05)",
-    colorBtn: "rgba(246, 195, 10, 0.19)", 
+    colorBtn: "rgba(246, 195, 10, 0.19)",
   },
 ];
 
@@ -560,7 +564,7 @@ export const contacts = [
         icon: "../images/social/whatsapp.png",
       },
       {
-        url: "...",
+        url: "https://www.linkedin.com/in/michel-btompe-3a0bb3234/",
         text: "@Michel BTOMPE",
         icon: "../images/social/linkedin.svg",
       },

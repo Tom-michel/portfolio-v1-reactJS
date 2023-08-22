@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Routes, Navigate, BrowserRouter } from "react-router-dom";
 import { FloatingMenu } from "../common/FloatingMenu";
 import { Header } from "../common/Header";
 import { Footer } from "../common/Footer";
@@ -9,13 +9,14 @@ import { ScrollTopBtn } from "../common/ScrollTopBtn";
 export const Pages = () => {
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <Header />
         <FloatingMenu />
-        <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch>
-      </Router>
+        <Routes>
+          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
       <ScrollTopBtn />
       <Footer />
     </>

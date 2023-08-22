@@ -40,7 +40,7 @@ export const Contacts = () => {
   };
 
   return (
-    <section id="contact" className="bg_dark py-5">
+    <section id="contact" className="bg_dark py-5 w-100">
       <div className="container">
         <Heading title="contactMe" param=" " />
         {contacts.map((cont) => (

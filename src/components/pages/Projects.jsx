@@ -8,7 +8,9 @@ import { Button } from "@mui/material";
 import { CategoryBtn } from "../common/Buttons";
 import { ProjectCard } from "../common/ProjectCard";
 
-const allCategory = [/*"all", */...new Set(portfolio.map((item) => item.category))];
+const allCategory = [
+  /*"all", */ ...new Set(portfolio.map((item) => item.category)),
+];
 
 export const Projects = () => {
   const [list, setList] = useState(portfolio);
@@ -33,7 +35,7 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-5 mb-3">
+    <section id="projects" className="py-5 mb-3  w-100">
       <div className="container pt-3">
         <Heading title="projects" param={list.length} />
         {project.map((pro) => (
@@ -63,28 +65,27 @@ export const Projects = () => {
               </span>
             </p>
             <div className="d-flex flex-wrap my-3 gap-3">
-            	
-            	{!showAll && projectsToShow.length < list.length ? (
-		            <Button
-		              onClick={() => setShowAll(true)}
-		              className="btn primaryBtn"
-		              endIcon={<ExpandMoreOutlined />}
-		              data-aos="fade-up"
-		            >
-		              Show All {list.length}
-		            </Button>
-		          ) : list.length > 4 ? (
-		            <Button
-		              onClick={() => setShowAll(false)}
-		              className="btn primaryBtn"
-		              endIcon={<ExpandLessOutlined />}
-		              data-aos="fade-up"
-		            >
-		              Show Less
-		            </Button>
-		          ) : (
-		            ""
-		          )}
+              {!showAll && projectsToShow.length < list.length ? (
+                <Button
+                  onClick={() => setShowAll(true)}
+                  className="btn primaryBtn"
+                  endIcon={<ExpandMoreOutlined />}
+                  data-aos="fade-up"
+                >
+                  Show All {list.length}
+                </Button>
+              ) : list.length > 4 ? (
+                <Button
+                  onClick={() => setShowAll(false)}
+                  className="btn primaryBtn"
+                  endIcon={<ExpandLessOutlined />}
+                  data-aos="fade-up"
+                >
+                  Show Less
+                </Button>
+              ) : (
+                ""
+              )}
               {category.map((cat) => (
                 <CategoryBtn
                   text={cat}

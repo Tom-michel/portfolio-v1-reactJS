@@ -8,13 +8,13 @@ import { Services } from "../pages/Services";
 
 export const Home = () => {
   return (
-    <>
+    <div classname="w-100">
       <Banner />
       <About />
       <Skills />
       <Projects />
       <Services />
       <Contacts />
-    </>
+    </div>
   );
 };

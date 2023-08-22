@@ -1,28 +1,24 @@
 import "./bootstrap.min.css";
 import "./App.css";
 import { Pages } from "./components/pages/Pages";
-import Aos from "aos";
+// import Aos from "aos";
 import { useEffect, useState } from "react";
-import LoadingPage from './LoadingPage';
+import LoadingPage from "./LoadingPage";
 
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
 
 function App() {
-  useEffect(() => {
-    Aos.init();
-    Aos.refresh();
-  }, []);
-  
+  // useEffect(() => {
+  //   Aos.init();
+  //   Aos.refresh();
+  // }, []);
+
   const [loading, setLoading] = useState(true);
-	useEffect(() => {
+  useEffect(() => {
     setLoading(false);
   }, []);
 
-  return (
-    <>
-      {loading ? <LoadingPage /> : <Pages />}
-    </>
-  );
+  return <>{loading ? <LoadingPage /> : <Pages />}</>;
 }
 
 export default App;

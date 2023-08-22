@@ -1,11 +1,10 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import {Modal, ModalClose, ModalDialog, Typography} from '@mui/joy';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import { Modal, ModalClose, ModalDialog, Typography } from "@mui/joy";
 //import Paper from '@mui/material/Paper';
-import Masonry from '@mui/lab/Masonry';
+import Masonry from "@mui/lab/Masonry";
 //import { styled } from '@mui/material/styles';
-import List from '@mui/joy/List';
-
+import List from "@mui/joy/List";
 
 /*const Label = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -17,83 +16,84 @@ import List from '@mui/joy/List';
   borderBottomRightRadius: 0,
 }));*/
 
-export const ProjectModal = ({my_project, open, setOpen}) => {
-
+export const ProjectModal = ({ my_project, open, setOpen }) => {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
-
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-      >
-        <ModalDialog layout="fullscreen">
-          <ModalClose
-            variant="plain"
-            sx={{
-              /*top: 'calc(-1/4 * var(--IconButton-size))',
+    <Modal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+    >
+      <ModalDialog layout="fullscreen">
+        <ModalClose
+          variant="plain"
+          sx={{
+            /*top: 'calc(-1/4 * var(--IconButton-size))',
               right: 'calc(-1/4 * var(--IconButton-size))',*/
-              boxShadow: '0 2px 12px 0 rgba(0 0 0 / 0.2)',
-              borderRadius: '50%',
-              bgcolor: 'background.body',
-            }}
-          />
-          <Typography
-            component="h2"
-            id="modal-title"
-            level="h4"
-            textColor="inherit"
-            fontWeight="lg"
-            mb={1}
-          >
-            {my_project.name}
-          </Typography>
-          <Typography id="modal-desc" textColor="text.tertiary">
-            {my_project.desc}
-          </Typography>
-          
-          <List className="desc-imgList"
-            sx={{
-              overflowY:'scroll',
-              mx: 'calc(-1 * var(--ModalDialog-padding))',
-              px: 'var(--ModalDialog-padding)',
-            }}
-          >
+            boxShadow: "0 2px 12px 0 rgba(0 0 0 / 0.2)",
+            borderRadius: "50%",
+            bgcolor: "background.body",
+          }}
+        />
+        <Typography
+          component="h2"
+          id="modal-title"
+          level="h4"
+          textColor="inherit"
+          fontWeight="lg"
+          mb={1}
+        >
+          {my_project.name}
+        </Typography>
+        <Typography id="modal-desc" textColor="text.tertiary">
+          {my_project.desc}
+          description
+        </Typography>
 
-						<Box>
-							<Masonry className="mx-auto" columns={{xs:2, sm:3, lg:4}} spacing={{xs:2, sm:3, lg:4}}>
-								{my_project.images.map((img, index) => (
-								  <div className="desc-img" key={index}>
-								  	<div className="desc-text">
-								  		<span>{img.text}</span>
-								  	</div>
-								    {/*<Label>{"image " + index + 1}</Label>*/}
-								    <img
-								      src={`${img.img}?w=162&auto=format`}
-								      srcSet={`${img.img}?w=162&auto=format&dpr=2 2x`}
-								      alt=""
-								      loading="lazy"
-								      style={{
-								        borderBottomLeftRadius: 4,
-								        borderBottomRightRadius: 4,
-								        display: 'block',
-								        width: '100%',
-								      }}
-								    />
-								  </div>
-								))}
-							</Masonry>
-						</Box>
-				</List>
-        </ModalDialog>
-      </Modal>
-    </div>
+        <List
+          className="desc-imgList"
+          sx={{
+            overflowY: "scroll",
+            mx: "calc(-1 * var(--ModalDialog-padding))",
+            px: "var(--ModalDialog-padding)",
+          }}
+        >
+          <Box>
+            <Masonry
+              className="mx-auto"
+              columns={{ xs: 2, sm: 3, lg: 4 }}
+              spacing={{ xs: 2, sm: 3, lg: 4 }}
+            >
+              {my_project.images.map((img, index) => (
+                <div className="desc-img" key={index}>
+                  <div className="desc-text">
+                    <span>{img.text}</span>
+                  </div>
+                  {/*<Label>{"image " + index + 1}</Label>*/}
+                  <img
+                    src={`${img.img}?w=162&auto=format`}
+                    srcSet={`${img.img}?w=162&auto=format&dpr=2 2x`}
+                    alt=""
+                    loading="lazy"
+                    style={{
+                      borderBottomLeftRadius: 4,
+                      borderBottomRightRadius: 4,
+                      display: "block",
+                      width: "100%",
+                    }}
+                  />
+                </div>
+              ))}
+            </Masonry>
+          </Box>
+        </List>
+      </ModalDialog>
+    </Modal>
   );
-}
+};
 
 /*const itemData = [
   {

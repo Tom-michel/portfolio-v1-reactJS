@@ -5,7 +5,7 @@ import { SkillTechno } from "../common/SkillTechno";
 
 export const Skills = () => {
   return (
-    <section id="skills" className="bg_dark py-5">
+    <section id="skills" className="bg_dark py-5 w-100">
       <div className="container py-3">
         <div className="row">
           <Heading title="skills" param=" " />
