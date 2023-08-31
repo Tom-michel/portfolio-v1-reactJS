@@ -107,7 +107,7 @@ export const about = [
   },
 ];
 
-// leste des technologies
+// liste des technologies
 
 export const javascript = {
   name: "JavaScript",
@@ -243,7 +243,7 @@ export const skills = [
     text: "I’am specialized in UI Design and web/mobile development. I do frontend and backend using many languages and technologies ",
     technos: [
       javascript,
-      typescript,
+      // typescript,
       html,
       css,
       bootstrap,
@@ -255,7 +255,7 @@ export const skills = [
       djangorest,
       python,
       figma,
-      tensorflow,
+      // tensorflow,
       sqlite,
       mysql,
       mongodb,
@@ -374,7 +374,7 @@ export const portfolio = [
         text: "",
       },
     ],
-    desc: "...",
+    desc: "'Le digital au coeur de l'automatisation de la femme': Vendez et Découvrez des produits de beauté qui vous aident à briler",
     date: "...",
     tech: [django, python, bootstrap, mysql],
     tags: ["...", "...", "..."],
@@ -393,7 +393,7 @@ export const portfolio = [
         text: "",
       },
     ],
-    desc: "...",
+    desc: "'Kennerbridge - Mentoring platform between kenners (experts, professionals) and aspirants': Help an aspirant connect with kenners (experts) in his or her fields of interest in order to be guided or assisted according to his or her needs",
     date: "...",
     tech: [django, python, bootstrap, mysql],
     tags: ["...", "...", "..."],
@@ -412,7 +412,7 @@ export const portfolio = [
         text: "",
       },
     ],
-    desc: "...",
+    desc: "Collaborez, gérez des projets et atteignez de nouveaux sommets de productivité. Managez et Suivez l'avancement de votre travail où que vous soyez.",
     date: "...",
     tech: [django, python, bootstrap, mysql],
     tags: ["...", "...", "..."],
@@ -431,7 +431,7 @@ export const portfolio = [
         text: "",
       },
     ],
-    desc: "...",
+    desc: "FindInvest est une plateforme qui permet aux étudiants de présenter leurs projets ou idées de projets à des investisseurs présents sur la plateforme afin de retenir leurs attention",
     date: "...",
     tech: [django, python, bootstrap, sqlite],
     tags: ["...", "...", "..."],
@@ -450,11 +450,30 @@ export const portfolio = [
         text: "",
       },
     ],
-    desc: "...",
+    desc: "'Améliorez votre niveau avec des professeurs sur mesure': FindRepeater vous permet de touver facilement et rapidement des professeurs sur mesure, proches de chez vous et sélectionnés en fonction de vos exigences",
     date: "...",
     tech: [django, python, bootstrap, sqlite],
     tags: ["...", "...", "..."],
     category: "web",
+  },
+  {
+    name: "Itta Consulting",
+    img: "../images/...",
+    images: [
+      {
+        img: "../images/...",
+        text: "",
+      },
+      {
+        img: "../images/...",
+        text: "",
+      },
+    ],
+    desc: "Site vitrine d'un agence de consultance en transport ferrovaire",
+    date: "...",
+    tech: [codeigniter, php, bootstrap, mysql],
+    tags: ["...", "...", "..."],
+    category: "mobile | design",
   },
   {
     name: "Simen Academy",
@@ -469,7 +488,7 @@ export const portfolio = [
         text: "",
       },
     ],
-    desc: "...",
+    desc: "Plateforme de formation en ligne 'Become Master': Learn New Skills Online Find Best Courses",
     date: "...",
     tech: [codeigniter, php, bootstrap, mysql],
     tags: ["...", "...", "..."],
@@ -488,14 +507,14 @@ export const portfolio = [
         text: "",
       },
     ],
-    desc: "...",
+    desc: "Vitrine d'une plateform de E-Com: Absolument tout ce qui est frais est sur UMONETY, Commandez vos produits et faites vous livrer rapidement",
     date: "...",
     tech: [bootstrap, html, css, figma],
     tags: ["...", "...", "..."],
     category: "mobile | design",
   },
   {
-    name: "Plannig",
+    name: "SPlanning",
     img: "../images/...",
     images: [
       {
@@ -507,7 +526,7 @@ export const portfolio = [
         text: "",
       },
     ],
-    desc: "...",
+    desc: "'Gestion des plannings scolaires de l'Université de Yaoundé 1': plateforme qui permet aux étudiants et aux enseignants de consulter facilement et rapidement des emplois de temps d'enseignement de l'université",
     date: "...",
     tech: [django, python, bootstrap, sqlite],
     tags: ["...", "...", "..."],
@@ -559,7 +578,7 @@ export const contacts = [
     mail: "../images/social/gmail.png",
     urls: [
       {
-        url: "...",
+        url: "wa.me/237656789174",
         text: "WhatsApp",
         icon: "../images/social/whatsapp.png",
       },
@@ -569,7 +588,7 @@ export const contacts = [
         icon: "../images/social/linkedin.svg",
       },
       {
-        url: "...",
+        url: "https://twitter.com/michelbtompe",
         text: "@MichelBTOMPE",
         icon: "../images/social/twitter.png",
       },
