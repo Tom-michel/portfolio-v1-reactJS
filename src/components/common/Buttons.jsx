@@ -25,6 +25,7 @@ export const SecondaryBtn = ({ icon, text, href }) => {
         className="btn secondaryBtn"
         endIcon={icon}
         href={href}
+        target="_blank"
         data-aos="fade-down-right"
       >
         {text}
