@@ -26,10 +26,12 @@ export const About = () => {
               <div className="d-flex my-3 gap-3" data-aos="fade-down-right">
                 <PrimaryBtn
                   icon={<FileDownloadOutlined />}
+                  href={about.cv}
                   text="Download CV"
                 />
                 <SecondaryBtn
                   icon={<RemoveRedEyeOutlined />}
+                  href={about.cv}
                   text="View The CV"
                 />
               </div>

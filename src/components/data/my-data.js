@@ -104,6 +104,7 @@ export const about = [
     text: "I am a user interface designer and a fullstack web/mobile developer. I like to build or improve innovative solutions to everyday problems in society. I have already participated in several professional and academic projects as a backend or frontend developer, freelancer, project manager.",
     user: "@Tom",
     role: "Fullstack Developer & Freelancer",
+    cv: "../doc/CV_BTOMPE_TCHEUFFA_MICHEL_R.pdf",
   },
 ];
 
@@ -315,11 +316,6 @@ const contextFR = require.context(
   false,
   /\.(png|jpe?g|svg)$/
 );
-const contextImpir = require.context(
-  "../../captures/impirTutu/",
-  false,
-  /\.(png|jpe?g|svg)$/
-);
 const contextIta = require.context(
   "../../captures/itaConsulting/",
   false,
@@ -355,14 +351,40 @@ const contextSTC = require.context(
   false,
   /\.(png|jpe?g|svg)$/
 );
+const contextEasyP = require.context(
+  "../../captures/easypass/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextDpM = require.context(
+  "../../captures/dolphprintM/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextCNIC = require.context(
+  "../../captures/cnic/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextWassup = require.context(
+  "../../captures/wassup/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+
+const contextFoodAg = require.context(
+  "../../captures/foodagenda/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
 
 export const portfolio = [
   {
     name: "Student Card UY1",
     img: getImageList(contextSTC).img,
     images: getImageList(contextSTC).images,
-    desc: "...",
-    date: "...",
+    desc: "Applicaton mobile permettant la dématérialisation des cartes d'étudiant à l'université de yaoundé 1",
+    date: "en cours",
     tech: [flutter, react, nest, mongodb],
     tags: ["...", "...", "..."],
     category: "mobile | design",
@@ -371,7 +393,7 @@ export const portfolio = [
     name: "DolphPrint W.",
     img: getImageList(contextDpW).img,
     images: getImageList(contextDpW).images,
-    desc: "...",
+    desc: "Application web de chat permettant la gestion des commandes de services de photographie, entre les clients et les 'labo photo' de DolphGroup",
     date: "...",
     tech: [flutter, react, nest, mongodb],
     tags: ["...", "...", "..."],
@@ -379,14 +401,9 @@ export const portfolio = [
   },
   {
     name: "EasyPass",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "..",
-      },
-    ],
-    desc: "...",
+    img: getImageList(contextEasyP).img,
+    images: getImageList(contextEasyP).images,
+    desc: "Application mobile permettant l'achat des tickets de voyage en ligne, ainsi que des tickets d'accès pour des évèments publics et/ou privés",
     date: "...",
     tech: [flutter, react, nest, mongodb],
     tags: ["...", "...", "..."],
@@ -394,14 +411,9 @@ export const portfolio = [
   },
   {
     name: "DolphPrint M.",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "..",
-      },
-    ],
-    desc: "...",
+    img: getImageList(contextDpM).img,
+    images: getImageList(contextDpM).images,
+    desc: "Application mobile permettant la gestion des commandes de services de photographie, entre les clients et les 'labo photo' de DolphGroup",
     date: "...",
     tech: [flutter, react, nest, mongodb],
     tags: ["...", "...", "..."],
@@ -409,14 +421,9 @@ export const portfolio = [
   },
   {
     name: "CNIC",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "..",
-      },
-    ],
-    desc: "...",
+    img: getImageList(contextCNIC).img,
+    images: getImageList(contextCNIC).images,
+    desc: "Application mobile proposant la dématérialisation de la délivrance des CNI au Cameroun",
     date: "...",
     tech: [flutter, react, nest, mongodb],
     tags: ["...", "...", "..."],
@@ -424,18 +431,20 @@ export const portfolio = [
   },
   {
     name: "Wassup",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
-    desc: "...",
+    img: getImageList(contextWassup).img,
+    images: getImageList(contextWassup).images,
+    // img: "../images/...",
+    // images: [
+    //   {
+    //     img: "../images/...",
+    //     text: "",
+    //   },
+    //   {
+    //     img: "../images/...",
+    //     text: "",
+    //   },
+    // ],
+    desc: "Apllication de chat (WhatsApp Clone). Réalisée dans le cadre d'un TP de MicroService à l'université de Yaoundé 1. L'application n'a malheureusement pas été terminée (Délais court)",
     date: "...",
     tech: [flutter, django, node, sqlite, figma],
     tags: ["...", "...", "..."],
@@ -443,60 +452,13 @@ export const portfolio = [
   },
   {
     name: "Food Agenda",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
-    desc: "...",
+    img: getImageList(contextFoodAg).img,
+    images: getImageList(contextFoodAg).images,
+    desc: "Application mobile constituant un adgenda nutritionnel. Elle permet de repertorier tout ce que l'on mange quotidiennement ainsi que les éventuels problèmes de santé ou gastriques provoqués par l'un des aliments. A fin d'être informé sur les aliments à risque pour notre santé",
     date: "...",
     tech: [flutter, sqlite],
     tags: ["...", "...", "..."],
     category: "mobile",
-  },
-  {
-    name: "Food Recognition",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
-    desc: "...",
-    date: "...",
-    tech: [flutter, tensorflow],
-    tags: ["...", "...", "..."],
-    category: "mobile",
-  },
-  {
-    name: "Food Annotation",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
-    desc: "...",
-    date: "...",
-    tech: [flutter, figma],
-    tags: ["...", "...", "..."],
-    category: "mobile | design",
   },
   {
     name: "DolphPretty",
