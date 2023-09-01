@@ -8,8 +8,8 @@ import {
   Divider,
   Link,
 } from "@mui/joy";
-import { /*Favorite,*/ RemoveRedEye } from "@mui/icons-material";
-import { Avatar, AvatarGroup } from "@mui/material";
+import { /*Favorite,*/ Filter } from "@mui/icons-material";
+import { Avatar, AvatarGroup, Tooltip, Zoom } from "@mui/material";
 
 export const ProjectCard = ({
   tech,
@@ -26,41 +26,32 @@ export const ProjectCard = ({
         variant="solid"
         sx={{ width: 320, bgcolor: "#09090D" }}
       >
-        <CardOverflow 
-        	//data-aos="flip-left"
+        <CardOverflow
+        //data-aos="flip-left"
         >
-          <AspectRatio ratio="2" 
-          	//data-aos="flip-down"
+          <AspectRatio
+            ratio="2"
+            sx={{
+              padding: "12px 12px 0",
+              borderBottomLeftRadius: 10,
+              borderBottomRightRadius: 10,
+            }}
+            //data-aos="flip-down"
           >
             <img
-              src="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318"
-              srcSet="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318&dpr=2 2x"
+              src={img}
+              // src="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318"
+              // srcSet="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318&dpr=2 2x"
               loading="lazy"
               alt=""
               //data-aos="flip-up"
             />
           </AspectRatio>
-          {/* <IconButton
-            aria-label="Like minimal photography"
-            size="sm"
-            variant="solid"
-            color="danger"
-            sx={{
-              position: "absolute",
-              zIndex: 2,
-              borderRadius: "50%",
-              right: "1rem",
-              bottom: 0,
-              transform: "translateY(50%)",
-            }}
-          >
-            <Favorite fontSize="small" />
-          </IconButton> */}
         </CardOverflow>
         <Typography
           className="d-flex align-items-center"
           level="h2"
-          sx={{ fontSize: "md", mt: 2 }}
+          sx={{ fontSize: "md" }}
         >
           <Link
             onClick={onClickAction}
@@ -73,17 +64,18 @@ export const ProjectCard = ({
             <Typography fontSize="md">{name}</Typography>
           </Link>
 
-          <span className="category me-1 mb-1 pt-1" data-aos="fade-left">{category}</span>
+          <span className="category me-1 mb-1 pt-1" data-aos="fade-left">
+            {category}
+          </span>
         </Typography>
         <Typography
           component="p"
           level="body2"
-          sx={{ mt: 0.5, mb: 2, color: "#fff" }}
+          sx={{ color: "#fff" }}
           data-aos="fade-up-right"
         >
-          <span>{desc}</span>
+          <span className="truncate-text">{desc}</span>
         </Typography>
-        <Divider inset="context" />
         <CardOverflow
           className="project-footer d-flex justify-content-between align-items-center"
           variant="soft"
@@ -97,20 +89,21 @@ export const ProjectCard = ({
         >
           <AvatarGroup className="gap-1" max={10}>
             {tech.map((val) => (
-              <Avatar
-                className="project-tech"
-                data-toggle="tooltip"
-                title={val.name}
-                alt={val.name}
-                src={val.img}
-                sx={{
-                  width: 20,
-                  height: 20,
-                  // bgcolor: "#161616",
-                  padding: 0.9,
-                }}
-                data-aos="fade-up-right"
-              />
+              <Tooltip title={val.name} TransitionComponent={Zoom} arrow>
+                <Avatar
+                  className="project-tech"
+                  data-toggle="tooltip"
+                  alt={val.name}
+                  src={val.img}
+                  sx={{
+                    width: 20,
+                    height: 20,
+                    // bgcolor: "#161616",
+                    padding: 0.9,
+                  }}
+                  data-aos="fade-up-right"
+                />
+              </Tooltip>
             ))}
           </AvatarGroup>
           <Divider orientation="vertical" />
@@ -122,8 +115,10 @@ export const ProjectCard = ({
             level="body3"
             sx={{ fontWeight: "md", color: "text.secondary" }}
           >
-            <span className="text-decoration-underline">Explore</span>
-            <RemoveRedEye fontSize="small" />
+            {/* <span className="text-decoration-underline">More</span> */}
+            <Tooltip title={"See More"} TransitionComponent={Zoom} arrow>
+              <Filter fontSize="small" />
+            </Tooltip>
           </Typography>
         </CardOverflow>
       </Card>

@@ -30,7 +30,7 @@ export const navlink = [
 
 export const contactlink = [
   {
-    url: "...",
+    url: "https://www.linkedin.com/in/michel-btompe-3a0bb3234",
     text: "LinkedIn",
     icon: "../images/icons/linkedin.svg",
   },
@@ -73,7 +73,7 @@ export const floatinglink = [
 export const banner = [
   {
     hello: "Hello, i am",
-    name: ["< Michel Btompe />", "Developer", "App Designer"],
+    name: ["< Michel Btompe />", "FullS. Developer", "App Designer"],
     // name: "Michel Btompe",
     role: [
       { text: "Full Stack Developer", icon: <Keyboard /> },
@@ -265,15 +265,152 @@ export const skills = [
 
 // projects
 
+// const contextDpretty = require.context(
+//   "../../captures/dolphpretty/",
+//   false,
+//   /\.(png|jpe?g|svg)$/
+// );
+// const imagesDp = contextDpretty.keys().map(contextDpretty);
+// const imagesDpretty = [];
+// imagesDp.forEach((img, index) => {
+//   imagesDpretty.push({
+//     img: img,
+//     text: "image " + index,
+//   });
+// });
+
+const getImageList = (imgeContext) => {
+  const images = imgeContext.keys().map(imgeContext);
+  const imageList = [];
+  images.forEach((img, index) => {
+    imageList.push({
+      img: img,
+      text: "image " + index,
+    });
+  });
+
+  return { img: imageList[0].img, images: imageList };
+};
+
+// context des images des projets
+
+const contextDpretty = require.context(
+  "../../captures/dolphpretty/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextKb = require.context(
+  "../../captures/kennerbridge/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+
+const contextFI = require.context(
+  "../../captures/findinvest/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextFR = require.context(
+  "../../captures/findrepeater/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextImpir = require.context(
+  "../../captures/impirTutu/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextIta = require.context(
+  "../../captures/itaConsulting/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextJerry = require.context(
+  "../../captures/jerry/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextSA = require.context(
+  "../../captures/simenAcademy/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextSP = require.context(
+  "../../captures/splanning/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextUmo = require.context(
+  "../../captures/umonety/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextDpW = require.context(
+  "../../captures/dolphprintW/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+const contextSTC = require.context(
+  "../../captures/stcUY1/",
+  false,
+  /\.(png|jpe?g|svg)$/
+);
+
 export const portfolio = [
   {
-    name: "CNIC",
+    name: "Student Card UY1",
+    img: getImageList(contextSTC).img,
+    images: getImageList(contextSTC).images,
+    desc: "...",
+    date: "...",
+    tech: [flutter, react, nest, mongodb],
+    tags: ["...", "...", "..."],
+    category: "mobile | design",
+  },
+  {
+    name: "DolphPrint W.",
+    img: getImageList(contextDpW).img,
+    images: getImageList(contextDpW).images,
+    desc: "...",
+    date: "...",
+    tech: [flutter, react, nest, mongodb],
+    tags: ["...", "...", "..."],
+    category: "web",
+  },
+  {
+    name: "EasyPass",
     img: "../images/...",
     images: [
       {
         img: "../images/...",
         text: "..",
       },
+    ],
+    desc: "...",
+    date: "...",
+    tech: [flutter, react, nest, mongodb],
+    tags: ["...", "...", "..."],
+    category: "mobile",
+  },
+  {
+    name: "DolphPrint M.",
+    img: "../images/...",
+    images: [
+      {
+        img: "../images/...",
+        text: "..",
+      },
+    ],
+    desc: "...",
+    date: "...",
+    tech: [flutter, react, nest, mongodb],
+    tags: ["...", "...", "..."],
+    category: "mobile",
+  },
+  {
+    name: "CNIC",
+    img: "../images/...",
+    images: [
       {
         img: "../images/...",
         text: "..",
@@ -363,17 +500,8 @@ export const portfolio = [
   },
   {
     name: "DolphPretty",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
+    img: getImageList(contextDpretty).img,
+    images: getImageList(contextDpretty).images,
     desc: "'Le digital au coeur de l'automatisation de la femme': Vendez et Découvrez des produits de beauté qui vous aident à briler",
     date: "...",
     tech: [django, python, bootstrap, mysql],
@@ -382,17 +510,19 @@ export const portfolio = [
   },
   {
     name: "KennerBrige",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
+    img: getImageList(contextKb).img,
+    images: getImageList(contextKb).images,
+    // img: "../images/...",
+    // images: [
+    //   {
+    //     img: "../images/...",
+    //     text: "",
+    //   },
+    //   {
+    //     img: "../images/...",
+    //     text: "",
+    //   },
+    // ],
     desc: "'Kennerbridge - Mentoring platform between kenners (experts, professionals) and aspirants': Help an aspirant connect with kenners (experts) in his or her fields of interest in order to be guided or assisted according to his or her needs",
     date: "...",
     tech: [django, python, bootstrap, mysql],
@@ -401,17 +531,8 @@ export const portfolio = [
   },
   {
     name: "Jerry",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
+    img: getImageList(contextJerry).img,
+    images: getImageList(contextJerry).images,
     desc: "Collaborez, gérez des projets et atteignez de nouveaux sommets de productivité. Managez et Suivez l'avancement de votre travail où que vous soyez.",
     date: "...",
     tech: [django, python, bootstrap, mysql],
@@ -420,17 +541,8 @@ export const portfolio = [
   },
   {
     name: "FindInvest",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
+    img: getImageList(contextFI).img,
+    images: getImageList(contextFI).images,
     desc: "FindInvest est une plateforme qui permet aux étudiants de présenter leurs projets ou idées de projets à des investisseurs présents sur la plateforme afin de retenir leurs attention",
     date: "...",
     tech: [django, python, bootstrap, sqlite],
@@ -439,17 +551,8 @@ export const portfolio = [
   },
   {
     name: "FindRepater",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
+    img: getImageList(contextFR).img,
+    images: getImageList(contextFR).images,
     desc: "'Améliorez votre niveau avec des professeurs sur mesure': FindRepeater vous permet de touver facilement et rapidement des professeurs sur mesure, proches de chez vous et sélectionnés en fonction de vos exigences",
     date: "...",
     tech: [django, python, bootstrap, sqlite],
@@ -458,74 +561,38 @@ export const portfolio = [
   },
   {
     name: "Itta Consulting",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
+    img: getImageList(contextIta).img,
+    images: getImageList(contextIta).images,
     desc: "Site vitrine d'un agence de consultance en transport ferrovaire",
     date: "...",
     tech: [codeigniter, php, bootstrap, mysql],
     tags: ["...", "...", "..."],
-    category: "mobile | design",
+    category: "web",
   },
   {
     name: "Simen Academy",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
+    img: getImageList(contextSA).img,
+    images: getImageList(contextSA).images,
     desc: "Plateforme de formation en ligne 'Become Master': Learn New Skills Online Find Best Courses",
     date: "...",
     tech: [codeigniter, php, bootstrap, mysql],
     tags: ["...", "...", "..."],
-    category: "mobile | design",
+    category: "web",
   },
   {
     name: "Umonety",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
+    img: getImageList(contextUmo).img,
+    images: getImageList(contextUmo).images,
     desc: "Vitrine d'une plateform de E-Com: Absolument tout ce qui est frais est sur UMONETY, Commandez vos produits et faites vous livrer rapidement",
     date: "...",
     tech: [bootstrap, html, css, figma],
     tags: ["...", "...", "..."],
-    category: "mobile | design",
+    category: "web",
   },
   {
     name: "SPlanning",
-    img: "../images/...",
-    images: [
-      {
-        img: "../images/...",
-        text: "..",
-      },
-      {
-        img: "../images/...",
-        text: "",
-      },
-    ],
+    img: getImageList(contextSP).img,
+    images: getImageList(contextSP).images,
     desc: "'Gestion des plannings scolaires de l'Université de Yaoundé 1': plateforme qui permet aux étudiants et aux enseignants de consulter facilement et rapidement des emplois de temps d'enseignement de l'université",
     date: "...",
     tech: [django, python, bootstrap, sqlite],

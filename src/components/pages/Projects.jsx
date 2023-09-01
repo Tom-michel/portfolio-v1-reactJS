@@ -98,7 +98,7 @@ export const Projects = () => {
                 <>
                   <ProjectCard
                     tech={p.tech}
-                    img=""
+                    img={p.img}
                     name={p.name}
                     category={p.category}
                     desc={p.desc}

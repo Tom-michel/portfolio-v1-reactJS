@@ -4,6 +4,8 @@ import { Pages } from "./components/pages/Pages";
 // import Aos from "aos";
 import { useEffect, useState } from "react";
 import LoadingPage from "./LoadingPage";
+// import { createTheme } from "@mui/material";
+// import { ThemeProvider } from "@emotion/react";
 
 // import "aos/dist/aos.css";
 

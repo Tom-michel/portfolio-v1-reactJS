@@ -48,9 +48,12 @@ export const ProjectModal = ({ my_project, open, setOpen }) => {
         >
           {my_project.name}
         </Typography>
-        <Typography id="modal-desc" textColor="text.tertiary">
+        <Typography
+          id="modal-desc"
+          textColor="text.tertiary"
+          sx={{ color: "#adadad", mb: 2 }}
+        >
           {my_project.desc}
-          description
         </Typography>
 
         <List
@@ -70,13 +73,14 @@ export const ProjectModal = ({ my_project, open, setOpen }) => {
               {my_project.images.map((img, index) => (
                 <div className="desc-img" key={index}>
                   <div className="desc-text">
-                    <span>{img.text}</span>
+                    {/* <span>{img.text}</span> */}
                   </div>
                   {/*<Label>{"image " + index + 1}</Label>*/}
                   <img
+                    key={index}
                     src={`${img.img}?w=162&auto=format`}
                     srcSet={`${img.img}?w=162&auto=format&dpr=2 2x`}
-                    alt=""
+                    alt="img"
                     loading="lazy"
                     style={{
                       borderBottomLeftRadius: 4,
