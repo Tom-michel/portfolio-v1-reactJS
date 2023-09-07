@@ -48,6 +48,7 @@ export const Experiences = ({ experiences }) => {
 									flex: 0,
 									padding: 0,
 								},
+								px: 0,
 							}}
 						>
 							{e.exp.map((item) => (

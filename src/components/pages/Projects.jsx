@@ -1,10 +1,13 @@
-// import { Typography } from "@mui/material";
 import React, { useState } from "react";
 import { Heading } from "../common/Heading";
 import { ProjectModal } from "../common/ProjectModal";
 import { project, portfolio } from "../data/my-data";
-import { ExpandLessOutlined, ExpandMoreOutlined } from "@mui/icons-material";
-import { Button } from "@mui/material";
+import {
+	ExpandLessOutlined,
+	ExpandMoreOutlined,
+	Sync,
+} from "@mui/icons-material";
+import { Button, Typography } from "@mui/material";
 import { CategoryBtn } from "../common/Buttons";
 import { ProjectCard } from "../common/ProjectCard";
 
@@ -29,9 +32,9 @@ export const Projects = () => {
 		const newItems = portfolio.filter((item) => item.category === category);
 		setList(newItems);
 
-		/*if (category === "all") {
-      setList(portfolio);
-    }*/
+		if (category === "all") {
+			setList(portfolio);
+		}
 	};
 
 	return (
@@ -64,7 +67,7 @@ export const Projects = () => {
 								(some of professional projects are in private mode !)
 							</span>
 						</p>
-						<div className="d-flex flex-wrap my-3 gap-3">
+						<div className="d-flex align-items-center flex-wrap my-3 gap-3">
 							{!showAll && projectsToShow.length < list.length ? (
 								<Button
 									onClick={() => setShowAll(true)}
@@ -92,8 +95,16 @@ export const Projects = () => {
 									oncliClickAction={() => filterItems(cat)}
 								/>
 							))}
+							<Typography
+								onClick={() => filterItems("all")}
+								className="t-gr"
+								style={{ cursor: "pointer" }}
+								title="reset the list"
+							>
+								<Sync />
+							</Typography>
 						</div>
-						<div className="projects pt-3 d-flex flex-wrap gap-4 align-items-center justify-content-md-start justify-content-center">
+						<div className="projects pt-3 d-flex flex-wrap gap-4 align-items-center  justify-content-center">
 							{projectsToShow.map((p) => (
 								<>
 									<ProjectCard

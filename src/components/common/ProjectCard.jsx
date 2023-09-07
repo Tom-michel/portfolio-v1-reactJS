@@ -112,7 +112,7 @@ export const ProjectCard = ({
 						{link !== "" ? (
 							<Typography
 								component="a"
-								className="t-gr t-code d-flex align-items-center gap-2"
+								className="t-gr t-code d-flex align-items-end gap-2"
 								href={link}
 								level="body3"
 								target="_blank"
@@ -128,7 +128,7 @@ export const ProjectCard = ({
 									TransitionComponent={Zoom}
 									arrow
 								>
-									<Launch fontSize="small" />
+									<Launch fontSize="medium" />
 								</Tooltip>
 							</Typography>
 						) : (
