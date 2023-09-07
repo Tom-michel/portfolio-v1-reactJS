@@ -23,17 +23,17 @@ export const Experiences = ({ experiences }) => {
 						onChange={handleChange}
 						textColor="primary"
 						indicatorColor="primary"
-						sx={{
-							["& .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected"]: {
-								color: "var(--primaryColor)",
-							},
-							[".css-1aquho2-MuiTabs-indicator"]: {
-								backgroundColor: "var(--primaryColor)",
-							},
-							".css-1h9z7r5-MuiButtonBase-root-MuiTab-root": {
-								color: "#fff",
-							},
-						}}
+						// sx={{
+						// 	["& .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected"]: {
+						// 		color: "var(--primaryColor)",
+						// 	},
+						// 	[".css-1aquho2-MuiTabs-indicator"]: {
+						// 		backgroundColor: "var(--primaryColor)",
+						// 	},
+						// 	".css-1h9z7r5-MuiButtonBase-root-MuiTab-root": {
+						// 		color: "#fff",
+						// 	},
+						// }}
 					>
 						{experiences.map((e) => (
 							<Tab label={e.year} value={e.id} />

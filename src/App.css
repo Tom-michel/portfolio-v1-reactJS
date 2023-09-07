@@ -54,6 +54,15 @@ html {
 #about .MuiTimelineDot-root {
 	border-color: var(--primaryColor) !important;
 }
+#about .MuiTab-root {
+	color: #fff !important;
+}
+#about .MuiTab-root.Mui-selected {
+	color: var(--primaryColor) !important;
+}
+#about .MuiTabs-indicator {
+	background-color: var(--primaryColor) !important;
+}
 
 body {
 	color: var(--white) !important;
