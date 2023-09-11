@@ -348,10 +348,22 @@ export const redis = {
 	dots: "#D93C21",
 	starred: false,
 };
+export const leaflet = {
+	name: "Leaflet",
+	img: "../images/tech/leaflet.jpg",
+	dots: "#D93C21",
+	starred: false,
+};
+export const postgresql = {
+	name: "Postgresql",
+	img: "../images/tech/postgresql.png",
+	dots: "#336993",
+	starred: false,
+};
 
 export const skills = [
 	{
-		text: "I’am specialized in UI Design and web/mobile development. I do frontend and backend using many languages and technologies ",
+		text: "I’am specialized in web/mobile development and UI Design. I do frontend and backend using many languages and technologies ",
 		technos: [
 			javascript,
 			// typescript,
@@ -370,8 +382,10 @@ export const skills = [
 			// tensorflow,
 			sqlite,
 			mysql,
+			postgresql,
 			mongodb,
 			redis,
+			leaflet,
 		],
 	},
 ];
@@ -558,7 +572,7 @@ export const portfolio = [
 		images: getImageList(contextZP).images,
 		desc: "'Management of school timetables at the University of Yaounde 1': Almost similar to google calendar or outlook calendar, this is a platform that allows students and teachers to quickly and easily consult university teaching timetables.",
 		date: "...",
-		tech: [django, djangorest, bootstrap, redis, mysql],
+		tech: [django, djangorest, bootstrap, react, mui, mysql],
 		tags: ["...", "...", "..."],
 		category: "web",
 
@@ -582,7 +596,7 @@ export const portfolio = [
 		images: getImageList(contextFA).images,
 		desc: "Application providing real-time information on the risk of dangerous weather (flooding, heavy storms, hurricanes) in each area of Cameroon. Risk levels are indicated by colour.",
 		date: "...",
-		tech: [flutter, django, djangorest, mongodb],
+		tech: [django, djangorest, postgresql, leaflet],
 		tags: ["...", "...", "..."],
 		category: "mobile",
 
