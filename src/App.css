@@ -854,14 +854,14 @@ form {
 }
 
 fieldset {
-	border-color: var(--primaryColor) !important;
+	border-color: #828282 !important;
 }
 .Mui-error fieldset {
 	border-color: #d32f2f !important;
 }
 
 label {
-	color: var(--primaryColor) !important;
+	color: #828282 !important;
 }
 label.Mui-error {
 	color: #d32f2f !important;
@@ -870,7 +870,8 @@ label.Mui-error {
 input,
 textarea {
 	width: 100% !important;
-	color: var(--primaryColor) !important;
+	color: #828282 !important;
+	/*color: var(--primaryColor) !important;*/
 }
 
 /*input, textarea {

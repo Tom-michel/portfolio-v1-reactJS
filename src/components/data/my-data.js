@@ -813,7 +813,7 @@ export const contacts = [
 			{
 				url: "https://twitter.com/michelbtompe",
 				text: "@MichelBTOMPE",
-				icon: "../images/social/twitter.png",
+				icon: "../images/social/x.png",
 			},
 		],
 	},
