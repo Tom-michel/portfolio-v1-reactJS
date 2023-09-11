@@ -351,7 +351,7 @@ export const redis = {
 export const leaflet = {
 	name: "Leaflet",
 	img: "../images/tech/leaflet.jpg",
-	dots: "#D93C21",
+	dots: "#AEDC58",
 	starred: false,
 };
 export const postgresql = {
