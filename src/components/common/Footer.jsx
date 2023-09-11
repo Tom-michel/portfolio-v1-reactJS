@@ -29,7 +29,7 @@ export const Footer = () => {
 				  <div className="footer-text">
 				  	<span>
 				  		Apache Licence 2.0{bull}  
-				  		<span className="fw-bold t-gr t-code text-decoration-underline">Tom-michel</span>{bull} 
+				  		<a href="mailto:michelbtompe@gmail.com" className="fw-bold t-gr t-code text-decoration-underline">Tom-michel</a>{bull} 
 				  		2023
 				  	</span>
 				  </div>

@@ -50,7 +50,7 @@ export const contactlink = [
 	},
 
 	{
-		url: "#contact",
+		url: "mailto:michelbtompe@gmail.com",
 		text: "Contact me",
 		icon: "../images/icons/contact-mail.svg",
 	},
