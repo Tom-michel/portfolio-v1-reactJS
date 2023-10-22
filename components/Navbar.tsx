@@ -11,7 +11,6 @@ import {
 import {
   AppBar,
   Box,
-  Button,
   Container,
   IconButton,
   Menu,
@@ -19,11 +18,8 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import { Inter } from "next/font/google";
 import Link from "next/link";
-import React, { useState } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
+import React, { useEffect, useState } from "react";
 
 const pages = [
   {
@@ -89,6 +85,23 @@ export default function Navbar() {
   // };
   // resizeWindow();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 6) {
+        setShowIcon(true);
+        // console.log(window.screenY);
+        // console.log(showIcon);
+      } else {
+        setShowIcon(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
     <>
       <AppBar
@@ -100,157 +113,163 @@ export default function Navbar() {
         }}
       >
         <Container>
-          <Toolbar
-            disableGutters
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              "& a": { fontSize: "20px" },
-            }}
-          >
-            <Link
-              href="/"
-              style={{
-                marginRight: 2,
+          <Container>
+            <Toolbar
+              disableGutters
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                "& a": { fontSize: "20px" },
               }}
             >
-              <span style={{ fontWeight: 700 }}>TOM• </span> Portfolio
-            </Link>
+              <Link
+                href="/"
+                style={{
+                  marginRight: 2,
+                }}
+                className="brand"
+              >
+                <span style={{ fontWeight: 700 }}>TOM• </span>{" "}
+                <span className="portfolio">Portfolio</span>
+              </Link>
 
-            <Box sx={{ display: "flex", alignItems: "center" }}>
               <Box sx={{ display: "flex", alignItems: "center" }}>
-                {socials.map((social) => (
-                  <IconButton size="small" sx={{ py: 0 }}>
-                    <Typography
-                      key={social.id}
-                      component="a"
-                      href={social.href}
-                      target="_blank"
-                      sx={{ mx: 0.5, display: "flex", alignItems: "center" }}
-                    >
-                      {social.icon}
-                    </Typography>
-                  </IconButton>
-                ))}
-              </Box>
-
-              <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
-                <IconButton
-                  // size="large"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={handleOpenNavMenu}
-                  sx={{
-                    backgroundColor: !Boolean(anchorElNav)
-                      ? "var(--cardBgColor)"
-                      : "var(--backgroundColor)",
-
-                    border: !Boolean(anchorElNav)
-                      ? "1px solid var(--cardBgColor)"
-                      : "1px solid var(--backgroundColor)",
-                    transition: "0.3s",
-                    ":hover": {
-                      transform: "rotate(-30deg)",
-                      backgroundColor: "var(--primaryColorOp)",
-                      border: "1px solid var(--primaryColor)",
-                    },
-                  }}
-                >
-                  <DragHandle />
-                </IconButton>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorElNav}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  open={Boolean(anchorElNav)}
-                  onClose={handleCloseNavMenu}
-                  sx={{
-                    display: {
-                      xs: "block",
-                      md: "none",
-                      a: { fontSize: "17px" },
-                      span: { fontSize: "20px" },
-                    },
-                  }}
-                >
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      px: 2,
-                      py: 1,
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: "var(--primaryColor)",
-                        fontWeight: 700,
-                      }}
-                    >
-                      TOM•Portfolio
-                    </span>
-                    {/* <IconButton size="small" onClick={handleCloseNavMenu}>
-                      <Close />
-                    </IconButton> */}
-                  </Box>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
                   {socials.map((social) => (
-                    <MenuItem key={social.id} onClick={handleCloseNavMenu}>
+                    <IconButton size="small" sx={{ py: 0 }}>
                       <Typography
-                        style={{
-                          width: "100%",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "15px",
-                        }}
+                        key={social.id}
                         component="a"
                         href={social.href}
+                        target="_blank"
+                        sx={{ mx: 0.5, display: "flex", alignItems: "center" }}
                       >
-                        {social.icon} {social.name}
+                        {social.icon}
                       </Typography>
-                    </MenuItem>
+                    </IconButton>
                   ))}
-                  {pages.map((page) => (
-                    <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                      <Link
-                        style={{
-                          width: "100%",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "15px",
-                        }}
-                        href={page.href}
-                      >
-                        {page.icon} {page.name}
-                      </Link>
-                    </MenuItem>
-                  ))}
-                </Menu>
-              </Box>
+                </Box>
 
-              <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-                {pages.map((page) => (
-                  <Link
-                    key={page.id}
-                    href={page.href}
-                    style={{ margin: "0 0.75rem" }}
+                <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
+                  <IconButton
+                    // size="large"
+                    aria-label="account of current user"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    onClick={handleOpenNavMenu}
+                    sx={{
+                      backgroundColor: !Boolean(anchorElNav)
+                        ? "var(--cardBgColor)"
+                        : "var(--backgroundColor)",
+
+                      border: !Boolean(anchorElNav)
+                        ? "1px solid var(--cardBgColor)"
+                        : "1px solid var(--backgroundColor)",
+                      transition: "0.3s",
+                      ":hover": {
+                        transform: "rotate(-30deg)",
+                        backgroundColor: "var(--primaryColorOp)",
+                        border: "1px solid var(--primaryColor)",
+                      },
+                    }}
                   >
-                    {page.name}
-                  </Link>
-                ))}
+                    <DragHandle />
+                  </IconButton>
+                  <Menu
+                    id="menu-appbar"
+                    anchorEl={anchorElNav}
+                    anchorOrigin={{
+                      vertical: "top",
+                      horizontal: "right",
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "right",
+                    }}
+                    open={Boolean(anchorElNav)}
+                    onClose={handleCloseNavMenu}
+                    sx={{
+                      display: {
+                        xs: "block",
+                        md: "none",
+                        a: { fontSize: "17px" },
+                        span: { fontSize: "20px" },
+                      },
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        px: 2,
+                        py: 1,
+                      }}
+                    >
+                      <span
+                        style={{
+                          color: "var(--primaryColor)",
+                          fontWeight: 700,
+                        }}
+                      >
+                        TOM•Portfolio
+                      </span>
+                      {!showIcon && (
+                        <IconButton size="small" onClick={handleCloseNavMenu}>
+                          <Close />
+                        </IconButton>
+                      )}
+                    </Box>
+                    {socials.map((social) => (
+                      <MenuItem key={social.id} onClick={handleCloseNavMenu}>
+                        <Typography
+                          style={{
+                            width: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "15px",
+                          }}
+                          component="a"
+                          href={social.href}
+                        >
+                          {social.icon} {social.name}
+                        </Typography>
+                      </MenuItem>
+                    ))}
+                    {pages.map((page) => (
+                      <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                        <Link
+                          style={{
+                            width: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "15px",
+                          }}
+                          href={page.href}
+                        >
+                          {page.icon} {page.name}
+                        </Link>
+                      </MenuItem>
+                    ))}
+                  </Menu>
+                </Box>
+
+                <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
+                  {pages.map((page) => (
+                    <Link
+                      key={page.id}
+                      href={page.href}
+                      style={{ margin: "0 0.75rem" }}
+                    >
+                      {page.name}
+                    </Link>
+                  ))}
+                </Box>
               </Box>
-            </Box>
-          </Toolbar>
+            </Toolbar>
+          </Container>
         </Container>
       </AppBar>
 
@@ -275,13 +294,13 @@ export default function Navbar() {
             border: !Boolean(anchorElNav)
               ? "1px solid var(--cardBgColor)"
               : "1px solid var(--backgroundColor)",
-            transition: "0.3s",
             ":hover": {
               transform: "rotate(-30deg)",
               backgroundColor: "var(--primaryColorOp)",
               border: "1px solid var(--primaryColor)",
             },
-            position: "absolute",
+            transition: "0.3s",
+            position: "fixed",
             right: 20,
             top: 15,
             zIndex: 9999,

@@ -16,3 +16,9 @@
 .MuiButton-root {
   text-transform: none;
 }
+
+@media (max-width: 349px) {
+  .brand .portfolio {
+    display: none;
+  }
+}
