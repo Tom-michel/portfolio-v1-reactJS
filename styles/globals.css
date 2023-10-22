@@ -5,8 +5,9 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --primaryColor: green;
-  --foregroundColor: 0, 0, 0;
+  --primaryColor: #ff6600;
+  --numberColor: #333;
+  --foregroundColor: rgb(0, 0, 0);
   --backgroundColor: rgb(214, 219, 220);
   --backgroundColorRgb: 214, 219, 220;
 
@@ -24,14 +25,15 @@
 
   --calloutColor: 238, 240, 241;
   --callout-borderColor: 172, 175, 176;
-  --cardBgColor: 180, 185, 188;
+  --cardBgColor: #f2f2f2;
   --card-borderColor: 131, 134, 135;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foregroundColor: 255, 255, 255;
-    --backgroundColor: rgb(51, 51, 51);
+    --numberColor: #525f7f;
+    --foregroundColor: #ffffffcc;
+    --backgroundColor: #171941;
     --backgroundColorRgb: 51, 51, 51;
 
     --tile-startColor: 2, 13, 46;
@@ -48,7 +50,7 @@
 
     --calloutColor: 20, 20, 20;
     --callout-borderColor: 108, 108, 108;
-    --cardBgColor: 100, 100, 100;
+    --cardBgColor: #1f2251;
     --card-borderColor: 200, 200, 200;
   }
 }
@@ -72,30 +74,50 @@ body {
 }
 
 body {
-  color: rgb(var(--foregroundColor));
+  font-family: "INter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--foregroundColor);
   background: var(--backgroundColor);
+  background-image: url("../assets/images/bodyBg.png");
+  background-size: contain;
+  overflow-x: hidden !important;
 }
 
-main {
+svg {
+  color: var(--foregroundColor);
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: center; */
-  /* padding: 6rem; */
   min-height: 100vh;
-}
+} */
 
 a {
-  color: inherit;
+  color: var(--foregroundColor);
   text-decoration: none;
-}
-
-.navbar {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  height: 80px;
-  font-size: 1rem;
 }
