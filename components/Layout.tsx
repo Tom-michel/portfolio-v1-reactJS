@@ -9,9 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />
-      <Container sx={{ mt: 10 }} className={inter.className}>
-        {children}
-      </Container>
+      <Container className={inter.className}>{children}</Container>
     </>
   );
 }

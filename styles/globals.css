@@ -6,6 +6,7 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --primaryColor: #ff6600;
+  --primaryColorOp: rgba(255, 102, 0, 0.487);
   --numberColor: #333;
   --foregroundColor: rgb(0, 0, 0);
   --backgroundColor: rgb(214, 219, 220);
@@ -120,4 +121,10 @@ p {
 a {
   color: var(--foregroundColor);
   text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  transition: 0.3s;
+  transform: translateY(-2px);
+  opacity: 0.8;
 }
