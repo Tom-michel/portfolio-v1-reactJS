@@ -5,6 +5,7 @@ import {
   Container,
   Grid,
   IconButton,
+  TextField,
   Tooltip,
 } from "@mui/material";
 import Head from "next/head";
@@ -57,7 +58,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box className="profile-page" sx={{ position: "relative" }}>
+      <Box
+        className="profile-page"
+        sx={{
+          position: "relative",
+        }}
+      >
         <Image
           className="bg-content"
           src={bgContent}
@@ -65,7 +71,7 @@ export default function Home() {
           style={{ maxWidth: "80%", height: "auto" }}
           priority
         />
-        {/* <Container> */}
+
         <Grid container alignItems={"center"}>
           <Grid sx={{ position: "relative", px: 2 }} item xs={12} md={6}>
             <h1 className="profile-title">Michel Btompe</h1>
@@ -101,6 +107,7 @@ export default function Home() {
             sx={{
               display: "flex",
               justifyContent: "center",
+              pl: { lg: 10 },
             }}
           >
             <Box
@@ -159,7 +166,6 @@ export default function Home() {
             </Box>
           </Grid>
         </Grid>
-        {/* </Container> */}
       </Box>
     </>
   );

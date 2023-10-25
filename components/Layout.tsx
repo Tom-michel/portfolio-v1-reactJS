@@ -6,7 +6,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />
-      <Container>{children}</Container>
+      <div
+        style={{
+          overflowX: "hidden",
+        }}
+      >
+        <Container>{children}</Container>
+      </div>
     </>
   );
 }

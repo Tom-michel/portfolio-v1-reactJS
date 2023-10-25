@@ -28,10 +28,10 @@ const experiences = [
     exp: [
       {
         icon: <Code fontSize="small" />,
-        title: "Fontend/Mobile Developer and Freelancer",
+        title: "Freelance Web/Mobile Dev",
         dec: (
           <>
-            Many projects (Web app, Mobile App, UI Design).{<br />}
+            Professional Web app, Android App.{<br />}
             <Link
               style={{ textDecoration: "underline" }}
               className="textPOP"
@@ -50,7 +50,7 @@ const experiences = [
     exp: [
       {
         icon: <DataObject fontSize="small" />,
-        title: "Backend Developer",
+        title: "Fullstack Developer",
         dec: (
           <>
             In the{" "}
@@ -68,10 +68,10 @@ const experiences = [
       },
       {
         icon: <BusinessCenterTwoTone fontSize="small" />,
-        title: "Freelancer",
+        title: "Freelancer & UI Designer",
         dec: (
           <>
-            Many projects (Web app, Mobile App, UI Design).{<br />}
+            Django API, Web/Mobile App, UI Design.{<br />}
             <Link
               style={{ textDecoration: "underline" }}
               className="textPOP"
@@ -108,10 +108,10 @@ const experiences = [
       },
       {
         icon: <BusinessCenterTwoTone fontSize="small" />,
-        title: "Freelancer",
+        title: "Freelancer & UI Designer",
         dec: (
           <>
-            Many projects (Web app, Mobile App, UI Design).{<br />}
+            Professional Web/Mobile App, UI Design.{<br />}
             <a
               style={{ textDecoration: "underline" }}
               className="textPOP"
@@ -127,7 +127,7 @@ const experiences = [
 ];
 
 const Experiences = () => {
-  const [value, setValue] = React.useState("3");
+  const [value, setValue] = React.useState(`${experiences.length}`);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -184,8 +184,15 @@ const Experiences = () => {
           {experiences.map((e) => (
             <Tab
               sx={{
+                color: "var(--foregroundColor)",
+                opacity: 0.5,
                 transition: "0.3s",
-                ":hover": { color: "var(--foregroundColor)" },
+                py: 0,
+                height: "40px",
+                ":hover": { opacity: 1 },
+                "&&.Mui-selected": {
+                  opacity: 1,
+                },
               }}
               label={e.year}
               value={e.id}
@@ -204,8 +211,13 @@ const Experiences = () => {
               px: 0,
             }}
           >
-            {e.exp.map((item) => (
-              <ExpItem icon={item.icon} title={item.title} desc={item.dec} />
+            {e.exp.map((item, index) => (
+              <ExpItem
+                key={index}
+                icon={item.icon}
+                title={item.title}
+                desc={item.dec}
+              />
             ))}
           </Timeline>
         </TabPanel>

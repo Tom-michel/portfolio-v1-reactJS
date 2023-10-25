@@ -77,7 +77,7 @@ body {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: "INter", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
@@ -173,13 +173,11 @@ a:hover {
   position: absolute;
   opacity: 0.02;
   top: -100px;
-  /* max-width: 60%;
-  z-index: 1; */
+  overflow: hidden !important;
 }
 
 .profile-page .bg-content {
   right: -110px;
-  /* right: 0; */
   top: 10px;
   /* transform: rotate(15deg); */
 }

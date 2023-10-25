@@ -87,10 +87,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 6) {
+      if (window.scrollY > 60) {
         setShowIcon(true);
-        // console.log(window.screenY);
-        // console.log(showIcon);
       } else {
         setShowIcon(false);
       }
@@ -134,7 +132,12 @@ export default function Navbar() {
                 <span className="portfolio">Portfolio</span>
               </Link>
 
-              <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   {socials.map((social) => (
                     <IconButton size="small" sx={{ py: 0 }}>
