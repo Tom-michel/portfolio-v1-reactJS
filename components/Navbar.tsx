@@ -100,6 +100,23 @@ export default function Navbar() {
     };
   });
 
+  const btnMenuStyle = {
+    backgroundColor: !Boolean(anchorElNav)
+      ? "var(--cardBgColor)"
+      : "var(--backgroundColor)",
+
+    border: !Boolean(anchorElNav)
+      ? "1px solid var(--cardBgColor)"
+      : "1px solid var(--backgroundColor)",
+    ":hover": {
+      backgroundColor: "var(--primaryColorOp)",
+      border: "1px solid var(--primaryColor)",
+      backdropFilter: "blur(2px)",
+    },
+    transform: Boolean(anchorElNav) ? "rotate(-50deg)" : "none",
+    transition: "0.3s",
+  };
+
   return (
     <>
       <AppBar
@@ -111,7 +128,7 @@ export default function Navbar() {
         }}
       >
         <Container>
-          <Container>
+          <Container sx={{ px: { xs: 0, sm: "24px" } }}>
             <Toolbar
               disableGutters
               sx={{
@@ -154,7 +171,7 @@ export default function Navbar() {
                   ))}
                 </Box>
 
-                <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
+                <Box sx={{ flexGrow: 0 }}>
                   <IconButton
                     // size="large"
                     aria-label="account of current user"
@@ -162,19 +179,8 @@ export default function Navbar() {
                     aria-haspopup="true"
                     onClick={handleOpenNavMenu}
                     sx={{
-                      backgroundColor: !Boolean(anchorElNav)
-                        ? "var(--cardBgColor)"
-                        : "var(--backgroundColor)",
-
-                      border: !Boolean(anchorElNav)
-                        ? "1px solid var(--cardBgColor)"
-                        : "1px solid var(--backgroundColor)",
-                      transition: "0.3s",
-                      ":hover": {
-                        transform: "rotate(-30deg)",
-                        backgroundColor: "var(--primaryColorOp)",
-                        border: "1px solid var(--primaryColor)",
-                      },
+                      display: { xs: "flex", md: "none" },
+                      "&&": btnMenuStyle,
                     }}
                   >
                     <DragHandle />
@@ -189,14 +195,12 @@ export default function Navbar() {
                     keepMounted
                     transformOrigin={{
                       vertical: "top",
-                      horizontal: "right",
+                      horizontal: "left",
                     }}
                     open={Boolean(anchorElNav)}
                     onClose={handleCloseNavMenu}
                     sx={{
                       display: {
-                        xs: "block",
-                        md: "none",
                         a: { fontSize: "17px" },
                         span: { fontSize: "20px" },
                       },
@@ -220,8 +224,11 @@ export default function Navbar() {
                         TOM•Portfolio
                       </span>
                       {!showIcon && (
-                        <IconButton size="small" onClick={handleCloseNavMenu}>
-                          <Close />
+                        <IconButton
+                          onClick={handleCloseNavMenu}
+                          sx={btnMenuStyle}
+                        >
+                          <DragHandle />
                         </IconButton>
                       )}
                     </Box>
@@ -290,30 +297,14 @@ export default function Navbar() {
             }
           }}
           sx={{
-            backgroundColor: !Boolean(anchorElNav)
-              ? "var(--cardBgColor)"
-              : "var(--backgroundColor)",
-
-            border: !Boolean(anchorElNav)
-              ? "1px solid var(--cardBgColor)"
-              : "1px solid var(--backgroundColor)",
-            ":hover": {
-              transform: "rotate(-30deg)",
-              backgroundColor: "var(--primaryColorOp)",
-              border: "1px solid var(--primaryColor)",
-            },
-            transition: "0.3s",
+            "&&": btnMenuStyle,
             position: "fixed",
             right: 20,
             top: 15,
             zIndex: 9999,
           }}
         >
-          {!Boolean(anchorElNav) ? (
-            <DragHandle fontSize="large" />
-          ) : (
-            <Close fontSize="large" />
-          )}
+          <DragHandle fontSize="large" />
         </IconButton>
       )}
     </>

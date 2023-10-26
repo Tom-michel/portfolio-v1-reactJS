@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
   --max-width: 1100px;
@@ -7,10 +7,14 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
+  /* dark scheme */
+  /* --primaryColor: #ff9c38;
+  --primaryColorOp: #ff9c3880; */
+
   --primaryColor: #ff6600;
   --primaryColorOp: rgba(255, 102, 0, 0.487);
   --numberColor: #333;
-  --foregroundColor: rgb(0, 0, 0);
+  --foregroundColor: #000000c7;
   --backgroundColor: rgb(214, 219, 220);
   --backgroundColorRgb: 214, 219, 220;
 
@@ -32,10 +36,22 @@
   --card-borderColor: 131, 134, 135;
 }
 
+.text-on-back {
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.bg-content {
+  opacity: 0.02;
+  filter: invert(100%);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
+    --primaryColor: #ff9c38;
+    --primaryColorOp: #ff9c3880;
+
     --numberColor: #525f7f;
-    --foregroundColor: #ffffffcc;
+    --foregroundColor: #ffffffcf;
     --backgroundColor: #171941;
     --backgroundColorRgb: 51, 51, 51;
 
@@ -55,6 +71,15 @@
     --callout-borderColor: 108, 108, 108;
     --cardBgColor: #1f2251;
     --card-borderColor: 200, 200, 200;
+  }
+
+  .text-on-back {
+    color: rgba(255, 255, 255, 0.1);
+  }
+
+  .bg-content {
+    opacity: 0.02;
+    filter: invert(0);
   }
 }
 
@@ -114,13 +139,6 @@ p {
   margin-bottom: 1rem;
 }
 
-/* main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-} */
-
 a {
   color: var(--foregroundColor);
   text-decoration: none;
@@ -144,13 +162,12 @@ a:hover {
 
 /* ============ banner ============= */
 
-.profile-title {
+.section-title {
   position: absolute;
   top: 110px;
   left: 50px;
   font-size: 2.0625rem;
   font-weight: 400;
-  /* word-wrap: break-word; */
   text-wrap: nowrap;
 }
 
@@ -160,10 +177,9 @@ a:hover {
   font-size: 9.5em;
   margin-left: -4px;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.2) !important;
 }
 
-.profile-page .profile-description {
+.section-description {
   margin-top: -30px;
   font-size: 0.875rem;
   line-height: 26px;
@@ -171,19 +187,18 @@ a:hover {
 
 .bg-content {
   position: absolute;
-  opacity: 0.02;
   top: -100px;
   overflow: hidden !important;
 }
 
-.profile-page .bg-content {
+.banner-section .bg-content {
   right: -110px;
   top: 10px;
   /* transform: rotate(15deg); */
 }
 
 @media (max-width: 344px) {
-  .profile-title {
+  .section-title {
     font-size: 1.85rem;
   }
   .text-on-back {
@@ -191,7 +206,7 @@ a:hover {
   }
 }
 @media (max-width: 320px) {
-  .profile-title {
+  .section-title {
     font-size: 1.5rem;
   }
   .text-on-back {
