@@ -157,9 +157,8 @@ export default function Navbar() {
               >
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   {socials.map((social) => (
-                    <IconButton size="small" sx={{ py: 0 }}>
+                    <IconButton key={social.id} size="small" sx={{ py: 0 }}>
                       <Typography
-                        key={social.id}
                         component="a"
                         href={social.href}
                         target="_blank"

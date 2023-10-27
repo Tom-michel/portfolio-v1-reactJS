@@ -183,6 +183,7 @@ const Experiences = () => {
         >
           {experiences.map((e) => (
             <Tab
+              key={e.id}
               sx={{
                 color: "var(--foregroundColor)",
                 opacity: 0.5,
@@ -201,7 +202,7 @@ const Experiences = () => {
         </TabList>
       </Box>
       {experiences.map((e) => (
-        <TabPanel value={e.id} sx={{ padding: 0, mt: 1.5 }}>
+        <TabPanel key={e.id} value={e.id} sx={{ padding: 0, mt: 1.5 }}>
           <Timeline
             sx={{
               [`& .${timelineItemClasses.root}:before`]: {

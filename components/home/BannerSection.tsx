@@ -76,8 +76,8 @@ const BannerSection = () => {
             </span>
           </p>
           <div className="pt-3">
-            {socials.map((social) => (
-              <Tooltip title={social.name} arrow>
+            {socials.map((social, index) => (
+              <Tooltip key={index} title={social.name} arrow>
                 <IconButton
                   sx={{ backgroundColor: "var(--cardBgColor)", mx: 0.5 }}
                   href={social.href}

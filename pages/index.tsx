@@ -1,5 +1,6 @@
-import BannerSection from "@/components/BannerSection";
-import ProjectsSection from "@/components/ProjectsSection";
+import BannerSection from "@/components/home/BannerSection";
+import ProjectsSection from "@/components/home/ProjectsSection";
+import Skills from "@/components/home/Skills";
 import Head from "next/head";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <BannerSection />
       <ProjectsSection />
+      <Skills />
     </>
   );
 }
