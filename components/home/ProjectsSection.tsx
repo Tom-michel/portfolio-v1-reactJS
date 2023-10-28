@@ -13,6 +13,7 @@ import Link from "next/link";
 
 import profilePic from "@/assets/images/profilePic.jpeg";
 import Image from "next/image";
+import SectionTilte from "../SectionTitle";
 
 const socials = [
   {
@@ -141,32 +142,37 @@ const ProjectsSection = () => {
           </List>
         </Grid>
         <Grid sx={{ position: "relative" }} item xs={12} md={6}>
-          <h2 className="section-title">Projects</h2>
-          <h5 className="text-on-back">02</h5>
-          <p className="section-description">
-            I have worked and participated on many projects: personal,
-            freelance, enterprise and academic. The recents projects are listed
-            below and others can be found on my{" "}
-            <Link
-              href="https://github.com/Tom-michel/"
-              target="_blank"
-              className="textP"
-            >
-              github
-            </Link>{" "}
-            and{" "}
-            <Link
-              href="https://gitlab.com/Tom-michel/"
-              target="_blank"
-              className="textP"
-            >
-              gitlab
-            </Link>{" "}
-            accounts.{" "}
-            <span style={{ fontStyle: "italic" }}>
-              (Unfortunately, several enterprise projects are in private mode)
-            </span>
-          </p>
+          <SectionTilte
+            title="Projects"
+            number="02"
+            description={
+              <>
+                I have worked and participated on many projects: personal,
+                freelance, enterprise and academic. The recents projects are
+                listed below and others can be found on my{" "}
+                <Link
+                  href="https://github.com/Tom-michel/"
+                  target="_blank"
+                  className="textP"
+                >
+                  github
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="https://gitlab.com/Tom-michel/"
+                  target="_blank"
+                  className="textP"
+                >
+                  gitlab
+                </Link>{" "}
+                accounts.{" "}
+                <span style={{ fontStyle: "italic" }}>
+                  (Unfortunately, several enterprise projects are in private
+                  mode)
+                </span>
+              </>
+            }
+          />
           <div className="pt-3">
             {socials.map((social) => (
               <Tooltip key={social.id} title={social.name} arrow>

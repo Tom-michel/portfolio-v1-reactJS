@@ -5,6 +5,7 @@ import profilePic from "@/assets/images/profilePic.jpeg";
 
 import Image from "next/image";
 import Experiences from "./Experiences";
+import SectionTilte from "../SectionTitle";
 
 const socials = [
   {
@@ -60,21 +61,25 @@ const BannerSection = () => {
           xs={12}
           md={6}
         >
-          <h1 className="section-title">Michel Btompe</h1>
-          <h5 className="text-on-back">01</h5>
-          <p className="section-description">
-            <span style={{ textTransform: "uppercase", fontWeight: 700 }}>
-              {" "}
-              You can call me <span className="textP">TOM</span>
-            </span>{" "}
-            <br />
-            I'am a fullstack web/mobile developer and Ui Designer. I like to
-            build or improve innovative solutions to everyday problems in
-            society. I build profeessional web and modile app. <br />
-            <span style={{ textTransform: "uppercase", fontWeight: 600 }}>
-              Based in Yaoundé, Available for Freelance Projects.
-            </span>
-          </p>
+          <SectionTilte
+            title="Michel Btompe"
+            number="01"
+            description={
+              <>
+                <span style={{ textTransform: "uppercase", fontWeight: 700 }}>
+                  {" "}
+                  You can call me <span className="textP">TOM</span>
+                </span>{" "}
+                <br />
+                I'am a fullstack web/mobile developer and Ui Designer. I like to
+                build or improve innovative solutions to everyday problems in
+                society. I build profeessional web and modile app. <br />
+                <span style={{ textTransform: "uppercase", fontWeight: 600 }}>
+                  Based in Yaoundé, Available for Freelance Projects.
+                </span>
+              </>
+            }
+          />
           <div className="pt-3">
             {socials.map((social, index) => (
               <Tooltip key={index} title={social.name} arrow>
