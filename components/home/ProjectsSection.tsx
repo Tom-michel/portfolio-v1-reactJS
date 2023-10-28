@@ -92,8 +92,8 @@ const ProjectsSection = () => {
                 <ListItemButton
                   sx={{
                     borderBottom: "1px solid var(--foregroundColor)",
-                    py: 2,
-                    pl: 0,
+                    py: 0,
+                    px: 0,
                     textTransform: "uppercase",
                     fontSize: "1.2rem",
                     opacity: 0.8,
@@ -102,6 +102,7 @@ const ProjectsSection = () => {
                     },
                     ":hover span": {
                       opacity: 1,
+                      color: "var(--primaryColor)",
                       transition: "0.3s",
                       transform: "translateX(20px)",
                     },
@@ -110,22 +111,30 @@ const ProjectsSection = () => {
                     justifyContent: "space-between",
                     overflow: "hidden",
 
-                    img: {
-                      maxHeight: 0,
-                      width: "auto",
-                      objectFit: "cover",
-                      // transform: "translateY(200px)",
-                    },
-                    ":hover img": {
-                      maxHeight: 110,
-                      width: "auto",
-                      transform: "translateY(0px)",
+                    ".imagePro": {
+                      position: "relative",
+                      height: 100,
+                      width: 150,
+                      overflow: "hidden",
                       transition: "0.3s",
+                      bottom: -110,
+                    },
+                    ":hover .imagePro": {
+                      overflow: "hidden",
+                      transition: "0.3s",
+                      bottom: 0,
+                    },
+                    ".imagePro img": {
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
                     },
                   }}
                 >
                   <span>{project.name}</span>
-                  <Image src={profilePic} alt="" />
+                  <div className="imagePro">
+                    <Image src={profilePic} alt="" />
+                  </div>
                 </ListItemButton>
               </Link>
             ))}
