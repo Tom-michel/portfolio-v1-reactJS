@@ -1,4 +1,5 @@
 import BannerSection from "@/components/home/BannerSection";
+import ContactSection from "@/components/home/ContactSection";
 import ProjectsSection from "@/components/home/ProjectsSection";
 import SkillsSection from "@/components/home/SkillsSection";
 import Head from "next/head";
@@ -18,6 +19,7 @@ export default function Home() {
       <BannerSection />
       <ProjectsSection />
       <SkillsSection />
+      <ContactSection />
     </>
   );
 }

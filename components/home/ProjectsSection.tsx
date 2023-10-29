@@ -60,7 +60,9 @@ const ProjectsSection = () => {
     <Box className="projects-section" sx={{ my: 5, px: { xs: 0, sm: 2 } }}>
       <Grid
         container
-        sx={{ flexDirection: { xs: "column-reverse", md: "row" } }}
+        sx={{
+          flexDirection: { xs: "column-reverse", md: "row" },
+        }}
       >
         <Grid
           item
